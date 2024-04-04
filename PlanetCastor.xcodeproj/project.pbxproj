@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */; };
+		CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */; };
+		CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3482BBED3BE00A6D853 /* ViewController.swift */; };
+		CC5FB34C2BBED3BE00A6D853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */; };
+		CC5FB34E2BBED3BF00A6D853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */; };
+		CC5FB3512BBED3BF00A6D853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */; };
+		CC5FB35C2BBED3BF00A6D853 /* PlanetCastorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */; };
+		CC5FB3662BBED3BF00A6D853 /* PlanetCastorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */; };
+		CC5FB3682BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC5FB3582BBED3BF00A6D853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5FB3392BBED3BE00A6D853 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC5FB3402BBED3BE00A6D853;
+			remoteInfo = PlanetCastor;
+		};
+		CC5FB3622BBED3BF00A6D853 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC5FB3392BBED3BE00A6D853 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC5FB3402BBED3BE00A6D853;
+			remoteInfo = PlanetCastor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC5FB3412BBED3BE00A6D853 /* PlanetCastor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetCastor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC5FB3482BBED3BE00A6D853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC5FB34B2BBED3BE00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC5FB3502BBED3BF00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC5FB3522BBED3BF00A6D853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorTests.swift; sourceTree = "<group>"; };
+		CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITests.swift; sourceTree = "<group>"; };
+		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC5FB33E2BBED3BE00A6D853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB3542BBED3BF00A6D853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB35E2BBED3BF00A6D853 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC5FB3382BBED3BD00A6D853 = {
+			isa = PBXGroup;
+			children = (
+				CC5FB3432BBED3BE00A6D853 /* PlanetCastor */,
+				CC5FB35A2BBED3BF00A6D853 /* PlanetCastorTests */,
+				CC5FB3642BBED3BF00A6D853 /* PlanetCastorUITests */,
+				CC5FB3422BBED3BE00A6D853 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC5FB3422BBED3BE00A6D853 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC5FB3412BBED3BE00A6D853 /* PlanetCastor.app */,
+				CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */,
+				CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC5FB3432BBED3BE00A6D853 /* PlanetCastor */ = {
+			isa = PBXGroup;
+			children = (
+				CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */,
+				CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */,
+				CC5FB3482BBED3BE00A6D853 /* ViewController.swift */,
+				CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */,
+				CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */,
+				CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */,
+				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
+			);
+			path = PlanetCastor;
+			sourceTree = "<group>";
+		};
+		CC5FB35A2BBED3BF00A6D853 /* PlanetCastorTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */,
+			);
+			path = PlanetCastorTests;
+			sourceTree = "<group>";
+		};
+		CC5FB3642BBED3BF00A6D853 /* PlanetCastorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */,
+				CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */,
+			);
+			path = PlanetCastorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC5FB3402BBED3BE00A6D853 /* PlanetCastor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5FB36B2BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastor" */;
+			buildPhases = (
+				CC5FB33D2BBED3BE00A6D853 /* Sources */,
+				CC5FB33E2BBED3BE00A6D853 /* Frameworks */,
+				CC5FB33F2BBED3BE00A6D853 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanetCastor;
+			productName = PlanetCastor;
+			productReference = CC5FB3412BBED3BE00A6D853 /* PlanetCastor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC5FB3562BBED3BF00A6D853 /* PlanetCastorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5FB36E2BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastorTests" */;
+			buildPhases = (
+				CC5FB3532BBED3BF00A6D853 /* Sources */,
+				CC5FB3542BBED3BF00A6D853 /* Frameworks */,
+				CC5FB3552BBED3BF00A6D853 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC5FB3592BBED3BF00A6D853 /* PBXTargetDependency */,
+			);
+			name = PlanetCastorTests;
+			productName = PlanetCastorTests;
+			productReference = CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC5FB3602BBED3BF00A6D853 /* PlanetCastorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC5FB3712BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastorUITests" */;
+			buildPhases = (
+				CC5FB35D2BBED3BF00A6D853 /* Sources */,
+				CC5FB35E2BBED3BF00A6D853 /* Frameworks */,
+				CC5FB35F2BBED3BF00A6D853 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC5FB3632BBED3BF00A6D853 /* PBXTargetDependency */,
+			);
+			name = PlanetCastorUITests;
+			productName = PlanetCastorUITests;
+			productReference = CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC5FB3392BBED3BE00A6D853 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CC5FB3402BBED3BE00A6D853 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					CC5FB3562BBED3BF00A6D853 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CC5FB3402BBED3BE00A6D853;
+					};
+					CC5FB3602BBED3BF00A6D853 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = CC5FB3402BBED3BE00A6D853;
+					};
+				};
+			};
+			buildConfigurationList = CC5FB33C2BBED3BE00A6D853 /* Build configuration list for PBXProject "PlanetCastor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC5FB3382BBED3BD00A6D853;
+			productRefGroup = CC5FB3422BBED3BE00A6D853 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC5FB3402BBED3BE00A6D853 /* PlanetCastor */,
+				CC5FB3562BBED3BF00A6D853 /* PlanetCastorTests */,
+				CC5FB3602BBED3BF00A6D853 /* PlanetCastorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC5FB33F2BBED3BE00A6D853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5FB3512BBED3BF00A6D853 /* LaunchScreen.storyboard in Resources */,
+				CC5FB34E2BBED3BF00A6D853 /* Assets.xcassets in Resources */,
+				CC5FB34C2BBED3BE00A6D853 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB3552BBED3BF00A6D853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB35F2BBED3BF00A6D853 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC5FB33D2BBED3BE00A6D853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
+				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
+				CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB3532BBED3BF00A6D853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5FB35C2BBED3BF00A6D853 /* PlanetCastorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC5FB35D2BBED3BF00A6D853 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC5FB3682BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift in Sources */,
+				CC5FB3662BBED3BF00A6D853 /* PlanetCastorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC5FB3592BBED3BF00A6D853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC5FB3402BBED3BE00A6D853 /* PlanetCastor */;
+			targetProxy = CC5FB3582BBED3BF00A6D853 /* PBXContainerItemProxy */;
+		};
+		CC5FB3632BBED3BF00A6D853 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC5FB3402BBED3BE00A6D853 /* PlanetCastor */;
+			targetProxy = CC5FB3622BBED3BF00A6D853 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5FB34B2BBED3BE00A6D853 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC5FB3502BBED3BF00A6D853 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC5FB3692BBED3BF00A6D853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC5FB36A2BBED3BF00A6D853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC5FB36C2BBED3BF00A6D853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetCastor/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC5FB36D2BBED3BF00A6D853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetCastor/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC5FB36F2BBED3BF00A6D853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetCastor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanetCastor";
+			};
+			name = Debug;
+		};
+		CC5FB3702BBED3BF00A6D853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetCastor.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanetCastor";
+			};
+			name = Release;
+		};
+		CC5FB3722BBED3BF00A6D853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanetCastor;
+			};
+			name = Debug;
+		};
+		CC5FB3732BBED3BF00A6D853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ia.PlanetCastorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanetCastor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC5FB33C2BBED3BE00A6D853 /* Build configuration list for PBXProject "PlanetCastor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5FB3692BBED3BF00A6D853 /* Debug */,
+				CC5FB36A2BBED3BF00A6D853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5FB36B2BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5FB36C2BBED3BF00A6D853 /* Debug */,
+				CC5FB36D2BBED3BF00A6D853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5FB36E2BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5FB36F2BBED3BF00A6D853 /* Debug */,
+				CC5FB3702BBED3BF00A6D853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC5FB3712BBED3BF00A6D853 /* Build configuration list for PBXNativeTarget "PlanetCastorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5FB3722BBED3BF00A6D853 /* Debug */,
+				CC5FB3732BBED3BF00A6D853 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC5FB3392BBED3BE00A6D853 /* Project object */;
+}
