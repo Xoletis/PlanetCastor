@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287B97BA2BC0265F009C1072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287B97B92BC0265F009C1072 /* Assets.xcassets */; };
 		CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */; };
 		CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */; };
 		CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3482BBED3BE00A6D853 /* ViewController.swift */; };
 		CC5FB34C2BBED3BE00A6D853 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */; };
-		CC5FB34E2BBED3BF00A6D853 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */; };
 		CC5FB3512BBED3BF00A6D853 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */; };
 		CC5FB35C2BBED3BF00A6D853 /* PlanetCastorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */; };
 		CC5FB3662BBED3BF00A6D853 /* PlanetCastorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */; };
@@ -37,12 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		287B97B92BC0265F009C1072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5FB3412BBED3BE00A6D853 /* PlanetCastor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetCastor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3482BBED3BE00A6D853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC5FB34B2BBED3BE00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5FB3502BBED3BF00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5FB3522BBED3BF00A6D853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +106,8 @@
 				CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */,
 				CC5FB3482BBED3BE00A6D853 /* ViewController.swift */,
 				CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */,
-				CC5FB34D2BBED3BF00A6D853 /* Assets.xcassets */,
 				CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */,
+				287B97B92BC0265F009C1072 /* Assets.xcassets */,
 				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
 			);
 			path = PlanetCastor;
@@ -235,8 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5FB3512BBED3BF00A6D853 /* LaunchScreen.storyboard in Resources */,
-				CC5FB34E2BBED3BF00A6D853 /* Assets.xcassets in Resources */,
 				CC5FB34C2BBED3BE00A6D853 /* Main.storyboard in Resources */,
+				287B97BA2BC0265F009C1072 /* Assets.xcassets in Resources */,
 				CC6A99962BBEE59E00CBDAC3 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
