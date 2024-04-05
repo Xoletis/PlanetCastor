@@ -153,6 +153,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.89803921568627454" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="9ik-3Z-DW6"/>
                 </viewController>
@@ -160,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--TypeDePlanet-->
         <scene sceneID="lrl-dr-WNt">
             <objects>
-                <viewController id="Ifr-gA-Rgb" sceneMemberID="viewController">
+                <viewController title="TypeDePlanet" id="Ifr-gA-Rgb" customClass="PlaneteParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWD-z9-N95">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,6 +186,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="BZ5-O6-BG6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHr-oK-a3g">
                                         <rect key="frame" x="177" y="8" width="145" height="109"/>
@@ -199,6 +203,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="SdF-3k-Ras"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-CB-NvQ">
                                         <rect key="frame" x="177" y="247" width="145" height="109"/>
@@ -213,6 +220,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="tVl-Sb-DTa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
                                         <rect key="frame" x="8" y="369" width="145" height="109"/>
@@ -227,6 +237,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="czX-u8-iqH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sh-L0-aWw">
                                         <rect key="frame" x="8" y="490" width="145" height="109"/>
@@ -241,6 +254,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="vxT-JY-r9e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-lC-izM">
                                         <rect key="frame" x="177" y="369" width="145" height="109"/>
@@ -255,6 +271,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="l0Q-iA-Bon"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBj-EV-8n7">
                                         <rect key="frame" x="8" y="247" width="145" height="109"/>
@@ -269,6 +288,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="mRP-kU-kvN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-ow-Xk4">
                                         <rect key="frame" x="177" y="128" width="145" height="109"/>
@@ -283,6 +305,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="Gw5-Ao-YYA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gm-zS-fUA">
                                         <rect key="frame" x="8" y="128" width="145" height="109"/>
@@ -297,6 +322,9 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ClickOnTerrestreButton:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="F6S-jO-HTb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8G-MW-U8e">
                                         <rect key="frame" x="171" y="490" width="157" height="109"/>
@@ -338,6 +366,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="5D1-oI-Aog"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="8Yr-oR-tCv" collectionClass="NSMutableArray" id="cH3-hG-0o8"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="8Yr-oR-tCv" collectionClass="NSMutableArray" id="ojP-1s-6VV"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3QG-ow-Xk4" collectionClass="NSMutableArray" id="cF8-z2-Pt9"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3Gm-zS-fUA" collectionClass="NSMutableArray" id="qMe-hv-3R4"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="EBj-EV-8n7" collectionClass="NSMutableArray" id="4dY-Fs-0TZ"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="AKm-so-paE"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="ZTa-hb-DDq"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="nAh-wu-BaJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zB-Uj-PRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
