@@ -10,11 +10,15 @@ import UIKit
 
 class PlaneteParameter: UIViewController {
       
-    
     @IBOutlet var ButtonsTypePlanet: [UIButton]!
     @IBOutlet var ButtonsAtmosphere: [UIButton]!
     @IBOutlet var ButtonsRessources: [UIButton]!
     
+    var atmospheresChoisies: [String?] = []
+    var ressourcesChoisies: [String?] = []
+
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if ButtonsTypePlanet != nil {
@@ -41,22 +45,40 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOpacity = 0.9
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
-                button.layer.cornerRadius = 4.0
+                button.layer.cornerRadius = 16
             }
         }
     }
     
     
     @IBAction func ClickAtmosphereButton(_ sender: UIButton) {
-        if sender.layer.borderColor == CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1){
-            sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
-            sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
-            sender.layer.borderWidth = 1
-        } else {
+        if atmospheresChoisies.contains(sender.titleLabel?.text) == false {
+            atmospheresChoisies.append(sender.titleLabel?.text)
             sender.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
             sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
             sender.layer.borderWidth = 3
             sender.layer.cornerCurve = .continuous
+        } else {
+            let indexElement = atmospheresChoisies.firstIndex(of: sender.titleLabel?.text)
+            atmospheresChoisies.remove(at: indexElement!)
+            sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
+            sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            sender.layer.borderWidth = 1
+        }
+    }
+    @IBAction func ClickRessourcesButton(_ sender: UIButton) {
+        if ressourcesChoisies.contains(sender.titleLabel?.text) == false {
+            ressourcesChoisies.append(sender.titleLabel?.text)
+            sender.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+            sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+            sender.layer.borderWidth = 3
+            sender.layer.cornerCurve = .continuous
+        } else {
+            let indexElement = ressourcesChoisies.firstIndex(of: sender.titleLabel?.text)
+            ressourcesChoisies.remove(at: indexElement!)
+            sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
+            sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            sender.layer.borderWidth = 1
         }
     }
     
