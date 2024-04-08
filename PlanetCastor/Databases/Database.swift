@@ -19,6 +19,11 @@ class Database{
     let planetsTable = Table("planets")
     let id = Expression<Int>("id")
     let type = Expression<String>("type")
+    let diametre = Expression<Int>("diametre")
+    let continent = Expression<Int>("continent")
+    let temperature = Expression<Int>("temperature")
+    let humidite = Expression<Int>("humidite")
+    let pression = Expression<Int>("pression")
     
     init(){
         do{
@@ -32,16 +37,18 @@ class Database{
     }
     
     func createTable(){
-        print ("Creat Table")
-        
         let creatTable = self.planetsTable.create{ (table) in
             table.column(self.id, primaryKey: true)
             table.column(self.type)
+            table.column(self.continent, defaultValue: 7)
+            table.column(self.diametre, defaultValue: 12742)
+            table.column(self.temperature, defaultValue: 15)
+            table.column(self.humidite, defaultValue: 30)
+            table.column(self.pression, defaultValue: 1)
         }
-        
+        //let creatTable = self.planetsTable.drop()
         do{
             try self.database.run(creatTable)
-            print("Created Table")
         }catch{
             print(error)
         }
@@ -65,18 +72,29 @@ class Database{
         }catch{
             print(error)
         }
-        showPlanet(id: id)
     }
     
-    func listPlanet(){
+    func setDiametre(diametre: Int, id: Int){
+        let planet = self.planetsTable.filter(self.id == id)
+        let updatePlanet = planet.update(self.diametre <- diametre)
+        
         do{
-            let planets = try self.database.prepare(self.planetsTable)
-            for planet in planets {
-                print("planetId: \(planet[self.id]), type: \(planet[self.type])")
-            }
+            try self.database.run(updatePlanet)
         }catch{
             print(error)
         }
+    }
+    
+    func setContinent(continent: Int, id: Int){
+        let planet = self.planetsTable.filter(self.id == id)
+        let updatePlanet = planet.update(self.continent <- continent)
+        
+        do{
+            try self.database.run(updatePlanet)
+        }catch{
+            print(error)
+        }
+        showPlanet(id: id)
     }
     
     func showPlanet(id: Int){
@@ -84,7 +102,7 @@ class Database{
             let planets = try self.database.prepare(self.planetsTable)
             for planet in planets {
                 if(planet[self.id] == id){
-                    print("planetId: \(planet[self.id]), type: \(planet[self.type])")
+                    print("id: \(planet[self.id]), type: \(planet[self.type]), diamètre: \(planet[self.diametre]), contient: \(planet[self.continent]), temperature: \(planet[self.temperature]), humidité: \(planet[self.humidite]), pression: \(planet[self.pression])")
                 }
             }
         }catch{
@@ -103,5 +121,15 @@ class Database{
             print(error)
         }
         return id;
+    }
+    
+    func deleteByID(id: Int){
+        let planet = self.planetsTable.filter(self.id == id);
+        let planetDelet = planet.delete();
+        do{
+            try self.database.run(planetDelet)
+        }catch{
+            print(error)
+        }
     }
 }

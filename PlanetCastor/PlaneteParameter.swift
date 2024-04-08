@@ -67,15 +67,19 @@ class PlaneteParameter: UIViewController {
             }
         }
         
-        planetType = "nil"
-        
-        if planetType == "nil" {
-            if NextPageType != nil{
-                NextPageType.isEnabled = false
+        if ButtonsTypePlanet != nil{
+            planetType = "nil"
+            
+            if planetType == "nil" {
+                if NextPageType != nil{
+                    NextPageType.isEnabled = false
+                }
             }
+            
+            planetId = Database.shared.createPlanet()
+        }else{
+            planetId = Database.shared.getLastId()
         }
-        
-        planetId = Database.shared.createPlanet()
     }
     
     @IBAction func ChooseTemperature(_ sender: UISlider) {
@@ -89,7 +93,6 @@ class PlaneteParameter: UIViewController {
     @IBAction func ChoosePression(_ sender: UISlider) {
         pressionLabel.text! = Int(sender.value).description + " atm"
     }
-    
     @IBAction func ClickAtmosphereButton(_ sender: UIButton) {
         if atmospheresChoisies.contains(sender.titleLabel?.text) == false {
             atmospheresChoisies.append(sender.titleLabel?.text)
@@ -137,14 +140,24 @@ class PlaneteParameter: UIViewController {
         Database.shared.setType(type: planetType, id: planetId)
     }
     
-    
     @IBAction func ClickOnInfo(_ sender: UIButton) {
         let text = informationMessages[sender.tag]
         let alert = UIAlertController(title: "", message: text, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+
+    @IBAction func DiametreChange(_ sender: UITextField, forEvent event: UIEvent) {
+        let text = sender.text!
+        if let diametre = Int(text) {
+            Database.shared.setDiametre(diametre: diametre, id: planetId)
+        }
+    }
     
-    
-    
+    @IBAction func ContinentChange(_ sender: UITextField) {
+        let text = sender.text!
+        if let continent = Int(text){
+            Database.shared.setContinent(continent: continent, id: planetId)
+        }
+    }
 }
