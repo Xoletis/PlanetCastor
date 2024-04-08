@@ -123,6 +123,7 @@
                                     <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CreatePlaner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zcz-0E-Ywi"/>
                                     <segue destination="Ifr-gA-Rgb" kind="show" id="6P5-gR-nZ4"/>
                                 </connections>
                             </button>
@@ -371,14 +372,20 @@
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="bhU-tl-Yww">
-                        <barButtonItem key="backBarButtonItem" title=" " id="eqb-ea-QdZ"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="eqb-ea-QdZ">
+                            <connections>
+                                <action selector="NextPageParameter:" destination="Ifr-gA-Rgb" id="ofj-gb-dK3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="gD6-QD-NXG">
                             <connections>
-                                <segue destination="30q-bo-z8Z" kind="show" id="nxL-W4-34b"/>
+                                <action selector="kerkgr:" destination="Ifr-gA-Rgb" id="as3-Vp-ZjA"/>
+                                <segue destination="30q-bo-z8Z" kind="show" destinationCreationSelector="NextText:" id="nxL-W4-34b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="NextPageType" destination="gD6-QD-NXG" id="5w4-eW-crg"/>
                         <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
                         <outletCollection property="ButtonsTypePlanet" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="5D1-oI-Aog"/>
                         <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>

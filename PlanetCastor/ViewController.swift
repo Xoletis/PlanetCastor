@@ -26,5 +26,8 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = 4.0
         }
     }
+    @IBAction func CreatePlaner(_ sender: Any) {
+        Database.shared.createTable()
+    }
 }
 
