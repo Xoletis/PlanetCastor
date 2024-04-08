@@ -379,8 +379,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="gD6-QD-NXG">
                             <connections>
-                                <action selector="kerkgr:" destination="Ifr-gA-Rgb" id="as3-Vp-ZjA"/>
-                                <segue destination="30q-bo-z8Z" kind="show" destinationCreationSelector="NextText:" id="nxL-W4-34b"/>
+                                <segue destination="30q-bo-z8Z" kind="show" id="Tx8-Ef-9Fd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -404,11 +403,10 @@
             </objects>
             <point key="canvasLocation" x="1072.5190839694656" y="-535.21126760563379"/>
         </scene>
-        <!--Planete Parameter-->
+        <!--ParametresGlobaux-->
         <scene sceneID="8vD-9D-5M6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k4x-J0-FV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="30q-bo-z8Z" customClass="PlaneteParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ParametresGlobaux" id="30q-bo-z8Z" customClass="PlaneteParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ddp-On-nZZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,6 +444,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="DiametreChange:forEvent:" destination="30q-bo-z8Z" eventType="editingDidEnd" id="KeY-tg-gGG"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Continent(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhW-xo-CDE">
                                 <rect key="frame" x="17" y="236" width="108" height="17"/>
@@ -466,6 +467,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ContinentChange:" destination="30q-bo-z8Z" eventType="editingDidEnd" id="EGc-Vp-SXa"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JOX-rl-gXg">
                                 <rect key="frame" x="164" y="274" width="118" height="30"/>
@@ -883,6 +887,7 @@
                         <outletCollection property="ButtonsRessources" destination="xHx-ID-udI" collectionClass="NSMutableArray" id="Y6S-Wp-SBf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4x-J0-FV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000.7633587786258" y="-535.21126760563379"/>
         </scene>
