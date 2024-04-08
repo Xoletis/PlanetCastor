@@ -26,6 +26,5 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = 4.0
         }
     }
-    
 }
 
