@@ -109,11 +109,11 @@
 				CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */,
 				CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */,
 				CC5FB3482BBED3BE00A6D853 /* ViewController.swift */,
+				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
 				CC5FB34A2BBED3BE00A6D853 /* Main.storyboard */,
 				CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */,
 				287B97B92BC0265F009C1072 /* Assets.xcassets */,
 				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
-				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
 			);
 			path = PlanetCastor;
 			sourceTree = "<group>";
