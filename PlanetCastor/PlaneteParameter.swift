@@ -56,8 +56,10 @@ class PlaneteParameter: UIViewController {
         
         planetType = "nil"
         
-        if planetType == "nil"{
-            NextPageType.isEnabled = false
+        if planetType == "nil" {
+            if NextPageType != nil{
+                NextPageType.isEnabled = false
+            }
         }
         
         planetId = Database.shared.createPlanet()
