@@ -65,7 +65,7 @@ class Database{
         }catch{
             print(error)
         }
-        listPlanet()
+        showPlanet(id: id)
     }
     
     func listPlanet(){
@@ -73,6 +73,19 @@ class Database{
             let planets = try self.database.prepare(self.planetsTable)
             for planet in planets {
                 print("planetId: \(planet[self.id]), type: \(planet[self.type])")
+            }
+        }catch{
+            print(error)
+        }
+    }
+    
+    func showPlanet(id: Int){
+        do{
+            let planets = try self.database.prepare(self.planetsTable)
+            for planet in planets {
+                if(planet[self.id] == id){
+                    print("planetId: \(planet[self.id]), type: \(planet[self.type])")
+                }
             }
         }catch{
             print(error)
