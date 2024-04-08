@@ -16,9 +16,11 @@ class PlaneteParameter: UIViewController {
     
     var atmospheresChoisies: [String?] = []
     var ressourcesChoisies: [String?] = []
-
+  
+    @IBOutlet weak var NextPageType: UIBarButtonItem!
     
-
+    var planetType : String!
+    var planetId : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         if ButtonsTypePlanet != nil {
@@ -51,6 +53,14 @@ class PlaneteParameter: UIViewController {
                 button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
+        
+        planetType = "nil"
+        
+        if planetType == "nil"{
+            NextPageType.isEnabled = false
+        }
+        
+        planetId = Database.shared.createPlanet()
     }
     
     
@@ -90,5 +100,14 @@ class PlaneteParameter: UIViewController {
             button.configuration?.baseBackgroundColor = UIColor.white;
         }
         sender.configuration?.baseBackgroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+        
+        planetType = sender.configuration?.title;
+        if planetType == "nil"{
+            NextPageType.isEnabled = false
+        }else{
+            NextPageType.isEnabled = true
+        }
+        
+        Database.shared.setType(type: planetType, id: planetId)
     }
 }
