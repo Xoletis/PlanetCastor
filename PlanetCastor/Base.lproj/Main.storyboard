@@ -17,7 +17,7 @@
         <scene sceneID="WHN-Jh-3Ud">
             <objects>
                 <navigationController id="pVK-p1-qCW" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wK3-qf-WIR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" id="wK3-qf-WIR">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -32,7 +32,7 @@
         <!--Votre Galerie-->
         <scene sceneID="pVu-vf-yUp">
             <objects>
-                <viewController id="oA4-8K-wxl" sceneMemberID="viewController">
+                <viewController id="oA4-8K-wxl" customClass="ViewController" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp9-SO-2CI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,9 +81,14 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZz-ay-SYp"/>
-                        <color key="backgroundColor" red="0.96078431610000004" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Votre Galerie" id="2GB-Hu-lrG"/>
+                    <connections>
+                        <outletCollection property="buttons" destination="b4r-hn-cLY" collectionClass="NSMutableArray" id="YUG-8h-jyd"/>
+                        <outletCollection property="buttons" destination="IZw-uE-VEp" collectionClass="NSMutableArray" id="X4M-E1-tln"/>
+                        <outletCollection property="buttons" destination="qDU-hL-uG9" collectionClass="NSMutableArray" id="Zcf-jJ-AAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVm-EN-ZOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,10 +157,17 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.95686274509803915" green="0.89803921568627454" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9326182074631082" green="0.87785868302053027" blue="0.99422556161880493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
                     </view>
-                    <navigationItem key="navigationItem" id="9ik-3Z-DW6"/>
+                    <navigationItem key="navigationItem" id="9ik-3Z-DW6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fPI-LV-fmh"/>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="buttons" destination="330-eQ-9aE" collectionClass="NSMutableArray" id="6s7-hJ-1y3"/>
+                        <outletCollection property="buttons" destination="3Ml-Q9-bCk" collectionClass="NSMutableArray" id="LhP-Fd-tJf"/>
+                        <outletCollection property="buttons" destination="Ceh-44-RhC" collectionClass="NSMutableArray" id="pZf-k2-up7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,6 +177,7 @@
         <scene sceneID="lrl-dr-WNt">
             <objects>
                 <viewController title="TypeDePlanet" id="Ifr-gA-Rgb" customClass="PlaneteParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="kWD-z9-N95">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,9 +370,10 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YqH-UZ-Xpf"/>
-                        <color key="backgroundColor" red="0.96078431610000004" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="bhU-tl-Yww">
+                        <barButtonItem key="backBarButtonItem" title=" " id="eqb-ea-QdZ"/>
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="gD6-QD-NXG">
                             <connections>
                                 <segue destination="30q-bo-z8Z" kind="show" id="nxL-W4-34b"/>
@@ -367,6 +381,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+
                         <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
                         <outletCollection property="ButtonsTypePlanet" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="5D1-oI-Aog"/>
                         <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>
@@ -378,6 +393,18 @@
                         <outletCollection property="ButtonsTypePlanet" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="AKm-so-paE"/>
                         <outletCollection property="ButtonsTypePlanet" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="ZTa-hb-DDq"/>
                         <outletCollection property="ButtonsTypePlanet" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="nAh-wu-BaJ"/>
+
+                        <outletCollection property="buttons" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="xeM-ei-8TW"/>
+                        <outletCollection property="buttons" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="fzm-9d-JPW"/>
+                        <outletCollection property="buttons" destination="3Gm-zS-fUA" collectionClass="NSMutableArray" id="6vF-4q-OHl"/>
+                        <outletCollection property="buttons" destination="3QG-ow-Xk4" collectionClass="NSMutableArray" id="Gl5-36-wgY"/>
+                        <outletCollection property="buttons" destination="EBj-EV-8n7" collectionClass="NSMutableArray" id="4Ry-tE-3OM"/>
+                        <outletCollection property="buttons" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="F2O-9Z-2r4"/>
+                        <outletCollection property="buttons" destination="8Yr-oR-tCv" collectionClass="NSMutableArray" id="QNa-kE-1Ke"/>
+                        <outletCollection property="buttons" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="LIH-qk-kmc"/>
+                        <outletCollection property="buttons" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="SDU-iM-4dX"/>
+                        <outletCollection property="buttons" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="6ny-5K-BGj"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zB-Uj-PRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -387,7 +414,7 @@
         <!--View Controller-->
         <scene sceneID="8vD-9D-5M6">
             <objects>
-                <viewController id="30q-bo-z8Z" sceneMemberID="viewController">
+                <viewController id="30q-bo-z8Z" customClass="ViewController" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ddp-On-nZZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -595,7 +622,7 @@
                                 <rect key="frame" x="13" y="478" width="120" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="dihydrogène" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="filled" title="Dihydrogène" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="strokeColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
@@ -775,15 +802,38 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q6j-Y1-F3a"/>
-                        <color key="backgroundColor" red="0.96078431610000004" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Ms-mS-870">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Njd-p5-K15"/>
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="TPJ-yt-5Vm">
                             <connections>
                                 <segue destination="g6L-Gb-0lQ" kind="show" id="eBI-8x-do1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="buttons" destination="sEb-cR-1ET" collectionClass="NSMutableArray" id="zyR-sK-mHT"/>
+                        <outletCollection property="buttons" destination="iL2-Gz-pRp" collectionClass="NSMutableArray" id="AnA-KX-0TE"/>
+                        <outletCollection property="buttons" destination="lcC-Gv-YKk" collectionClass="NSMutableArray" id="xgC-ZQ-o15"/>
+                        <outletCollection property="buttons" destination="gYh-Jg-C2C" collectionClass="NSMutableArray" id="Dde-D1-kyc"/>
+                        <outletCollection property="buttons" destination="8oc-7b-Ukw" collectionClass="NSMutableArray" id="Hdi-sx-6b8"/>
+                        <outletCollection property="buttons" destination="RL7-br-Kfh" collectionClass="NSMutableArray" id="a43-gv-QlX"/>
+                        <outletCollection property="buttons" destination="DsA-TV-Jh3" collectionClass="NSMutableArray" id="FxD-LY-E0w"/>
+                        <outletCollection property="buttons" destination="ayq-Yh-xBl" collectionClass="NSMutableArray" id="Kyd-Ym-ASe"/>
+                        <outletCollection property="buttons" destination="gae-dU-9Rf" collectionClass="NSMutableArray" id="6Zn-GG-cgD"/>
+                        <outletCollection property="buttons" destination="NXl-UK-4cj" collectionClass="NSMutableArray" id="dkN-jn-hJ6"/>
+                        <outletCollection property="buttons" destination="dfU-Ev-5eC" collectionClass="NSMutableArray" id="hil-bA-ewk"/>
+                        <outletCollection property="buttons" destination="qAS-LR-ZEU" collectionClass="NSMutableArray" id="dyZ-Cn-LrK"/>
+                        <outletCollection property="buttons" destination="nTI-4v-rFE" collectionClass="NSMutableArray" id="Udy-wv-DuU"/>
+                        <outletCollection property="buttons" destination="nra-Xa-PNb" collectionClass="NSMutableArray" id="ro9-fl-ReV"/>
+                        <outletCollection property="buttons" destination="Ylx-L1-mhc" collectionClass="NSMutableArray" id="K5Q-7b-8fY"/>
+                        <outletCollection property="buttons" destination="rq2-gH-AW5" collectionClass="NSMutableArray" id="wrS-Uv-pJj"/>
+                        <outletCollection property="buttons" destination="QG9-IL-xCh" collectionClass="NSMutableArray" id="sje-C1-x1x"/>
+                        <outletCollection property="buttons" destination="Nq4-t8-Bow" collectionClass="NSMutableArray" id="tjX-pl-LaG"/>
+                        <outletCollection property="buttons" destination="xHx-ID-udI" collectionClass="NSMutableArray" id="fAQ-2p-DrE"/>
+                        <outletCollection property="buttons" destination="Yb9-ZR-rRz" collectionClass="NSMutableArray" id="rJG-ku-eof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4x-J0-FV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -820,6 +870,7 @@
         <image name="aquatique" width="390" height="844"/>
         <image name="arakis" width="93.333335876464844" height="91.666664123535156"/>
         <image name="bouton valider" width="61" height="36"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="naboo" width="215" height="129"/>
         <image name="planeteBleue" width="130" height="122"/>
         <image name="planeteType" width="185" height="185"/>
