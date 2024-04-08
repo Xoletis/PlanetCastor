@@ -14,8 +14,21 @@ class PlaneteParameter: UIViewController {
     @IBOutlet var ButtonsAtmosphere: [UIButton]!
     @IBOutlet var ButtonsRessources: [UIButton]!
     
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var pressionLabel: UILabel!
+    @IBOutlet weak var humiditeLabel: UILabel!
+    
+    @IBOutlet weak var infosDiametreButton: UIButton!
+    
     var atmospheresChoisies: [String?] = []
     var ressourcesChoisies: [String?] = []
+    
+    var informationMessages = [0: "Cette variable correspond au diamètre de votre planète. \nPour comparaison, celui de la                            terre est de 12 742km.",
+                            1: "Cette variable correspond au nombre de continents de votre planète. \nPour comparaison, sur terre il y a 7 contients.",
+                            2: "Cette variable correspond à la temperature moyennes sur votre planete. \nPour comparaison, sur terre il fait 15°C en moyenne.",
+                            3: "Cette variable correspond au pourcentage moyen d’humidité sur votre planete. \nPour comparaison, sur terre Il y a 30% d’humidité en moyenne.",
+                            4: "Cette variable correspond à la pression atmospherique de votre planete. \nPour comparaison, sur terre la pression atmospherique est de 1 atm.",
+                            5: "Selectionez les différents gaz qui composent votre atmosphère. \nSur terre nous avons du dihydrogène, de l’hélium, du diazote, du dioxygène, du dioxyde de carbone et du méthane."]
   
     @IBOutlet weak var NextPageType: UIBarButtonItem!
     
@@ -30,7 +43,7 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 4.0
-                //button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
+                //button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 20)
             }
         }
         if ButtonsAtmosphere != nil {
@@ -68,7 +81,18 @@ class PlaneteParameter: UIViewController {
             planetId = Database.shared.getLastId()
         }
     }
- 
+    
+    @IBAction func ChooseTemperature(_ sender: UISlider) {
+        temperatureLabel.text! = Int(sender.value).description + " °C"
+    }
+    
+    @IBAction func ChooseHumidite(_ sender: UISlider) {
+        humiditeLabel.text! = Int(sender.value).description + " %"
+    }
+    
+    @IBAction func ChoosePression(_ sender: UISlider) {
+        pressionLabel.text! = Int(sender.value).description + " atm"
+    }
     @IBAction func ClickAtmosphereButton(_ sender: UIButton) {
         if atmospheresChoisies.contains(sender.titleLabel?.text) == false {
             atmospheresChoisies.append(sender.titleLabel?.text)
@@ -100,7 +124,7 @@ class PlaneteParameter: UIViewController {
         }
     }
     
-    @IBAction func ClickOnTerrestreButton(_ sender: UIButton) {
+    @IBAction func ClickOnTypePlanete(_ sender: UIButton) {
         for button in ButtonsTypePlanet{
             button.configuration?.baseBackgroundColor = UIColor.white;
         }
@@ -116,6 +140,13 @@ class PlaneteParameter: UIViewController {
         Database.shared.setType(type: planetType, id: planetId)
     }
     
+    @IBAction func ClickOnInfo(_ sender: UIButton) {
+        let text = informationMessages[sender.tag]
+        let alert = UIAlertController(title: "", message: text, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     @IBAction func DiametreChange(_ sender: UITextField, forEvent event: UIEvent) {
         let text = sender.text!
         if let diametre = Int(text) {
