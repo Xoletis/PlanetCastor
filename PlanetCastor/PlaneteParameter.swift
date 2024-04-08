@@ -28,6 +28,7 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 4.0
+                button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
         if ButtonsAtmosphere != nil {
@@ -37,6 +38,7 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 16
+                button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
         if ButtonsRessources != nil {
@@ -46,6 +48,7 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 16
+                button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
     }
