@@ -397,16 +397,18 @@
                         <outletCollection property="ButtonsTypePlanet" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="AKm-so-paE"/>
                         <outletCollection property="ButtonsTypePlanet" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="ZTa-hb-DDq"/>
                         <outletCollection property="ButtonsTypePlanet" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="nAh-wu-BaJ"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="wZu-bk-LOW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zB-Uj-PRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.5190839694656" y="-535.21126760563379"/>
         </scene>
-        <!--View Controller-->
+        <!--Planete Parameter-->
         <scene sceneID="8vD-9D-5M6">
             <objects>
-                <viewController id="30q-bo-z8Z" customClass="ViewController" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4x-J0-FV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="30q-bo-z8Z" customClass="PlaneteParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ddp-On-nZZ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,6 +539,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="CCb-qU-Q6u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-Gz-pRp">
                                 <rect key="frame" x="269" y="436" width="114" height="35"/>
@@ -550,6 +555,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="U8C-X2-Xt9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ressources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9P-ch-5yd">
                                 <rect key="frame" x="17" y="640" width="98" height="17"/>
@@ -570,6 +578,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="S5k-73-deJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gae-dU-9Rf">
                                 <rect key="frame" x="269" y="521" width="114" height="35"/>
@@ -583,6 +594,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="BOb-c4-7fm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayq-Yh-xBl">
                                 <rect key="frame" x="144" y="520" width="114" height="35"/>
@@ -596,6 +610,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="Bff-Lu-yQo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYh-Jg-C2C">
                                 <rect key="frame" x="144" y="479" width="114" height="35"/>
@@ -609,6 +626,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="ddX-xy-1YY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcC-Gv-YKk">
                                 <rect key="frame" x="13" y="478" width="120" height="35"/>
@@ -622,6 +642,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="goU-f2-oJ6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL7-br-Kfh">
                                 <rect key="frame" x="17" y="522" width="114" height="35"/>
@@ -635,6 +658,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="zK0-9G-OL4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXl-UK-4cj">
                                 <rect key="frame" x="16" y="563" width="114" height="35"/>
@@ -648,6 +674,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="shg-dr-d0b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsA-TV-Jh3">
                                 <rect key="frame" x="143" y="563" width="240" height="35"/>
@@ -667,13 +696,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Bois" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background">
+                                    <backgroundConfiguration key="background" strokeWidth="1">
                                         <color key="strokeColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="15"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="ID2-qy-YLo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAS-LR-ZEU">
                                 <rect key="frame" x="269" y="628" width="114" height="35"/>
@@ -687,6 +719,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="6ef-zH-g1J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylx-L1-mhc">
                                 <rect key="frame" x="269" y="670" width="114" height="35"/>
@@ -700,6 +735,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="u09-DG-9OW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nq4-t8-Bow">
                                 <rect key="frame" x="269" y="713" width="114" height="35"/>
@@ -713,6 +751,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="Q4n-4t-nUB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG9-IL-xCh">
                                 <rect key="frame" x="144" y="712" width="114" height="35"/>
@@ -726,6 +767,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="EyV-FI-hgG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nra-Xa-PNb">
                                 <rect key="frame" x="144" y="671" width="114" height="35"/>
@@ -739,6 +783,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="7Hn-X1-aBS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTI-4v-rFE">
                                 <rect key="frame" x="13" y="670" width="120" height="35"/>
@@ -752,6 +799,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="xx0-6v-Ium"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-gH-AW5">
                                 <rect key="frame" x="13" y="712" width="120" height="35"/>
@@ -765,6 +815,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="WgP-hw-qJ7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-ZR-rRz">
                                 <rect key="frame" x="143" y="755" width="240" height="35"/>
@@ -791,6 +844,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="PE3-uU-KXa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q6j-Y1-F3a"/>
@@ -805,29 +861,28 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outletCollection property="buttons" destination="sEb-cR-1ET" collectionClass="NSMutableArray" id="zyR-sK-mHT"/>
-                        <outletCollection property="buttons" destination="iL2-Gz-pRp" collectionClass="NSMutableArray" id="AnA-KX-0TE"/>
-                        <outletCollection property="buttons" destination="lcC-Gv-YKk" collectionClass="NSMutableArray" id="xgC-ZQ-o15"/>
-                        <outletCollection property="buttons" destination="gYh-Jg-C2C" collectionClass="NSMutableArray" id="Dde-D1-kyc"/>
-                        <outletCollection property="buttons" destination="8oc-7b-Ukw" collectionClass="NSMutableArray" id="Hdi-sx-6b8"/>
-                        <outletCollection property="buttons" destination="RL7-br-Kfh" collectionClass="NSMutableArray" id="a43-gv-QlX"/>
-                        <outletCollection property="buttons" destination="DsA-TV-Jh3" collectionClass="NSMutableArray" id="FxD-LY-E0w"/>
-                        <outletCollection property="buttons" destination="ayq-Yh-xBl" collectionClass="NSMutableArray" id="Kyd-Ym-ASe"/>
-                        <outletCollection property="buttons" destination="gae-dU-9Rf" collectionClass="NSMutableArray" id="6Zn-GG-cgD"/>
-                        <outletCollection property="buttons" destination="NXl-UK-4cj" collectionClass="NSMutableArray" id="dkN-jn-hJ6"/>
-                        <outletCollection property="buttons" destination="dfU-Ev-5eC" collectionClass="NSMutableArray" id="hil-bA-ewk"/>
-                        <outletCollection property="buttons" destination="qAS-LR-ZEU" collectionClass="NSMutableArray" id="dyZ-Cn-LrK"/>
-                        <outletCollection property="buttons" destination="nTI-4v-rFE" collectionClass="NSMutableArray" id="Udy-wv-DuU"/>
-                        <outletCollection property="buttons" destination="nra-Xa-PNb" collectionClass="NSMutableArray" id="ro9-fl-ReV"/>
-                        <outletCollection property="buttons" destination="Ylx-L1-mhc" collectionClass="NSMutableArray" id="K5Q-7b-8fY"/>
-                        <outletCollection property="buttons" destination="rq2-gH-AW5" collectionClass="NSMutableArray" id="wrS-Uv-pJj"/>
-                        <outletCollection property="buttons" destination="QG9-IL-xCh" collectionClass="NSMutableArray" id="sje-C1-x1x"/>
-                        <outletCollection property="buttons" destination="Nq4-t8-Bow" collectionClass="NSMutableArray" id="tjX-pl-LaG"/>
-                        <outletCollection property="buttons" destination="xHx-ID-udI" collectionClass="NSMutableArray" id="fAQ-2p-DrE"/>
-                        <outletCollection property="buttons" destination="Yb9-ZR-rRz" collectionClass="NSMutableArray" id="rJG-ku-eof"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="sEb-cR-1ET" collectionClass="NSMutableArray" id="HX9-cb-1WF"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="iL2-Gz-pRp" collectionClass="NSMutableArray" id="rq4-Q9-H3y"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="lcC-Gv-YKk" collectionClass="NSMutableArray" id="nl1-E7-9PK"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="gYh-Jg-C2C" collectionClass="NSMutableArray" id="e6C-Me-pB4"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="8oc-7b-Ukw" collectionClass="NSMutableArray" id="Ins-hr-tCA"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="gae-dU-9Rf" collectionClass="NSMutableArray" id="c6R-ab-qEp"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="ayq-Yh-xBl" collectionClass="NSMutableArray" id="LHX-Ig-eDq"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="RL7-br-Kfh" collectionClass="NSMutableArray" id="qvA-1L-96K"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="NXl-UK-4cj" collectionClass="NSMutableArray" id="7e5-Ht-QAg"/>
+                        <outletCollection property="ButtonsAtmosphere" destination="DsA-TV-Jh3" collectionClass="NSMutableArray" id="u00-86-Ply"/>
+                        <outletCollection property="ButtonsRessources" destination="dfU-Ev-5eC" collectionClass="NSMutableArray" id="34E-jQ-qj1"/>
+                        <outletCollection property="ButtonsRessources" destination="qAS-LR-ZEU" collectionClass="NSMutableArray" id="jqC-uy-zvy"/>
+                        <outletCollection property="ButtonsRessources" destination="nTI-4v-rFE" collectionClass="NSMutableArray" id="Qsh-4R-T7z"/>
+                        <outletCollection property="ButtonsRessources" destination="nra-Xa-PNb" collectionClass="NSMutableArray" id="e7l-b5-KGf"/>
+                        <outletCollection property="ButtonsRessources" destination="Ylx-L1-mhc" collectionClass="NSMutableArray" id="vus-8x-iFj"/>
+                        <outletCollection property="ButtonsRessources" destination="rq2-gH-AW5" collectionClass="NSMutableArray" id="yR1-M3-sNh"/>
+                        <outletCollection property="ButtonsRessources" destination="QG9-IL-xCh" collectionClass="NSMutableArray" id="lwy-W5-MJL"/>
+                        <outletCollection property="ButtonsRessources" destination="Nq4-t8-Bow" collectionClass="NSMutableArray" id="jBa-CK-e3a"/>
+                        <outletCollection property="ButtonsRessources" destination="Yb9-ZR-rRz" collectionClass="NSMutableArray" id="BjA-As-InF"/>
+                        <outletCollection property="ButtonsRessources" destination="xHx-ID-udI" collectionClass="NSMutableArray" id="Y6S-Wp-SBf"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k4x-J0-FV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2000.7633587786258" y="-535.21126760563379"/>
         </scene>
