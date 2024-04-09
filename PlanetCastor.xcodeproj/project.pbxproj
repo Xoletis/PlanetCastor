@@ -123,6 +123,8 @@
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
 		CC7C7A192BC3FC120054D210 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		CC9DBAE72BC5471F007BCD76 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9DBAE82BC5471F007BCD76 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneteParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

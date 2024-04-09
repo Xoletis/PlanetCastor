@@ -84,30 +84,40 @@ class PlaneteParameter: UIViewController {
     
     @IBAction func ChooseTemperature(_ sender: UISlider) {
         temperatureLabel.text! = Int(sender.value).description + " °C"
+        Database.shared.setTemperature(temperature: Int(sender.value), id: self.planetId)
     }
     
     @IBAction func ChooseHumidite(_ sender: UISlider) {
         humiditeLabel.text! = Int(sender.value).description + " %"
+        Database.shared.setHumidite(humidite: Int(sender.value), id: self.planetId)
     }
     
     @IBAction func ChoosePression(_ sender: UISlider) {
         pressionLabel.text! = Int(sender.value).description + " atm"
+        Database.shared.setPression(pression: Int(sender.value), id: self.planetId)
     }
+    
     @IBAction func ClickAtmosphereButton(_ sender: UIButton) {
+        
+        let tag = sender.tag
+        
         if atmospheresChoisies.contains(sender.titleLabel?.text) == false {
             atmospheresChoisies.append(sender.titleLabel?.text)
             sender.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
             sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
             sender.layer.borderWidth = 3
             sender.layer.cornerCurve = .continuous
+            Database.shared.addAtmosphere(atmosphereID: tag, planetID: self.planetId)
         } else {
             let indexElement = atmospheresChoisies.firstIndex(of: sender.titleLabel?.text)
             atmospheresChoisies.remove(at: indexElement!)
             sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
             sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             sender.layer.borderWidth = 1
+            Database.shared.removeAtmosphere(atmosphereID: tag, planetID: self.planetId)
         }
     }
+    
     @IBAction func ClickRessourcesButton(_ sender: UIButton) {
         if ressourcesChoisies.contains(sender.titleLabel?.text) == false {
             ressourcesChoisies.append(sender.titleLabel?.text)
