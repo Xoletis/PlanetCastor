@@ -67,34 +67,19 @@ class Database{
     func setType(type: String, id : Int){
         let planet = self.planetsTable.filter(self.id == id)
         let updatePlanet = planet.update(self.type <- type)
-        do{
-            try self.database.run(updatePlanet)
-        }catch{
-            print(error)
-        }
+        updateDatabase(method: updatePlanet)
     }
     
     func setDiametre(diametre: Int, id: Int){
         let planet = self.planetsTable.filter(self.id == id)
         let updatePlanet = planet.update(self.diametre <- diametre)
-        
-        do{
-            try self.database.run(updatePlanet)
-        }catch{
-            print(error)
-        }
+        updateDatabase(method: updatePlanet)
     }
     
     func setContinent(continent: Int, id: Int){
         let planet = self.planetsTable.filter(self.id == id)
         let updatePlanet = planet.update(self.continent <- continent)
-        
-        do{
-            try self.database.run(updatePlanet)
-        }catch{
-            print(error)
-        }
-        showPlanet(id: id)
+        updateDatabase(method: updatePlanet)
     }
     
     func showPlanet(id: Int){
@@ -131,5 +116,15 @@ class Database{
         }catch{
             print(error)
         }
+    }
+    
+    func updateDatabase(method: Update){
+        do{
+            try self.database.run(method)
+        }catch{
+            print(error)
+        }
+        
+        showPlanet(id: getLastId())
     }
 }

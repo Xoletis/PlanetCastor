@@ -116,13 +116,13 @@
 		CC5FB34B2BBED3BE00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC5FB3502BBED3BF00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5FB3522BBED3BF00A6D853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PlanetCastorTests.xctest; path = "/Users/asarbiewsk/Documents/PlanetCastor/build/Debug-iphoneos/PlanetCastorTests.xctest"; sourceTree = "<absolute>"; };
 		CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorTests.swift; sourceTree = "<group>"; };
-		CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PlanetCastorUITests.xctest; path = "/Users/asarbiewsk/Documents/PlanetCastor/build/Debug-iphoneos/PlanetCastorUITests.xctest"; sourceTree = "<absolute>"; };
 		CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITests.swift; sourceTree = "<group>"; };
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
 		CC7C7A192BC3FC120054D210 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		CC9DBAE72BC5471F007BCD76 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9DBAE82BC5471F007BCD76 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneteParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +183,8 @@
 				CC5FB3642BBED3BF00A6D853 /* PlanetCastorUITests */,
 				28A3B29E2BC41EC800295EFE /* Frameworks */,
 				28A3B2A22BC41EC800295EFE /* PlanetCastor.app */,
+				CC9DBAE72BC5471F007BCD76 /* PlanetCastorTests.xctest */,
+				CC9DBAE82BC5471F007BCD76 /* PlanetCastorUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,7 +266,7 @@
 			);
 			name = PlanetCastorTests;
 			productName = PlanetCastorTests;
-			productReference = CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */;
+			productReference = CC9DBAE72BC5471F007BCD76 /* PlanetCastorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CC5FB3602BBED3BF00A6D853 /* PlanetCastorUITests */ = {
@@ -282,7 +284,7 @@
 			);
 			name = PlanetCastorUITests;
 			productName = PlanetCastorUITests;
-			productReference = CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */;
+			productReference = CC9DBAE82BC5471F007BCD76 /* PlanetCastorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
