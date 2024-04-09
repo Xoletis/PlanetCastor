@@ -43,6 +43,6 @@ package.dependencies = [
     .package(url: "https://github.com/stephencelis/CSQLite.git", from: "0.0.3")
 ]
 package.targets.first?.dependencies += [
-    .product(name: "CSQLite", package: "CSQLite")
+    .product(atm_name: "CSQLite", package: "CSQLite")
 ]
 #endif
