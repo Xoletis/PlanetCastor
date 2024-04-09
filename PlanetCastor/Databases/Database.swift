@@ -19,12 +19,16 @@ class Database{
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
+    let ressourcesTable = Table("ressources")
     let planetatmospheretable = Table("planet_atmosphere")
+    let planetressourcetable = Table("planet_ressource")
     
     
     let planetId = Expression<Int>("planet_id")
     let atmosphereId = Expression<Int>("atmosphere_id")
-    let planetatmosphereId = Expression<Int>("linkap_id")
+    let resourceId = Expression<Int>("ressource_id")
+    let linkAPId = Expression<Int>("linkap_id")
+    let linkRPId = Expression<Int>("linkrp_id")
     
     let type = Expression<String>("type")
     let diametre = Expression<Int>("diametre")
@@ -34,9 +38,13 @@ class Database{
     let pression = Expression<Int>("pression")
     
     let atm_name = Expression<String>("atm_name")
+    let res_name = Expression<String>("res_name")
     
     let linkAP_planetId = Expression<Int>("linkAP_planetId")
     let linkAP_athmosphereId = Expression<Int>("linkAP_athmosphereId")
+    
+    let linkRP_planetId = Expression<Int>("linkRP_planetId")
+    let linkRP_ressourceId = Expression<Int>("linkRP_ressourceId")
     
     init(){
         do{
@@ -51,10 +59,12 @@ class Database{
     
     func createTable(){
         
-        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere"){
+        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource"){
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
+            createOrDeleteTable(table: self.ressourcesTable.drop())
+            createOrDeleteTable(table: self.planetressourcetable.drop())
             
             createOrDeleteTable(table: self.planetsTable.create{ (table) in
                 table.column(self.planetId, primaryKey: true)
@@ -74,7 +84,7 @@ class Database{
             createAthmosphere(name: "néon")
             createAthmosphere(name: "argon")
             createAthmosphere(name: "dihydrogène")
-            createAthmosphere(name: "hlium")
+            createAthmosphere(name: "hélium")
             createAthmosphere(name: "diazote")
             createAthmosphere(name: "dioxygène")
             createAthmosphere(name: "sodium")
@@ -82,20 +92,31 @@ class Database{
             createAthmosphere(name: "méthane")
             
             createOrDeleteTable(table: self.planetatmospheretable.create{ (table) in
-                table.column(self.planetatmosphereId, primaryKey: true)
+                table.column(self.linkAPId, primaryKey: true)
                 table.column(self.linkAP_planetId)
                 table.column(self.linkAP_athmosphereId)
             })
             
-            /*do{
-                let athmospheres = try self.database.prepare(self.athmosphereTabe)
-                for athmosphere in athmospheres {
-                        print("id: \(athmosphere[self.id]), name: \(athmosphere[self.name])")
-                }
-            }catch{
-                print(error)
-            }*/
+            createOrDeleteTable(table: self.ressourcesTable.create{ (table) in
+                table.column(self.resourceId, primaryKey: true)
+                table.column(self.res_name)
+            })
             
+            createRessource(name: "bois")
+            createRessource(name: "charbon")
+            createRessource(name: "fer")
+            createRessource(name: "cuivre")
+            createRessource(name: "plomb")
+            createRessource(name: "or")
+            createRessource(name: "pierre")
+            createRessource(name: "petrole")
+            createRessource(name: "eau douce")
+            
+            createOrDeleteTable(table: self.planetressourcetable.create{ (table) in
+                table.column(self.linkRPId, primaryKey: true)
+                table.column(self.linkRP_planetId)
+                table.column(self.linkRP_ressourceId)
+            })
         }
     }
     
@@ -103,6 +124,15 @@ class Database{
         let insertAthmosphere = self.athmosphereTabe.insert(self.atm_name <- name)
         do{
             try self.database.run(insertAthmosphere)
+        }catch{
+            print(error)
+        }
+    }
+    
+    func createRessource(name: String){
+        let insert = self.ressourcesTable.insert(self.res_name <- name)
+        do{
+            try self.database.run(insert)
         }catch{
             print(error)
         }
@@ -156,9 +186,14 @@ class Database{
     
     func showPlanet(id: Int){
         var text = ""
-        let query = self.planetsTable
+        let linkAP_Query = self.planetsTable
             .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
             .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
+            .filter(self.planetId == id)
+        
+        let linkRP_Query = self.planetsTable
+            .join(self.planetressourcetable, on: self.planetId == self.linkRP_planetId)
+            .join(self.ressourcesTable, on: self.resourceId == self.linkRP_ressourceId)
             .filter(self.planetId == id)
         
         do {
@@ -171,10 +206,18 @@ class Database{
             
             text += ", atmospheres : "
             
-            for row in try self.database.prepare(query) {
-                let atmosphereName = try row.get(self.atm_name)
-                text += "\(atmosphereName), "
+            for row in try self.database.prepare(linkAP_Query) {
+                let name = try row.get(self.atm_name)
+                text += "\(name), "
             }
+            
+            text += " ressources : "
+            
+            for row in try self.database.prepare(linkRP_Query) {
+                let name = try row.get(self.res_name)
+                text += "\(name), "
+            }
+            
         } catch {
             print("Erreur lors de l'exécution de la requête: \(error)")
         }
@@ -245,6 +288,29 @@ class Database{
     
     func removeAtmosphere(atmosphereID : Int, planetID : Int){
         let planet = self.planetatmospheretable.filter(self.linkAP_planetId == planetID && self.linkAP_athmosphereId == atmosphereID);
+        let planetDelete = planet.delete();
+        do{
+            try self.database.run(planetDelete)
+        }catch{
+            print(error)
+        }
+        
+        showPlanet(id: planetID)
+    }
+    
+    func addRessource(ressourceID : Int, planetID : Int){
+        let insertElement = self.planetressourcetable.insert(self.linkRP_ressourceId <- ressourceID, self.linkRP_planetId <- planetID)
+        do{
+            try self.database.run(insertElement)
+        }catch{
+            print(error)
+        }
+        
+        showPlanet(id: planetID)
+    }
+    
+    func removeRessource(ressourceID : Int, planetID : Int){
+        let planet = self.planetressourcetable.filter(self.linkRP_planetId == planetID && self.linkRP_ressourceId == ressourceID);
         let planetDelete = planet.delete();
         do{
             try self.database.run(planetDelete)

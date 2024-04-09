@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Notable-Regular.ttf</string>
+		<string>LuckiestGuy.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
