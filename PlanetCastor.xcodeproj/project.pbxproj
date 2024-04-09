@@ -110,15 +110,15 @@
 		28A3B29F2BC41EC800295EFE /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A3B2A22BC41EC800295EFE /* PlanetCastor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetCastor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A3B2BE2BC4206F00295EFE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "PlanetCastor/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		28D8852A2BC53F6000410E57 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D8852B2BC53F6000410E57 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3482BBED3BE00A6D853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC5FB34B2BBED3BE00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC5FB3502BBED3BF00A6D853 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5FB3522BBED3BF00A6D853 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PlanetCastorTests.xctest; path = "/Users/asarbiewsk/Documents/PlanetCastor/build/Debug-iphoneos/PlanetCastorTests.xctest"; sourceTree = "<absolute>"; };
 		CC5FB35B2BBED3BF00A6D853 /* PlanetCastorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorTests.swift; sourceTree = "<group>"; };
-		CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PlanetCastorUITests.xctest; path = "/Users/asarbiewsk/Documents/PlanetCastor/build/Debug-iphoneos/PlanetCastorUITests.xctest"; sourceTree = "<absolute>"; };
 		CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITests.swift; sourceTree = "<group>"; };
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
@@ -183,6 +183,8 @@
 				CC5FB3642BBED3BF00A6D853 /* PlanetCastorUITests */,
 				28A3B29E2BC41EC800295EFE /* Frameworks */,
 				28A3B2A22BC41EC800295EFE /* PlanetCastor.app */,
+				28D8852A2BC53F6000410E57 /* PlanetCastorTests.xctest */,
+				28D8852B2BC53F6000410E57 /* PlanetCastorUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,7 +266,7 @@
 			);
 			name = PlanetCastorTests;
 			productName = PlanetCastorTests;
-			productReference = CC5FB3572BBED3BF00A6D853 /* PlanetCastorTests.xctest */;
+			productReference = 28D8852A2BC53F6000410E57 /* PlanetCastorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CC5FB3602BBED3BF00A6D853 /* PlanetCastorUITests */ = {
@@ -282,7 +284,7 @@
 			);
 			name = PlanetCastorUITests;
 			productName = PlanetCastorUITests;
-			productReference = CC5FB3612BBED3BF00A6D853 /* PlanetCastorUITests.xctest */;
+			productReference = 28D8852B2BC53F6000410E57 /* PlanetCastorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

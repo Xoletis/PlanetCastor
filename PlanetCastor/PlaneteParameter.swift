@@ -160,4 +160,6 @@ class PlaneteParameter: UIViewController {
             Database.shared.setContinent(continent: continent, id: planetId)
         }
     }
+    
+    
 }

@@ -181,195 +181,288 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bh-hl-ZQ7">
-                                <rect key="frame" x="31" y="312" width="330" height="498"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9d-zX-0OV">
-                                        <rect key="frame" x="8" y="8" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Terrestre" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="BZ5-O6-BG6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHr-oK-a3g">
-                                        <rect key="frame" x="177" y="8" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Aquatique" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="SdF-3k-Ras"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-CB-NvQ">
-                                        <rect key="frame" x="177" y="247" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Aride" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="tVl-Sb-DTa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
-                                        <rect key="frame" x="8" y="369" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Volcanique" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="czX-u8-iqH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sh-L0-aWw">
-                                        <rect key="frame" x="8" y="490" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Glaciaire" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="vxT-JY-r9e"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-lC-izM">
-                                        <rect key="frame" x="177" y="369" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Tropicale" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="l0Q-iA-Bon"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBj-EV-8n7">
-                                        <rect key="frame" x="8" y="247" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Nuageuse" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="mRP-kU-kvN"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-ow-Xk4">
-                                        <rect key="frame" x="177" y="128" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Gazeuse" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="Gw5-Ao-YYA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gm-zS-fUA">
-                                        <rect key="frame" x="8" y="128" width="145" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Urbaine" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="F6S-jO-HTb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8G-MW-U8e">
-                                        <rect key="frame" x="171" y="490" width="157" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <size key="titleShadowOffset" width="15" height="110"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Marécageuse" cornerStyle="large">
-                                            <backgroundConfiguration key="background" strokeWidth="1">
-                                                <color key="strokeColor" systemColor="labelColor"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Myw-ID-ZPJ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="h8p-Vp-jeA"/>
-                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="planeteType" translatesAutoresizingMaskIntoConstraints="NO" id="M0h-tS-ahl">
                                 <rect key="frame" x="104" y="87" width="185" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type de Panète" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ES-73-kIn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type de Panète" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ES-73-kIn">
                                 <rect key="frame" x="122" y="280" width="148" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xxl-Y0-ZNA">
+                                <rect key="frame" x="0.0" y="324" width="393" height="481"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXD-ha-CJf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="650"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xLp-wb-Xa7">
+                                                <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="650"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qt1-lN-Xyo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHr-oK-a3g">
+                                                                <rect key="frame" x="20" y="11" width="157" height="109"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Aquatique" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="SdF-3k-Ras"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edd-CE-Ncr">
+                                                        <rect key="frame" x="0.0" y="130" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBj-EV-8n7">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="QBu-MC-uuP"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Nuageuse" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="mRP-kU-kvN"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-b5-xeu">
+                                                        <rect key="frame" x="0.0" y="260" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="pHa-Oc-qsA"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Volcanique" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="czX-u8-iqH"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnz-JA-VQ4">
+                                                        <rect key="frame" x="0.0" y="390" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoX-CB-NvQ">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="sh9-zg-xGk"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Aride" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="tVl-Sb-DTa"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISN-Qp-2mo">
+                                                        <rect key="frame" x="0.0" y="520" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrI-lC-izM">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="tWA-WU-Jlj"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Tropicale" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="l0Q-iA-Bon"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-p6-sdx">
+                                                <rect key="frame" x="196.66666666666669" y="0.0" width="196.66666666666669" height="650"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-7C-ZkS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QG-ow-Xk4">
+                                                                <rect key="frame" x="20" y="11" width="157" height="109"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Gazeuse" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="Gw5-Ao-YYA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elZ-OB-uHC">
+                                                        <rect key="frame" x="0.0" y="130" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sh-L0-aWw">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="we4-aS-HCQ"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Glaciaire" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="vxT-JY-r9e"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYl-GH-4g6">
+                                                        <rect key="frame" x="0.0" y="260" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8G-MW-U8e">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="Qty-A2-14s"/>
+                                                                    <constraint firstAttribute="width" constant="158" id="z2U-5I-Ujt"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Marécageuse" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jxa-pc-23o">
+                                                        <rect key="frame" x="0.0" y="390" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gm-zS-fUA">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="6vp-zC-vzP"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Urbaine" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="F6S-jO-HTb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wgT-z4-pcG">
+                                                        <rect key="frame" x="0.0" y="520" width="196.66666666666666" height="130"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9d-zX-0OV">
+                                                                <rect key="frame" x="20" y="11" width="156.66666666666666" height="109"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="109" id="I3f-2l-Ugk"/>
+                                                                </constraints>
+                                                                <size key="titleShadowOffset" width="15" height="110"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Terrestre" cornerStyle="large">
+                                                                    <backgroundConfiguration key="background" strokeWidth="1">
+                                                                        <color key="strokeColor" systemColor="labelColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <fontDescription key="titleFontDescription" name="LuckiestGuy-Regular" family="Luckiest Guy" pointSize="20"/>
+                                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="BZ5-O6-BG6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eXD-ha-CJf" secondAttribute="trailing" id="6e2-Yx-mJy"/>
+                                    <constraint firstItem="eXD-ha-CJf" firstAttribute="height" secondItem="Xxl-Y0-ZNA" secondAttribute="height" id="D9b-RG-6zn"/>
+                                    <constraint firstItem="eXD-ha-CJf" firstAttribute="leading" secondItem="Xxl-Y0-ZNA" secondAttribute="leading" id="Jrh-Ze-1uj"/>
+                                    <constraint firstItem="eXD-ha-CJf" firstAttribute="top" secondItem="Xxl-Y0-ZNA" secondAttribute="top" id="mNW-Rf-wQQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eXD-ha-CJf" secondAttribute="bottom" id="n5r-mF-pwO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VKz-r3-jMV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="lWw-TF-raD"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YqH-UZ-Xpf"/>
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Xxl-Y0-ZNA" firstAttribute="top" secondItem="0ES-73-kIn" secondAttribute="bottom" constant="24" id="ZBN-ui-h53"/>
+                            <constraint firstItem="Xxl-Y0-ZNA" firstAttribute="leading" secondItem="YqH-UZ-Xpf" secondAttribute="leading" id="iCi-T9-fza"/>
+                            <constraint firstItem="Xxl-Y0-ZNA" firstAttribute="trailing" secondItem="YqH-UZ-Xpf" secondAttribute="trailing" id="mnO-wg-9ZN"/>
+                            <constraint firstItem="YqH-UZ-Xpf" firstAttribute="bottom" secondItem="Xxl-Y0-ZNA" secondAttribute="bottom" constant="13" id="zl6-kN-wcU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bhU-tl-Yww">
                         <barButtonItem key="backBarButtonItem" title=" " id="eqb-ea-QdZ"/>
@@ -381,17 +474,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="NextPageType" destination="gD6-QD-NXG" id="5w4-eW-crg"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
                         <outletCollection property="ButtonsTypePlanet" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="5D1-oI-Aog"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3QG-ow-Xk4" collectionClass="NSMutableArray" id="cF8-z2-Pt9"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="EBj-EV-8n7" collectionClass="NSMutableArray" id="4dY-Fs-0TZ"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="ZTa-hb-DDq"/>
                         <outletCollection property="ButtonsTypePlanet" destination="8Yr-oR-tCv" collectionClass="NSMutableArray" id="cH3-hG-0o8"/>
                         <outletCollection property="ButtonsTypePlanet" destination="8Yr-oR-tCv" collectionClass="NSMutableArray" id="ojP-1s-6VV"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="3QG-ow-Xk4" collectionClass="NSMutableArray" id="cF8-z2-Pt9"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="3Gm-zS-fUA" collectionClass="NSMutableArray" id="qMe-hv-3R4"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="EBj-EV-8n7" collectionClass="NSMutableArray" id="4dY-Fs-0TZ"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="AKm-so-paE"/>
-                        <outletCollection property="ButtonsTypePlanet" destination="3sh-L0-aWw" collectionClass="NSMutableArray" id="ZTa-hb-DDq"/>
                         <outletCollection property="ButtonsTypePlanet" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="nAh-wu-BaJ"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="3Gm-zS-fUA" collectionClass="NSMutableArray" id="qMe-hv-3R4"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="yrI-lC-izM" collectionClass="NSMutableArray" id="AKm-so-paE"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
                         <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="wZu-bk-LOW"/>
                     </connections>
                 </viewController>
