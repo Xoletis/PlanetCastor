@@ -44,7 +44,6 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 4.0
-                //button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 20)
             }
         }
         if ButtonsAtmosphere != nil {
@@ -54,7 +53,6 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 16
-                //button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
         if ButtonsRessources != nil {
@@ -64,7 +62,6 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 16
-                //button.titleLabel?.font = UIFont(name: "Luckiest Guy", size: 15)
             }
         }
         
@@ -73,7 +70,7 @@ class PlaneteParameter: UIViewController {
             
             if planetType == "nil" {
                 if NextPageType != nil{
-                    //NextPageType.isEnabled = false
+                    NextPageType.isEnabled = false
                 }
             }
             
@@ -120,18 +117,22 @@ class PlaneteParameter: UIViewController {
     }
     
     @IBAction func ClickRessourcesButton(_ sender: UIButton) {
+        let tag = sender.tag
+        
         if ressourcesChoisies.contains(sender.titleLabel?.text) == false {
             ressourcesChoisies.append(sender.titleLabel?.text)
             sender.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
             sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
             sender.layer.borderWidth = 3
             sender.layer.cornerCurve = .continuous
+            Database.shared.addRessource(ressourceID: tag, planetID: self.planetId)
         } else {
             let indexElement = ressourcesChoisies.firstIndex(of: sender.titleLabel?.text)
             ressourcesChoisies.remove(at: indexElement!)
             sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
             sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             sender.layer.borderWidth = 1
+            Database.shared.removeRessource(ressourceID: tag, planetID: self.planetId)
         }
     }
     
