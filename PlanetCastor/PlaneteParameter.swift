@@ -30,7 +30,8 @@ class PlaneteParameter: UIViewController {
                             4: "Cette variable correspond à la pression atmospherique de votre planete. \nPour comparaison, sur terre la pression atmospherique est de 1 atm.",
                             5: "Selectionez les différents gaz qui composent votre atmosphère. \nSur terre nous avons du dihydrogène, de l’hélium, du diazote, du dioxygène, du dioxyde de carbone et du méthane."]
   
-    @IBOutlet weak var NextPageType: UIBarButtonItem!
+    
+    @IBOutlet weak var NextPageType: UIButton!
     
     var planetType : String!
     var planetId : Int!
@@ -72,7 +73,7 @@ class PlaneteParameter: UIViewController {
             
             if planetType == "nil" {
                 if NextPageType != nil{
-                    NextPageType.isEnabled = false
+                    //NextPageType.isEnabled = false
                 }
             }
             

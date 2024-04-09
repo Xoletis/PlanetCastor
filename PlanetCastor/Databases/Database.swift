@@ -15,7 +15,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = true
+    let updateTable = false
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
@@ -74,7 +74,7 @@ class Database{
             createAthmosphere(name: "néon")
             createAthmosphere(name: "argon")
             createAthmosphere(name: "dihydrogène")
-            createAthmosphere(name: "hlium")
+            createAthmosphere(name: "hélium")
             createAthmosphere(name: "diazote")
             createAthmosphere(name: "dioxygène")
             createAthmosphere(name: "sodium")
