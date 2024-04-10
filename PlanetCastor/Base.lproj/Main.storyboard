@@ -287,6 +287,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="Z73-Um-oY8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
                                 <rect key="frame" x="22" y="616" width="160" height="90"/>
@@ -399,6 +402,7 @@
                         <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="wZu-bk-LOW"/>
                         <outletCollection property="ButtonsTypePlanet" destination="s9d-zX-0OV" collectionClass="NSMutableArray" id="VzU-5s-HYL"/>
                         <outletCollection property="ButtonsTypePlanet" destination="3QG-ow-Xk4" collectionClass="NSMutableArray" id="cF8-z2-Pt9"/>
+                        <outletCollection property="ButtonsTypePlanet" destination="h8G-MW-U8e" collectionClass="NSMutableArray" id="v5I-XW-vGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zB-Uj-PRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1053,6 +1057,9 @@
                     <navigationItem key="navigationItem" id="zgn-JL-j2l">
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="C2t-wt-NbQ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PlanetImage" destination="b7o-G0-iMT" id="KVO-3U-izl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwx-L6-weS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1060,9 +1067,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Gf-cW-ct0"/>
+        <segue reference="3n0-SR-2h7"/>
         <segue reference="6P5-gR-nZ4"/>
-        <segue reference="ifD-Aj-PU2"/>
+        <segue reference="crU-cG-5eZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>

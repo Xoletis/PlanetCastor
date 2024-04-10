@@ -320,4 +320,18 @@ class Database{
         
         showPlanet(id: planetID)
     }
+    
+    func getPlanetType(id : Int) -> String{
+        let planet = self.planetsTable.filter(self.planetId == id);
+        var type = "nil"
+        do{
+            for row in try self.database.prepare(planet) {
+                type = try row.get(self.type)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return type.lowercased();
+    }
 }
