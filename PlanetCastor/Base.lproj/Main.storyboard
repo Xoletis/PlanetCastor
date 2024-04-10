@@ -98,7 +98,7 @@
                                 <rect key="frame" x="-89" y="103" width="564" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
                                 <rect key="frame" x="16" y="370" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1045,11 +1045,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="3n0-SR-2h7"/>
-        <segue reference="ceD-0g-6m6"/>
+        <segue reference="6P5-gR-nZ4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
-        <image name="Planète castor" width="365" height="141"/>
+        <image name="Planète castor" width="365" height="141"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="arakis" width="93.333335876464844" height="91.666664123535156"/>
         <image name="bouton valider" width="61" height="36"/>
