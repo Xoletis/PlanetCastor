@@ -186,6 +186,7 @@ class Database{
     
     func showPlanet(id: Int){
         var text = ""
+        
         let linkAP_Query = self.planetsTable
             .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
             .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
@@ -321,17 +322,61 @@ class Database{
         showPlanet(id: planetID)
     }
     
-    func getPlanetType(id : Int) -> String{
+    func getPlanetParameter<V : Value>(id : Int, parametre : Expression<V>) -> V {
         let planet = self.planetsTable.filter(self.planetId == id);
-        var type = "nil"
+        var type : V? = nil
         do{
             for row in try self.database.prepare(planet) {
-                type = try row.get(self.type)
+                type = try row.get(parametre)
             }
         }catch{
             print(error)
         }
         
-        return type.lowercased();
+        return type!
     }
+    
+    func getPlanetAthmosphere(id : Int) -> [String]{
+        
+        var atmospheres: [String] = []
+        
+        let linkAP_Query = self.planetsTable
+            .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
+            .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(linkAP_Query) {
+                let name = try row.get(self.atm_name)
+                atmospheres.append(name)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return atmospheres
+    }
+    
+    func getPlanetRessource(id : Int) -> [String]{
+        
+        var ressources: [String] = []
+        
+        let linkRP_Query = self.planetsTable
+            .join(self.planetressourcetable, on: self.planetId == self.linkRP_planetId)
+            .join(self.ressourcesTable, on: self.resourceId == self.linkRP_ressourceId)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(linkRP_Query) {
+                let name = try row.get(self.res_name)
+                ressources.append(name)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return ressources
+    }
+    
+    
 }

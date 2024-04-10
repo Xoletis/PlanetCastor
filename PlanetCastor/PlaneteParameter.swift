@@ -20,7 +20,7 @@ class PlaneteParameter: UIViewController {
     
     @IBOutlet weak var infosDiametreButton: UIButton!
     
-    
+    var receivedData: Bool?
     
     var atmospheresChoisies: [String?] = []
     var ressourcesChoisies: [String?] = []
@@ -39,6 +39,11 @@ class PlaneteParameter: UIViewController {
     var planetId : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let data = receivedData {
+                   print("Received data: \(data)")
+               }
+        
         if ButtonsTypePlanet != nil {
             for button in ButtonsTypePlanet {
                 button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
@@ -80,6 +85,10 @@ class PlaneteParameter: UIViewController {
         }else{
             planetId = Database.shared.getLastId()
         }
+        
+        let type = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.type)
+        print(type)
+        
     }
     
     @IBAction func ChooseTemperature(_ sender: UISlider) {
