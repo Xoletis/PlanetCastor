@@ -13,6 +13,7 @@ class BiodiversiteView: UIViewController {
     var name : String = ""
     
     @IBOutlet weak var PageTitle: UILabel!
+    var images: [UIImageView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class BiodiversiteView: UIViewController {
         stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
         stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         
-        for i in 1...2{
+        for _ in 1...2{
             let stackViewHori = UIStackView()
             stackView.addArrangedSubview(stackViewHori)
             stackViewHori.axis = .horizontal
@@ -50,14 +51,18 @@ class BiodiversiteView: UIViewController {
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
             
-            for j in 1...4{
+            for _ in 1...4{
                 let imageView = UIImageView()
                 imageView.image = UIImage(named: "Poisson1")
                 stackViewHori.addArrangedSubview(imageView)
                 imageView.widthAnchor.constraint(equalToConstant: 98.25).isActive = true
                 imageView.heightAnchor.constraint(equalToConstant: 108).isActive = true
+                
+                images.append(imageView)
             }
         }
+        
+        
         
     }
     
