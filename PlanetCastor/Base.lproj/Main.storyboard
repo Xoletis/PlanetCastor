@@ -1304,12 +1304,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwx-L6-weS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3154.9618320610684" y="-513.38028169014092"/>
+            <point key="canvasLocation" x="2848" y="-513"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Parameter-->
         <scene sceneID="Dw4-xN-mlJ">
             <objects>
-                <viewController id="auD-uo-i0X" sceneMemberID="viewController">
+                <viewController id="auD-uo-i0X" customClass="ImageParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vf7-N5-jce">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1327,7 +1327,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Kg5-dI-VCd" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="lDP-BF-IMH"/>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="y1d-Ur-L2q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHx-n0-XgG">
@@ -1342,6 +1342,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="1Em-HT-0n3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-9r-NNb">
                                 <rect key="frame" x="51" y="274" width="309" height="54"/>
@@ -1355,6 +1358,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="JvF-CZ-8Or"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-Wf-W65">
                                 <rect key="frame" x="51" y="350" width="309" height="54"/>
@@ -1368,6 +1374,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="ly7-fg-z0r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-V9-KBy">
                                 <rect key="frame" x="51" y="424" width="309" height="54"/>
@@ -1381,6 +1390,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="DrP-0a-t93"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-H1-yT2">
                                 <rect key="frame" x="51" y="497" width="309" height="54"/>
@@ -1394,6 +1406,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="fQz-4D-6GW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z01-Bn-e9A">
                                 <rect key="frame" x="51" y="572" width="309" height="54"/>
@@ -1407,6 +1422,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="C35-mB-9ND"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQn-JD-XJ0">
                                 <rect key="frame" x="51" y="646" width="309" height="54"/>
@@ -1420,6 +1438,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="SelectType:" destination="auD-uo-i0X" eventType="touchUpInside" id="nis-th-Bbt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqg-nA-zNf" userLabel="bouton croix">
                                 <rect key="frame" x="16" y="20" width="61" height="45"/>
@@ -1437,15 +1458,25 @@
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outletCollection property="ButtonsType" destination="OoG-FS-U6a" collectionClass="NSMutableArray" id="8N2-dv-nYX"/>
+                        <outletCollection property="ButtonsType" destination="HHx-n0-XgG" collectionClass="NSMutableArray" id="d4U-JR-nQU"/>
+                        <outletCollection property="ButtonsType" destination="fTO-9r-NNb" collectionClass="NSMutableArray" id="fUL-YF-ye9"/>
+                        <outletCollection property="ButtonsType" destination="Nd3-Wf-W65" collectionClass="NSMutableArray" id="8BV-oF-UXv"/>
+                        <outletCollection property="ButtonsType" destination="zGt-V9-KBy" collectionClass="NSMutableArray" id="jhr-35-cZ9"/>
+                        <outletCollection property="ButtonsType" destination="cqC-H1-yT2" collectionClass="NSMutableArray" id="I7N-fb-NrC"/>
+                        <outletCollection property="ButtonsType" destination="Z01-Bn-e9A" collectionClass="NSMutableArray" id="8ny-4m-4yx"/>
+                        <outletCollection property="ButtonsType" destination="CQn-JD-XJ0" collectionClass="NSMutableArray" id="8O8-tV-ss5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZa-aa-KFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3907.6335877862593" y="-513.38028169014092"/>
+            <point key="canvasLocation" x="3589" y="-513"/>
         </scene>
-        <!--View Controller-->
+        <!--listbiodiv-->
         <scene sceneID="MN8-md-dvJ">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="Kg5-dI-VCd" sceneMemberID="viewController">
+                <viewController restorationIdentifier="listbiodiv" storyboardIdentifier="listbiodiv" title="listbiodiv" modalTransitionStyle="crossDissolve" id="Kg5-dI-VCd" customClass="BiodiversiteView" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XYm-lU-63j">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1461,26 +1492,25 @@
                                     <segue destination="auD-uo-i0X" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="H1P-i7-Top"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Craniates non tétrapodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-6f-7NP">
-                                <rect key="frame" x="31" y="87" width="331" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Craniates non tétrapodes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-6f-7NP">
+                                <rect key="frame" x="31" y="59" width="331" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planeteType" translatesAutoresizingMaskIntoConstraints="NO" id="abV-xF-4Ah">
-                                <rect key="frame" x="31" y="151" width="331" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p9a-Ut-N36"/>
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Tgd-t6-MfD"/>
+                    <connections>
+                        <outlet property="PageTitle" destination="dtV-6f-7NP" id="TQB-Sc-vR4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sjg-Qe-ebe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5084.7328244274804" y="-1035.2112676056338"/>
+            <point key="canvasLocation" x="4400.7633587786258" y="-513.38028169014092"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
