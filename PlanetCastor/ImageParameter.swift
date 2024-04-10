@@ -20,8 +20,8 @@ class ImageParameter: UIViewController {
         
         planetID = Database.shared.getLastId()
 
-        let planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type).lowercased();
-        PlanetImage.image = UIImage(named: planetType)
+        let planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.lowercased();
+        PlanetImage.image = UIImage(named: planetType!)
         
         print(Database.shared.getPlanetRessource(id: planetID))
 

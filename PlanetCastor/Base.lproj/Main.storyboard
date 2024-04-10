@@ -970,6 +970,11 @@
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="TPJ-yt-5Vm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ContinentPatameter" destination="tF5-pj-a7l" id="wQJ-RE-IGe"/>
+                        <outlet property="DiametreParameter" destination="kI2-bm-tIQ" id="a0I-Qa-Ud5"/>
+                        <outlet property="HumiditePatameter" destination="9nZ-Kl-RJc" id="o7g-cP-lIc"/>
+                        <outlet property="PressionPatameter" destination="pna-i3-N6I" id="s7K-wx-CQH"/>
+                        <outlet property="TemperaturePatameter" destination="JOX-rl-gXg" id="zLq-S9-bm7"/>
                         <outlet property="humiditeLabel" destination="HOc-K8-o3g" id="eVb-ED-KfR"/>
                         <outlet property="infosDiametreButton" destination="ZKy-dt-0W0" id="bvS-2A-e92"/>
                         <outlet property="pressionLabel" destination="6XG-g9-7Pl" id="syb-hP-PaO"/>
@@ -1250,9 +1255,9 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="H1P-i7-Top"/>
-        <segue reference="2cy-Wv-reI"/>
+        <segue reference="nhL-St-Ny4"/>
         <segue reference="3n0-SR-2h7"/>
-        <segue reference="Zqr-IF-D9Q"/>
+        <segue reference="ceD-0g-6m6"/>
         <segue reference="crU-cG-5eZ"/>
     </inferredMetricsTieBreakers>
     <resources>
