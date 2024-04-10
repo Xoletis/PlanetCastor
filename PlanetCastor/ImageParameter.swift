@@ -39,8 +39,13 @@ class ImageParameter: UIViewController {
             let types = Database.shared.getBiodivType(type: planetType!)
             var i = 0
             for button in ButtonsType{
-                button.titleLabel?.text = types[i]
-                i += 1
+                if types.count < i || types.count == 0{
+                    button.isHidden = true
+                }else{
+                    button.isHidden = false
+                    button.titleLabel?.text = types[i]
+                    i += 1
+                }
             }
         }
     }
