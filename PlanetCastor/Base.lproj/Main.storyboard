@@ -56,6 +56,9 @@
                                 <buttonConfiguration key="configuration" style="filled" image="boutonRetour">
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ghI-wj-VrV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZw-uE-VEp">
                                 <rect key="frame" x="214" y="135" width="163" height="156"/>
@@ -98,7 +101,7 @@
                                 <rect key="frame" x="-89" y="103" width="564" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
                                 <rect key="frame" x="16" y="370" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1030,6 +1033,19 @@
                                     <segue destination="30q-bo-z8Z" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="2Gf-cW-ct0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-GH-APj">
+                                <rect key="frame" x="269" y="747" width="89" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background">
+                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="70"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eoS-8m-z8J"/>
                         <color key="backgroundColor" red="0.96078431610000004" green="0.92156863209999995" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1040,16 +1056,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwx-L6-weS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3155" y="-513"/>
+            <point key="canvasLocation" x="3154.9618320610684" y="-513.38028169014092"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3n0-SR-2h7"/>
-        <segue reference="ceD-0g-6m6"/>
+        <segue reference="2Gf-cW-ct0"/>
+        <segue reference="6P5-gR-nZ4"/>
+        <segue reference="ghI-wj-VrV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
-        <image name="Planète castor" width="365" height="141"/>
+        <image name="Planète castor" width="365" height="141"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="arakis" width="93.333335876464844" height="91.666664123535156"/>
         <image name="bouton valider" width="61" height="36"/>
