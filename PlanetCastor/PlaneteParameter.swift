@@ -20,6 +20,8 @@ class PlaneteParameter: UIViewController {
     
     @IBOutlet weak var infosDiametreButton: UIButton!
     
+    
+    
     var atmospheresChoisies: [String?] = []
     var ressourcesChoisies: [String?] = []
     
