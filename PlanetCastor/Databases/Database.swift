@@ -142,6 +142,14 @@ class Database{
             createBiodiv(name: "Mollusques", Type: "aquatique")
             createBiodiv(name: "Hétérokontophytes", Type: "aquatique")
             
+            let commetuveux = self.planetsTable.insert(self.type<-"aride", self.diametre<-5000, self.continent<-8, self.temperature<-45, self.humidite<-89, self.pression<-6)
+            do {
+                try self.database.run(commetuveux)
+            } catch {
+                print("error")
+            }
+            self.addAtmosphere(atmosphereID: 5, planetID: 1)
+            self.addRessource(ressourceID: 4, planetID: 1)
         }
     }
     
