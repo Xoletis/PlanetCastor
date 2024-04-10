@@ -20,7 +20,13 @@ class PlaneteParameter: UIViewController {
     
     @IBOutlet weak var infosDiametreButton: UIButton!
     
+    @IBOutlet weak var DiametreParameter: UITextField!
+    @IBOutlet weak var ContinentPatameter: UITextField!
+    @IBOutlet weak var TemperaturePatameter: UISlider!
+    @IBOutlet weak var HumiditePatameter: UISlider!
+    @IBOutlet weak var PressionPatameter: UISlider!
     
+    var receivedData: Bool?
     
     var atmospheresChoisies: [String?] = []
     var ressourcesChoisies: [String?] = []
@@ -39,6 +45,7 @@ class PlaneteParameter: UIViewController {
     var planetId : Int!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if ButtonsTypePlanet != nil {
             for button in ButtonsTypePlanet {
                 button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
@@ -47,6 +54,8 @@ class PlaneteParameter: UIViewController {
                 button.layer.shadowRadius = 2
                 button.layer.cornerRadius = 4.0
             }
+            
+            Database.shared.createTable()
         }
         if ButtonsAtmosphere != nil {
             for button in ButtonsAtmosphere {
@@ -80,6 +89,53 @@ class PlaneteParameter: UIViewController {
         }else{
             planetId = Database.shared.getLastId()
         }
+        
+        if DiametreParameter != nil{
+            let diametre = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.diametre)
+            let continent = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.continent)
+            let temperature = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.temperature)
+            let humidite = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.humidite)
+            let pression = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.pression)
+            
+            DiametreParameter.placeholder = "\(diametre!)"
+            ContinentPatameter.placeholder = "\(continent!)"
+            TemperaturePatameter.value = Float(temperature!)
+            HumiditePatameter.value = Float(humidite!)
+            PressionPatameter.value = Float(pression!)
+            
+            temperatureLabel.text = "\(temperature!)"
+            humiditeLabel.text = "\(humidite!)"
+            pressionLabel.text = "\(pression!)"
+            
+            let atmospheres = Database.shared.getPlanetAthmosphere(id : planetId)
+            
+            for atm in ButtonsAtmosphere{
+                let name = atm.titleLabel?.text
+                if atmospheres.contains(name!.lowercased()){
+                    atmospheresChoisies.append(name)
+                    atm.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+                    atm.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+                    atm.layer.borderWidth = 3
+                    atm.layer.cornerCurve = .continuous
+                }
+            }
+            
+            let ressources = Database.shared.getPlanetRessource(id : planetId)
+            
+            for res in ButtonsRessources{
+                let name = res.titleLabel?.text
+                if ressources.contains(name!.lowercased()){
+                    ressourcesChoisies.append(name)
+                    res.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+                    res.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+                    res.layer.borderWidth = 3
+                    res.layer.cornerCurve = .continuous
+                }
+            }
+        }
+        
+        
+        
     }
     
     @IBAction func ChooseTemperature(_ sender: UISlider) {
@@ -144,7 +200,7 @@ class PlaneteParameter: UIViewController {
         }
         sender.configuration?.baseBackgroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
         
-        planetType = sender.configuration?.title;
+        planetType = sender.configuration?.title?.lowercased();
         if planetType == "nil"{
             NextPageType.isEnabled = false
         }else{

@@ -101,14 +101,14 @@
                                 <rect key="frame" x="-89" y="103" width="564" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
                                 <rect key="frame" x="16" y="370" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="330-eQ-9aE">
                                 <rect key="frame" x="119" y="553" width="159" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Créer"/>
+                                <state key="normal" title="Button" image="Créer"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CREER" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="strokeColor" systemColor="labelColor"/>
@@ -118,14 +118,13 @@
                                     <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="CreatePlaner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zcz-0E-Ywi"/>
-                                    <segue destination="Ifr-gA-Rgb" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="6P5-gR-nZ4"/>
+                                    <segue destination="Ifr-gA-Rgb" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Zqr-IF-D9Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ml-Q9-bCk">
                                 <rect key="frame" x="119" y="617" width="159" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Créer"/>
+                                <state key="normal" title="Button" image="Créer"/>
                                 <buttonConfiguration key="configuration" style="filled" title="GALERIE" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="strokeColor" systemColor="labelColor"/>
@@ -141,7 +140,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-44-RhC">
                                 <rect key="frame" x="119" y="683" width="159" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Créer"/>
+                                <state key="normal" title="Button" image="Créer"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CREDITS" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="strokeColor" systemColor="labelColor"/>
@@ -971,6 +970,11 @@
                         <barButtonItem key="rightBarButtonItem" image="bouton valider" style="plain" id="TPJ-yt-5Vm"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ContinentPatameter" destination="tF5-pj-a7l" id="wQJ-RE-IGe"/>
+                        <outlet property="DiametreParameter" destination="kI2-bm-tIQ" id="a0I-Qa-Ud5"/>
+                        <outlet property="HumiditePatameter" destination="9nZ-Kl-RJc" id="o7g-cP-lIc"/>
+                        <outlet property="PressionPatameter" destination="pna-i3-N6I" id="s7K-wx-CQH"/>
+                        <outlet property="TemperaturePatameter" destination="JOX-rl-gXg" id="zLq-S9-bm7"/>
                         <outlet property="humiditeLabel" destination="HOc-K8-o3g" id="eVb-ED-KfR"/>
                         <outlet property="infosDiametreButton" destination="ZKy-dt-0W0" id="bvS-2A-e92"/>
                         <outlet property="pressionLabel" destination="6XG-g9-7Pl" id="syb-hP-PaO"/>
@@ -1064,6 +1068,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="PlanetImage" destination="b7o-G0-iMT" id="CA4-Jf-euw"/>
                         <outlet property="plusButton" destination="h8D-GH-APj" id="6dc-lh-MSa"/>
                     </connections>
                 </viewController>
@@ -1249,16 +1254,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lDP-BF-IMH"/>
         <segue reference="H1P-i7-Top"/>
-        <segue reference="2cy-Wv-reI"/>
+        <segue reference="nhL-St-Ny4"/>
         <segue reference="3n0-SR-2h7"/>
         <segue reference="ceD-0g-6m6"/>
         <segue reference="crU-cG-5eZ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Créer" width="59" height="21"/>
-        <image name="Planète castor" width="365" height="141"/>
+        <image name="Créer" width="59" height="21"/>
+        <image name="Planète castor" width="365" height="141"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="arakis" width="93.333335876464844" height="91.666664123535156"/>
         <image name="bouton croix" width="37" height="31"/>

@@ -60,6 +60,9 @@ class Database{
     func createTable(){
         
         if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource"){
+            
+            
+            
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
@@ -81,15 +84,15 @@ class Database{
                 table.column(self.atm_name)
             })
             
-            createAthmosphere(name: "néon")
+            createAthmosphere(name: "neon")
             createAthmosphere(name: "argon")
-            createAthmosphere(name: "dihydrogène")
-            createAthmosphere(name: "hélium")
+            createAthmosphere(name: "dihydrogene")
+            createAthmosphere(name: "helium")
             createAthmosphere(name: "diazote")
-            createAthmosphere(name: "dioxygène")
+            createAthmosphere(name: "dioxygene")
             createAthmosphere(name: "sodium")
             createAthmosphere(name: "dioxyde de carbone")
-            createAthmosphere(name: "méthane")
+            createAthmosphere(name: "methane")
             
             createOrDeleteTable(table: self.planetatmospheretable.create{ (table) in
                 table.column(self.linkAPId, primaryKey: true)
@@ -186,6 +189,7 @@ class Database{
     
     func showPlanet(id: Int){
         var text = ""
+        
         let linkAP_Query = self.planetsTable
             .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
             .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
@@ -320,4 +324,62 @@ class Database{
         
         showPlanet(id: planetID)
     }
+    
+    func getPlanetParameter<V : Value>(id : Int, parametre : Expression<V>) -> V? {
+        let planet = self.planetsTable.filter(self.planetId == id);
+        var type : V? = nil
+        do{
+            for row in try self.database.prepare(planet) {
+                type = try row.get(parametre)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return type
+    }
+    
+    func getPlanetAthmosphere(id : Int) -> [String]{
+        
+        var atmospheres: [String] = []
+        
+        let linkAP_Query = self.planetsTable
+            .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
+            .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(linkAP_Query) {
+                let name = try row.get(self.atm_name)
+                atmospheres.append(name)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return atmospheres
+    }
+    
+    func getPlanetRessource(id : Int) -> [String]{
+        
+        var ressources: [String] = []
+        
+        let linkRP_Query = self.planetsTable
+            .join(self.planetressourcetable, on: self.planetId == self.linkRP_planetId)
+            .join(self.ressourcesTable, on: self.resourceId == self.linkRP_ressourceId)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(linkRP_Query) {
+                let name = try row.get(self.res_name)
+                ressources.append(name)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return ressources
+    }
+    
+    
 }
