@@ -56,6 +56,9 @@
                                 <buttonConfiguration key="configuration" style="filled" image="boutonRetour">
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ifD-Aj-PU2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZw-uE-VEp">
                                 <rect key="frame" x="214" y="135" width="163" height="156"/>
@@ -998,10 +1001,10 @@
             </objects>
             <point key="canvasLocation" x="2046.564885496183" y="-513.38028169014092"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Parameter-->
         <scene sceneID="ri3-Oj-MDF">
             <objects>
-                <viewController id="g6L-Gb-0lQ" sceneMemberID="viewController">
+                <viewController id="g6L-Gb-0lQ" customClass="ImageParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zU1-cu-hwO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1044,8 +1047,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3n0-SR-2h7"/>
+        <segue reference="2Gf-cW-ct0"/>
         <segue reference="6P5-gR-nZ4"/>
+        <segue reference="ifD-Aj-PU2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>

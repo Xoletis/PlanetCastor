@@ -23,6 +23,7 @@
 		CC6A99962BBEE59E00CBDAC3 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = CC6A99952BBEE59E00CBDAC3 /* Fonts */; };
 		CC7C7A1A2BC3FC130054D210 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C7A192BC3FC120054D210 /* Database.swift */; };
 		CCAECC182BC03A8300B07DE1 /* PlaneteParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */; };
+		CCF2FC5C2BC695C4000CEF8F /* ImageParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,9 +124,8 @@
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
 		CC7C7A192BC3FC120054D210 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		CC9DBAE72BC5471F007BCD76 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC9DBAE82BC5471F007BCD76 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneteParameter.swift; sourceTree = "<group>"; };
+		CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +203,7 @@
 				287B97B92BC0265F009C1072 /* Assets.xcassets */,
 				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
 				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
+				CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */,
 			);
 			path = PlanetCastor;
 			sourceTree = "<group>";
@@ -431,6 +432,7 @@
 				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
 				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
 				CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */,
+				CCF2FC5C2BC695C4000CEF8F /* ImageParameter.swift in Sources */,
 				CC7C7A1A2BC3FC130054D210 /* Database.swift in Sources */,
 				CCAECC182BC03A8300B07DE1 /* PlaneteParameter.swift in Sources */,
 			);
