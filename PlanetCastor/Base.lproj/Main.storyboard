@@ -1255,9 +1255,6 @@
                                     <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="0.0"/>
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="NextPage:" destination="g6L-Gb-0lQ" eventType="touchUpInside" id="n4B-39-0XN"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khz-aN-g41">
                                 <rect key="frame" x="15" y="45" width="85" height="50"/>
