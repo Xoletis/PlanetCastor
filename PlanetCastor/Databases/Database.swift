@@ -450,8 +450,26 @@ class Database{
         for _ in 1...24{
             createBiodivSpacies(Type: "Craniates non tétrapodes")
         }
-        for _ in 1...24{
+        for _ in 1...14{
+            createBiodivSpacies(Type: "Cétacés")
+        }
+        for _ in 1...14{
+            createBiodivSpacies(Type: "Euselachii")
+        }
+        for _ in 1...12{
             createBiodivSpacies(Type: "Céphalopodes")
+        }
+        for _ in 1...10{
+            createBiodivSpacies(Type: "Crustacés")
+        }
+        for _ in 1...10{
+            createBiodivSpacies(Type: "Cryptodira")
+        }
+        for _ in 1...14{
+            createBiodivSpacies(Type: "Mollusques")
+        }
+        for _ in 1...18{
+            createBiodivSpacies(Type: "Hétérokontophytes")
         }
     }
     

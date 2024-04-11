@@ -73,6 +73,7 @@ class BiodiversiteView: UIViewController {
             
             for _ in 1...divider{
                 let imageView = UIImageView()
+                imageView.isUserInteractionEnabled = true
                 imageView.image = UIImage(named: spacies[id])
                 stackViewHori.addArrangedSubview(imageView)
                 imageView.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive = true
@@ -83,30 +84,35 @@ class BiodiversiteView: UIViewController {
             }
         }
         
-        
+        for image in images{
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(spawnImage(_:)))
+            image.addGestureRecognizer(tapGesture)
+        }
     }
     
     func checkFirstDivider(nb : Int) -> Int{
         
         if(nb == 1){
             return 1
+        }else if(nb % 5 == 0){
+            return 5
+        }else if(nb % 4 == 0){
+            return 4
+        }else if(nb % 3 == 0){
+            return 3
+        }else if(nb % 2 == 0){
+            return 2
+        }else{
+            return 1
         }
-        
-        var divider = 2
-        var modulo = -1
-        while modulo != 0{
-            divider += 1
-            modulo = nb % divider
-        }
-        
-        print(divider)
-        
-        
-        if(divider == nb){
-            divider = 1
-        }
-        
-        return divider
+    }
+    
+    @objc func spawnImage(_ sender: UITapGestureRecognizer){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view2 = storyboard.instantiateViewController(withIdentifier: "Environnement") as! ImageParameter
+        view2.imageToSpawn = ""
+        view2.modalPresentationStyle = .fullScreen
+        present(view2, animated: false, completion: nil)
     }
     
 }

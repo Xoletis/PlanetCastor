@@ -20,6 +20,8 @@ class ImageParameter: UIViewController {
     
     var planetType : String?
     
+    var imageToSpawn : String = "nil"
+    
     override func viewDidLoad() {
             super.viewDidLoad()
         
