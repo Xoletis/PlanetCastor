@@ -166,6 +166,8 @@ class Database{
                 table.column(self.BIP_Y)
                 table.column(self.planetId)
             })
+            
+            createExamplePlanet()
         }
     }
     
