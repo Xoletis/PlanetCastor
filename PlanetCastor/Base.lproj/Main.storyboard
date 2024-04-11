@@ -691,6 +691,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="UcS-jn-665"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
                                 <rect key="frame" x="22" y="616" width="160" height="90"/>
@@ -1873,23 +1876,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oAF-3f-wrG"/>
         <segue reference="q8I-Oa-Usq"/>
         <segue reference="R4Z-v9-fKz"/>
-        <segue reference="RCI-gK-yOE"/>
-        <segue reference="3n0-SR-2h7"/>
-        <segue reference="ceD-0g-6m6"/>
-        <segue reference="crU-cG-5eZ"/>
-        <segue reference="SeJ-w6-jn9"/>
-        <segue reference="pjE-YZ-iZi"/>
-        <segue reference="q43-GV-fje"/>
-        <segue reference="fc5-qK-PQB"/>
         <segue reference="nhL-St-Ny4"/>
         <segue reference="2Gf-cW-ct0"/>
         <segue reference="Zqr-IF-D9Q"/>
         <segue reference="ifD-Aj-PU2"/>
+        <segue reference="4zn-IY-Soy"/>
+        <segue reference="7D5-AL-lCR"/>
         <segue reference="ZjQ-bR-pIb"/>
-        <segue reference="0Qz-Yd-Ahw"/>
+        <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
