@@ -22,11 +22,15 @@ class ImageParameter: UIViewController {
     
     var imageToSpawn : String = "nil"
     
+    var moveImages : [UIImageView] = []
+    var objectTouch = -1
+    let ImagesList = ImageSpawns.shared
+
     override func viewDidLoad() {
             super.viewDidLoad()
         
         planetID = Database.shared.getLastId()
-
+        
         planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.lowercased();
         if PlanetImage != nil{
             PlanetImage.image = UIImage(named: planetType!)
@@ -35,6 +39,19 @@ class ImageParameter: UIViewController {
             plusButton.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
             plusButton.layer.shadowRadius = 2
             plusButton.layer.cornerRadius = 4.0
+            
+            if(imageToSpawn != "nil"){
+                ImagesList.addLocation(name: imageToSpawn, x: 410/2, y: 939/2)
+            }
+            
+            for img in ImagesList.images{
+                let imageView = UIImageView(frame: CGRect(x: img.x - 50, y: img.y - 50, width: 100, height: 100))
+                imageView.image = UIImage(named: img.name)
+                
+                self.view.addSubview(imageView)
+                
+                moveImages.append(imageView)
+            }
         }
         
         if ButtonsType != nil{
@@ -62,4 +79,31 @@ class ImageParameter: UIViewController {
         present(view2, animated: false, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let t = touches.randomElement()!
+        let p = t.location(in: view)
+        var i = 0
+        for d in moveImages {
+            if d.frame.contains(p){
+                objectTouch = i
+            }
+            i+=1
+        }
+    }
+    
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if(objectTouch >= 0){
+            let t = touches.randomElement()!
+            let p = t.location(in: view)
+            moveImages[objectTouch].center = p
+            
+            ImagesList.images[objectTouch].x = p.x
+            ImagesList.images[objectTouch].y = p.y
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+       objectTouch = -1
+   }
 }

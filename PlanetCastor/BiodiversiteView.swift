@@ -110,7 +110,11 @@ class BiodiversiteView: UIViewController {
     @objc func spawnImage(_ sender: UITapGestureRecognizer){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view2 = storyboard.instantiateViewController(withIdentifier: "Environnement") as! ImageParameter
-        view2.imageToSpawn = ""
+        
+        let img = sender.view as! UIImageView
+        let name = (img.image?.imageAsset?.value(forKey: "assetName"))!
+        
+        view2.imageToSpawn = name as! String
         view2.modalPresentationStyle = .fullScreen
         present(view2, animated: false, completion: nil)
     }
