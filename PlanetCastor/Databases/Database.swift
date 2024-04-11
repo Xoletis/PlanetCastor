@@ -23,6 +23,7 @@ class Database{
     let planetatmospheretable = Table("planet_atmosphere")
     let planetressourcetable = Table("planet_ressource")
     let biodivType = Table("biodiv_type")
+    let biodivSpacies = Table("biodiv_spacies")
     
     
     let planetId = Expression<Int>("planet_id")
@@ -51,6 +52,9 @@ class Database{
     let biodiv_name = Expression<String>("biodiv_name")
     let biodiv_type = Expression<String>("biodiv_type")
     
+    let biodivspacies_id = Expression<Int>("biodiv_spacies_id")
+    let biodivspacies_type = Expression<String>("biodiv_spacies_type")
+    
     init(){
         do{
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -64,16 +68,14 @@ class Database{
     
     func createTable(){
         
-        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "aquatique_type"){
-            
-            
-            
+        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "aquatique_type") || !tableExists(tableName: "biodiv_spacies_img"){
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
             createOrDeleteTable(table: self.ressourcesTable.drop())
             createOrDeleteTable(table: self.planetressourcetable.drop())
             createOrDeleteTable(table: self.biodivType.drop())
+            createOrDeleteTable(table: self.biodivSpacies.drop())
             
             createOrDeleteTable(table: self.planetsTable.create{ (table) in
                 table.column(self.planetId, primaryKey: true)
@@ -150,6 +152,13 @@ class Database{
             }
             self.addAtmosphere(atmosphereID: 5, planetID: 1)
             self.addRessource(ressourceID: 4, planetID: 1)
+            
+            createOrDeleteTable(table: self.biodivSpacies.create{ (table) in
+                table.column(self.biodivspacies_id, primaryKey: true)
+                table.column(self.biodivspacies_type)
+            })
+            
+            AddAllBiodivSpacies()
         }
     }
     
@@ -436,4 +445,40 @@ class Database{
         
         return ressources
     }
+    
+    func AddAllBiodivSpacies(){
+        for _ in 1...24{
+            createBiodivSpacies(Type: "Craniates non tétrapodes")
+        }
+        for _ in 1...24{
+            createBiodivSpacies(Type: "Céphalopodes")
+        }
+    }
+    
+    func createBiodivSpacies(Type : String){
+        let insert = self.biodivSpacies.insert( self.biodivspacies_type <- Type)
+        do{
+            try self.database.run(insert)
+        }catch{
+            print(error)
+        }
+    }
+    
+    func getBiodivSpacies(type : String) -> [String]{
+        var texts: [String] = []
+        
+        let biodiv = self.biodivSpacies.filter(self.biodivspacies_type == type)
+        
+        do{
+            for row in try self.database.prepare(biodiv) {
+                let name = try row.get(self.biodivspacies_id)
+                texts.append("bs_\(name)")
+            }
+        }catch{
+            print(error)
+        }
+        
+        return texts
+    }
+    
 }
