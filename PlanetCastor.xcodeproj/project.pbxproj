@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2825F6352BC7F25B008BA088 /* PopulationParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2825F6342BC7F25B008BA088 /* PopulationParameter.swift */; };
 		287B97BA2BC0265F009C1072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287B97B92BC0265F009C1072 /* Assets.xcassets */; };
 		287B97BB2BC03880009C1072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287B97B92BC0265F009C1072 /* Assets.xcassets */; };
 		287B97BC2BC03880009C1072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287B97B92BC0265F009C1072 /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2825F6342BC7F25B008BA088 /* PopulationParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationParameter.swift; sourceTree = "<group>"; };
 		287B97B92BC0265F009C1072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalerieParameter.swift; sourceTree = "<group>"; };
 		287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResultatParameter.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */,
 				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
 				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
+				2825F6342BC7F25B008BA088 /* PopulationParameter.swift */,
 			);
 			path = PlanetCastor;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
 				CC53DA822BC83DAC0074C619 /* ImageSpawn.swift in Sources */,
 				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
+				2825F6352BC7F25B008BA088 /* PopulationParameter.swift in Sources */,
 				CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */,
 				CCF2FC5C2BC695C4000CEF8F /* ImageParameter.swift in Sources */,
 				287E097B2BC6CBC800C73ED1 /* GalerieParameter.swift in Sources */,
