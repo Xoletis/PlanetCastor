@@ -20,6 +20,7 @@
 		28A11BE82BCD572A00F7BD4F /* IdentiteParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */; };
 		28A3B2D62BC4207D00295EFE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A3B2C92BC4206F00295EFE /* SQLite.framework */; };
 		28A3B2D72BC4207D00295EFE /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28A3B2C92BC4206F00295EFE /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC53DA822BC83DAC0074C619 /* ImageSpawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC53DA812BC83DAC0074C619 /* ImageSpawn.swift */; };
 		CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */; };
 		CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */; };
 		CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3482BBED3BE00A6D853 /* ViewController.swift */; };
@@ -126,6 +127,7 @@
 		28A3B2BE2BC4206F00295EFE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "PlanetCastor/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		28D8852A2BC53F6000410E57 /* PlanetCastorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D8852B2BC53F6000410E57 /* PlanetCastorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetCastorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC53DA812BC83DAC0074C619 /* ImageSpawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSpawn.swift; sourceTree = "<group>"; };
 		CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3462BBED3BE00A6D853 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC5FB3482BBED3BE00A6D853 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CC53DA782BC83D940074C619 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CC53DA812BC83DAC0074C619 /* ImageSpawn.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		CC5FB3382BBED3BD00A6D853 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		CC5FB3432BBED3BE00A6D853 /* PlanetCastor */ = {
 			isa = PBXGroup;
 			children = (
+				CC53DA782BC83D940074C619 /* Classes */,
 				CC7C7A182BC3FBF00054D210 /* Databases */,
 				CC6A99952BBEE59E00CBDAC3 /* Fonts */,
 				CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */,
@@ -450,6 +461,7 @@
 			files = (
 				28A11BE82BCD572A00F7BD4F /* IdentiteParameter.swift in Sources */,
 				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
+				CC53DA822BC83DAC0074C619 /* ImageSpawn.swift in Sources */,
 				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
 				2825F6352BC7F25B008BA088 /* PopulationParameter.swift in Sources */,
 				CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */,

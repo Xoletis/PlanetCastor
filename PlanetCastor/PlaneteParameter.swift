@@ -55,6 +55,7 @@ class PlaneteParameter: UIViewController {
                 button.layer.cornerRadius = 4.0
             }
             
+            ImageSpawns.shared.images = []
             Database.shared.createTable()
         }
         if ButtonsAtmosphere != nil {
