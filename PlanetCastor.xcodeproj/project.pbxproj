@@ -17,6 +17,7 @@
 		287E097F2BC6E34400C73ED1 /* ImageResultatParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */; };
 		287E09802BC6E34400C73ED1 /* ImageResultatParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */; };
 		287E09812BC6E34400C73ED1 /* ImageResultatParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */; };
+		28A11BE82BCD572A00F7BD4F /* IdentiteParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */; };
 		28A3B2D62BC4207D00295EFE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A3B2C92BC4206F00295EFE /* SQLite.framework */; };
 		28A3B2D72BC4207D00295EFE /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28A3B2C92BC4206F00295EFE /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3442BBED3BE00A6D853 /* AppDelegate.swift */; };
@@ -119,6 +120,7 @@
 		287B97B92BC0265F009C1072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalerieParameter.swift; sourceTree = "<group>"; };
 		287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResultatParameter.swift; sourceTree = "<group>"; };
+		28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentiteParameter.swift; sourceTree = "<group>"; };
 		28A3B29F2BC41EC800295EFE /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A3B2A22BC41EC800295EFE /* PlanetCastor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetCastor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28A3B2BE2BC4206F00295EFE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "PlanetCastor/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
 				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
 				2825F6342BC7F25B008BA088 /* PopulationParameter.swift */,
+				28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */,
 			);
 			path = PlanetCastor;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A11BE82BCD572A00F7BD4F /* IdentiteParameter.swift in Sources */,
 				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
 				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
 				2825F6352BC7F25B008BA088 /* PopulationParameter.swift in Sources */,

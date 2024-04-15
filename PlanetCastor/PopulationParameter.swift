@@ -62,8 +62,6 @@ class PopulationParameter: UIViewController {
             button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
             button.layer.shadowRadius = 2
             button.layer.cornerRadius = 4.0
-            button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-            button.layer.borderWidth = 1.0
         }
        
         let actionAspectExplicationsClosure = { (action: UIAction) in
