@@ -157,6 +157,20 @@ class PopulationParameter: UIViewController {
         SpaciesName.placeholder = data.getPlanetParameter(id: data.getLastId(), parametre: data.habitantName)
         
         Language.placeholder = data.getPlanetParameter(id: data.getLastId(), parametre: data.langue)
+        
+        let car = data.getPlanetCar(id: data.getLastId())
+        
+        for carbtn in CaractersButton{
+            let name = carbtn.titleLabel?.text
+            if car.contains(name!.lowercased()){
+                caractereChoisies.append(name)
+                carbtn.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+                carbtn.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+                carbtn.layer.borderWidth = 3
+                carbtn.layer.cornerCurve = .continuous
+                carbtn.layer.cornerRadius = 16
+            }
+        }
     }
     
     @objc private func changeAspect(){
@@ -214,12 +228,17 @@ class PopulationParameter: UIViewController {
             sender.layer.borderWidth = 3
             sender.layer.cornerRadius = 16
             sender.layer.cornerCurve = .continuous
+            
+            data.addCar(carID: tag, planetID: data.getLastId())
+            
         } else {
             let indexElement = caractereChoisies.firstIndex(of: sender.titleLabel?.text)
             caractereChoisies.remove(at: indexElement!)
             sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
             sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             sender.layer.borderWidth = 1
+            
+            data.removecar(carID: tag, planetID: data.getLastId())
         }
     }
 }
