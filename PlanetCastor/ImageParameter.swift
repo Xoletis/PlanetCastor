@@ -98,9 +98,11 @@ class ImageParameter: UIViewController {
         if(objectTouch >= 0){
             let t = touches.randomElement()!
             let p = t.location(in: view)
-            moveImages[objectTouch].center = p
-            ImagesList.images[objectTouch].x = p.x
-            ImagesList.images[objectTouch].y = p.y
+            if(!ImagesList.images.isEmpty){
+                moveImages[objectTouch].center = p
+                ImagesList.images[objectTouch].x = p.x
+                ImagesList.images[objectTouch].y = p.y
+            }
         }
     }
     

@@ -20,18 +20,23 @@ class Database{
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
     let ressourcesTable = Table("ressources")
+    let caracterTable = Table("caracter")
     let planetatmospheretable = Table("planet_atmosphere")
     let planetressourcetable = Table("planet_ressource")
     let biodivType = Table("biodiv_type")
     let biodivSpacies = Table("biodiv_spacies")
     let biodivInPlanet = Table("biodiv_planet")
+    let linkCP = Table("Link_CP")
     
     
     let planetId = Expression<Int>("planet_id")
     let atmosphereId = Expression<Int>("atmosphere_id")
     let resourceId = Expression<Int>("ressource_id")
+    let carId = Expression<Int>("CarID");
     let linkAPId = Expression<Int>("linkap_id")
     let linkRPId = Expression<Int>("linkrp_id")
+    let linkCPId = Expression<Int>("linkcp_ID")
+    
     
     let type = Expression<String>("type")
     let diametre = Expression<Int>("diametre")
@@ -49,12 +54,16 @@ class Database{
     
     let atm_name = Expression<String>("atm_name")
     let res_name = Expression<String>("res_name")
+    let car_name = Expression<String>("car_name")
     
     let linkAP_planetId = Expression<Int>("linkAP_planetId")
     let linkAP_athmosphereId = Expression<Int>("linkAP_athmosphereId")
     
     let linkRP_planetId = Expression<Int>("linkRP_planetId")
     let linkRP_ressourceId = Expression<Int>("linkRP_ressourceId")
+    
+    let linkCP_planetID = Expression<Int>("linkCP_planet")
+    let linkCP_caracterID = Expression<Int>("linkCP_caracter")
     
     let biodiv_ID = Expression<Int>("biodiv_ID")
     let biodiv_name = Expression<String>("biodiv_name")
@@ -82,7 +91,7 @@ class Database{
     
     func createTable(){
         
-        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "aquatique_type") || !tableExists(tableName: "biodiv_spacies_img") || !tableExists(tableName: "biodiv_planet"){
+        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "aquatique_type") || !tableExists(tableName: "biodiv_spacies_img") || !tableExists(tableName: "biodiv_planet") || !tableExists(tableName: "caracter") || !tableExists(tableName: "Link_CP"){
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
@@ -91,6 +100,8 @@ class Database{
             createOrDeleteTable(table: self.biodivType.drop())
             createOrDeleteTable(table: self.biodivSpacies.drop())
             createOrDeleteTable(table: self.biodivInPlanet.drop())
+            createOrDeleteTable(table: self.caracterTable.drop())
+            createOrDeleteTable(table: self.linkCP.drop())
             
             createOrDeleteTable(table: self.planetsTable.create{ (table) in
                 table.column(self.planetId, primaryKey: true)
@@ -144,6 +155,32 @@ class Database{
             createRessource(name: "pierre")
             createRessource(name: "petrole")
             createRessource(name: "eau douce")
+            
+            createOrDeleteTable(table: self.caracterTable.create{ (table) in
+                table.column(self.carId, primaryKey: true)
+                table.column(self.car_name)
+            })
+            
+            createCaractere(name: "calme")
+            createCaractere(name: "colerique")
+            createCaractere(name: "altruiste")
+            createCaractere(name: "energique")
+            createCaractere(name: "sage")
+            createCaractere(name: "orgueilleux")
+            createCaractere(name: "avenant")
+            createCaractere(name: "craintif")
+            createCaractere(name: "respectueux")
+            createCaractere(name: "brave")
+            createCaractere(name: "cruel")
+            createCaractere(name: "emotifs")
+            createCaractere(name: "feignant")
+            createCaractere(name: "gourmand")
+            
+            createOrDeleteTable(table: self.linkCP.create{ (table) in
+                table.column(self.linkCPId, primaryKey: true)
+                table.column(self.linkCP_planetID)
+                table.column(self.linkCP_caracterID)
+            })
             
             createOrDeleteTable(table: self.planetressourcetable.create{ (table) in
                 table.column(self.linkRPId, primaryKey: true)
@@ -246,6 +283,15 @@ class Database{
     
     func createRessource(name: String){
         let insert = self.ressourcesTable.insert(self.res_name <- name)
+        do{
+            try self.database.run(insert)
+        }catch{
+            print(error)
+        }
+    }
+    
+    func createCaractere(name: String){
+        let insert = self.caracterTable.insert(self.car_name <- name)
         do{
             try self.database.run(insert)
         }catch{
@@ -416,6 +462,29 @@ class Database{
         showPlanet(id: planetID)
     }
     
+    func addCar(carID : Int, planetID : Int){
+        let insertElement = self.linkCP.insert(self.linkCP_caracterID <- carID, self.linkCP_planetID <- planetID)
+        do{
+            try self.database.run(insertElement)
+        }catch{
+            print(error)
+        }
+        
+        showPlanet(id: planetID)
+    }
+    
+    func removecar(carID : Int, planetID : Int){
+        let planet = self.linkCP.filter(self.linkCP_planetID == planetID && self.linkCP_caracterID == carID);
+        let planetDelete = planet.delete();
+        do{
+            try self.database.run(planetDelete)
+        }catch{
+            print(error)
+        }
+        
+        showPlanet(id: planetID)
+    }
+    
     func getPlanetParameter<V : Value>(id : Int, parametre : Expression<V>) -> V? {
         let planet = self.planetsTable.filter(self.planetId == id);
         var type : V? = nil
@@ -459,6 +528,27 @@ class Database{
         do{
             for row in try self.database.prepare(linkAP_Query) {
                 let name = try row.get(self.atm_name)
+                atmospheres.append(name)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return atmospheres
+    }
+    
+    func getPlanetCar(id : Int) -> [String]{
+        
+        var atmospheres: [String] = []
+        
+        let linkAP_Query = self.planetsTable
+            .join(self.linkCP, on: self.planetId == self.linkCP_planetID)
+            .join(self.caracterTable, on: self.carId == self.linkCP_caracterID)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(linkAP_Query) {
+                let name = try row.get(self.car_name)
                 atmospheres.append(name)
             }
         }catch{

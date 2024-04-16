@@ -392,10 +392,10 @@
             </objects>
             <point key="canvasLocation" x="3233" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Galerie Id-->
         <scene sceneID="Gk8-1c-qKT">
             <objects>
-                <viewController id="UAJ-3j-Jhn" sceneMemberID="viewController">
+                <viewController id="UAJ-3j-Jhn" customClass="GalerieId" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dNx-Bb-ecU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,10 +459,10 @@
             </objects>
             <point key="canvasLocation" x="1567" y="1286"/>
         </scene>
-        <!--View Controller-->
+        <!--Galerie Pop-->
         <scene sceneID="e15-lK-wqt">
             <objects>
-                <viewController id="ZbB-lO-thP" sceneMemberID="viewController">
+                <viewController id="ZbB-lO-thP" customClass="GaleriePop" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bBd-wV-Kbs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1136,19 +1136,6 @@
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="shg-dr-d0b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsA-TV-Jh3">
-                                <rect key="frame" x="143" y="563" width="240" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Entrez un nom d'élement" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-Ev-5eC">
                                 <rect key="frame" x="144" y="628" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1276,19 +1263,6 @@
                                 <connections>
                                     <action selector="ClickRessourcesButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="WgP-hw-qJ7"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-ZR-rRz">
-                                <rect key="frame" x="143" y="755" width="240" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Entrez un nom de ressource" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="14"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHx-ID-udI">
                                 <rect key="frame" x="13" y="755" width="120" height="35"/>
@@ -1428,7 +1402,6 @@
                         <outletCollection property="ButtonsAtmosphere" destination="ayq-Yh-xBl" collectionClass="NSMutableArray" id="LHX-Ig-eDq"/>
                         <outletCollection property="ButtonsAtmosphere" destination="RL7-br-Kfh" collectionClass="NSMutableArray" id="qvA-1L-96K"/>
                         <outletCollection property="ButtonsAtmosphere" destination="NXl-UK-4cj" collectionClass="NSMutableArray" id="7e5-Ht-QAg"/>
-                        <outletCollection property="ButtonsAtmosphere" destination="DsA-TV-Jh3" collectionClass="NSMutableArray" id="u00-86-Ply"/>
                         <outletCollection property="ButtonsRessources" destination="dfU-Ev-5eC" collectionClass="NSMutableArray" id="34E-jQ-qj1"/>
                         <outletCollection property="ButtonsRessources" destination="qAS-LR-ZEU" collectionClass="NSMutableArray" id="jqC-uy-zvy"/>
                         <outletCollection property="ButtonsRessources" destination="nTI-4v-rFE" collectionClass="NSMutableArray" id="Qsh-4R-T7z"/>
@@ -1437,7 +1410,6 @@
                         <outletCollection property="ButtonsRessources" destination="rq2-gH-AW5" collectionClass="NSMutableArray" id="yR1-M3-sNh"/>
                         <outletCollection property="ButtonsRessources" destination="QG9-IL-xCh" collectionClass="NSMutableArray" id="lwy-W5-MJL"/>
                         <outletCollection property="ButtonsRessources" destination="Nq4-t8-Bow" collectionClass="NSMutableArray" id="jBa-CK-e3a"/>
-                        <outletCollection property="ButtonsRessources" destination="Yb9-ZR-rRz" collectionClass="NSMutableArray" id="BjA-As-InF"/>
                         <outletCollection property="ButtonsRessources" destination="xHx-ID-udI" collectionClass="NSMutableArray" id="Y6S-Wp-SBf"/>
                     </connections>
                 </viewController>
@@ -1651,6 +1623,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="Yo1-Nx-2e6"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="lvq-1H-2d9"/>
                                 </connections>
                             </button>
@@ -1667,6 +1640,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="QRR-b1-zBL"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="hPK-6F-17A"/>
                                 </connections>
                             </button>
@@ -1683,6 +1657,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="RcI-Su-3L2"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="LjC-9o-fHw"/>
                                 </connections>
                             </button>
@@ -1699,6 +1674,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="Yet-5Z-DMC"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="TdN-Vp-Shx"/>
                                 </connections>
                             </button>
@@ -1715,10 +1691,11 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="cP8-pn-s0p"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="sAb-PI-I0J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-fS-q9M">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-fS-q9M">
                                 <rect key="frame" x="143" y="677" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -1731,10 +1708,11 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="UfE-c3-oTR"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="6wT-Ub-zr6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9S-XJ-CBj">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9S-XJ-CBj">
                                 <rect key="frame" x="268" y="677" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -1747,6 +1725,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="DPt-Yd-NfO"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="3qN-HA-ccm"/>
                                 </connections>
                             </button>
@@ -1763,6 +1742,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="Qhg-hz-m6p"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="8Er-Tc-S9f"/>
                                 </connections>
                             </button>
@@ -1779,6 +1759,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="tp0-TM-j8Y"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="YcE-Lg-Wsd"/>
                                 </connections>
                             </button>
@@ -1795,6 +1776,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="OBB-yx-Twu"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="3Ey-cO-v2W"/>
                                 </connections>
                             </button>
@@ -1811,10 +1793,11 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="Kjr-aV-G1m"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="4hN-gC-2Eg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-bk-939">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-bk-939">
                                 <rect key="frame" x="143" y="720" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -1827,10 +1810,11 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="cBP-3O-55V"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="Hms-mp-99b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-W9-oCC">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-W9-oCC">
                                 <rect key="frame" x="268" y="720" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -1843,10 +1827,11 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="guF-W7-cWT"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="yUt-uS-3Qk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-ue-Iyb">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-ue-Iyb">
                                 <rect key="frame" x="16" y="720" width="114" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -1859,6 +1844,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="CaractereChoose:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="IvJ-4n-IEy"/>
                                     <action selector="ClickAtmosphereButton:" destination="30q-bo-z8Z" eventType="touchUpInside" id="gOd-4r-vwN"/>
                                 </connections>
                             </button>
@@ -2362,22 +2348,14 @@
     <inferredMetricsTieBreakers>
         <segue reference="H1P-i7-Top"/>
         <segue reference="Swf-pg-cz0"/>
-        <segue reference="2cy-Wv-reI"/>
-        <segue reference="2Gf-cW-ct0"/>
-        <segue reference="ceD-0g-6m6"/>
-        <segue reference="ifD-Aj-PU2"/>
-        <segue reference="4zn-IY-Soy"/>
-        <segue reference="7D5-AL-lCR"/>
-        <segue reference="ZjQ-bR-pIb"/>
-        <segue reference="fc5-qK-PQB"/>
         <segue reference="RCI-gK-yOE"/>
         <segue reference="3n0-SR-2h7"/>
-        <segue reference="Zqr-IF-D9Q"/>
+        <segue reference="ceD-0g-6m6"/>
         <segue reference="crU-cG-5eZ"/>
-        <segue reference="4zn-IY-Soy"/>
-        <segue reference="7D5-AL-lCR"/>
-        <segue reference="qRp-eg-gzX"/>
-        <segue reference="0Qz-Yd-Ahw"/>
+        <segue reference="SeJ-w6-jn9"/>
+        <segue reference="pjE-YZ-iZi"/>
+        <segue reference="q43-GV-fje"/>
+        <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>

@@ -30,6 +30,8 @@
 		CC5FB3662BBED3BF00A6D853 /* PlanetCastorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */; };
 		CC5FB3682BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */; };
 		CC6A99962BBEE59E00CBDAC3 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = CC6A99952BBEE59E00CBDAC3 /* Fonts */; };
+		CC7C5BF42BCEC44E0058CD4B /* GaleriePop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */; };
+		CC7C5BFD2BCEC4660058CD4B /* GalerieId.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */; };
 		CC7C7A1A2BC3FC130054D210 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C7A192BC3FC120054D210 /* Database.swift */; };
 		CCAECC182BC03A8300B07DE1 /* PlaneteParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */; };
 		CCB9397A2BC6C94A00D7A231 /* BiodiversiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */; };
@@ -138,6 +140,8 @@
 		CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITests.swift; sourceTree = "<group>"; };
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
+		CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriePop.swift; sourceTree = "<group>"; };
+		CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalerieId.swift; sourceTree = "<group>"; };
 		CC7C7A192BC3FC120054D210 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneteParameter.swift; sourceTree = "<group>"; };
 		CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodiversiteView.swift; sourceTree = "<group>"; };
@@ -200,14 +204,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		CC53DA782BC83D940074C619 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CC53DA812BC83DAC0074C619 /* ImageSpawn.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		CC5FB3382BBED3BD00A6D853 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +233,8 @@
 				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
 				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
 				CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */,
+				CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */,
+				CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */,
 				CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */,
 				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
 				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
@@ -471,6 +469,7 @@
 				CC5FB3492BBED3BE00A6D853 /* ViewController.swift in Sources */,
 				CC53DA822BC83DAC0074C619 /* ImageSpawn.swift in Sources */,
 				CC5FB3452BBED3BE00A6D853 /* AppDelegate.swift in Sources */,
+				CC7C5BFD2BCEC4660058CD4B /* GalerieId.swift in Sources */,
 				2825F6352BC7F25B008BA088 /* PopulationParameter.swift in Sources */,
 				CC5FB3472BBED3BE00A6D853 /* SceneDelegate.swift in Sources */,
 				CCF2FC5C2BC695C4000CEF8F /* ImageParameter.swift in Sources */,
@@ -478,6 +477,7 @@
 				CC7C7A1A2BC3FC130054D210 /* Database.swift in Sources */,
 				CCAECC182BC03A8300B07DE1 /* PlaneteParameter.swift in Sources */,
 				CCB9397A2BC6C94A00D7A231 /* BiodiversiteView.swift in Sources */,
+				CC7C5BF42BCEC44E0058CD4B /* GaleriePop.swift in Sources */,
 				287E097F2BC6E34400C73ED1 /* ImageResultatParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
