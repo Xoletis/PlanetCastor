@@ -39,6 +39,13 @@ class Database{
     let temperature = Expression<Int>("temperature")
     let humidite = Expression<Int>("humidite")
     let pression = Expression<Int>("pression")
+    let habitantName = Expression<String>("habitant_name")
+    let color_r = Expression<Int>("color_r")
+    let color_g = Expression<Int>("color_g")
+    let color_b = Expression<Int>("color_b")
+    let langue = Expression<String>("langue")
+    let aspect = Expression<String>("aspect")
+    let politique = Expression<String>("politique")
     
     let atm_name = Expression<String>("atm_name")
     let res_name = Expression<String>("res_name")
@@ -93,6 +100,13 @@ class Database{
                 table.column(self.temperature, defaultValue: 15)
                 table.column(self.humidite, defaultValue: 30)
                 table.column(self.pression, defaultValue: 1)
+                table.column(self.habitantName, defaultValue: "Humain")
+                table.column(self.color_r, defaultValue: 0)
+                table.column(self.color_g, defaultValue: 0)
+                table.column(self.color_b, defaultValue: 0)
+                table.column(self.langue, defaultValue: "Français")
+                table.column(self.aspect, defaultValue: "Humanoïde")
+                table.column(self.politique, defaultValue: "Ploutocratie")
             })
             
             createOrDeleteTable(table: self.athmosphereTabe.create{ (table) in
@@ -258,39 +272,9 @@ class Database{
         return getLastId()
     }
     
-    func setType(type: String, id : Int){
+    func setPlanetParameter<V : Value>(id : Int, parametre : Expression<V>, value : V) {
         let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.type <- type)
-        updateDatabase(method: updatePlanet)
-    }
-    
-    func setDiametre(diametre: Int, id: Int){
-        let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.diametre <- diametre)
-        updateDatabase(method: updatePlanet)
-    }
-    
-    func setContinent(continent: Int, id: Int){
-        let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.continent <- continent)
-        updateDatabase(method: updatePlanet)
-    }
-    
-    func setTemperature(temperature: Int, id: Int){
-        let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.temperature <- temperature)
-        updateDatabase(method: updatePlanet)
-    }
-    
-    func setHumidite(humidite: Int, id: Int){
-        let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.humidite <- humidite)
-        updateDatabase(method: updatePlanet)
-    }
-    
-    func setPression(pression: Int, id: Int){
-        let planet = self.planetsTable.filter(self.planetId == id)
-        let updatePlanet = planet.update(self.pression <- pression)
+        let updatePlanet = planet.update(parametre <- value)
         updateDatabase(method: updatePlanet)
     }
     
@@ -311,7 +295,7 @@ class Database{
             let planets = try self.database.prepare(self.planetsTable)
             for planet in planets {
                 if(planet[self.planetId] == id){
-                    text += "id: \(planet[self.planetId]), type: \(planet[self.type]), diamètre: \(planet[self.diametre]), contient: \(planet[self.continent]), temperature: \(planet[self.temperature]), humidité: \(planet[self.humidite]), pression: \(planet[self.pression])"
+                    text += "id: \(planet[self.planetId]), type: \(planet[self.type]), diamètre: \(planet[self.diametre]), contient: \(planet[self.continent]), temperature: \(planet[self.temperature]), humidité: \(planet[self.humidite]), pression: \(planet[self.pression]), habitants : \(planet[self.habitantName]), couleur = [\(planet[self.color_r]), \(planet[self.color_g]), \(planet[self.color_b])]"
                 }
             }
             

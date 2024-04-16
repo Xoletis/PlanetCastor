@@ -1493,12 +1493,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="auD-uo-i0X" kind="popoverPresentation" popoverAnchorView="h8D-GH-APj" id="q8I-Oa-Usq">
-                                        <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
-                                        <popoverPassthroughViews>
-                                            <imageView reference="b7o-G0-iMT"/>
-                                        </popoverPassthroughViews>
-                                    </segue>
+                                    <segue destination="auD-uo-i0X" kind="presentation" modalPresentationStyle="fullScreen" id="q8I-Oa-Usq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1536,6 +1531,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="NextPage:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="EIa-CF-TqO"/>
                                     <segue destination="3dv-Wq-tIC" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="oAF-3f-wrG"/>
                                 </connections>
                             </button>
@@ -1570,6 +1566,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
+                                    <action selector="ChooseNom:" destination="nOW-Xc-hk9" eventType="editingChanged" id="0hL-3k-cUh"/>
                                     <action selector="DiametreChange:forEvent:" destination="30q-bo-z8Z" eventType="editingChanged" id="l3S-6P-GPN"/>
                                 </connections>
                             </textField>
@@ -1616,6 +1613,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
+                                    <action selector="ChooseLangue:" destination="nOW-Xc-hk9" eventType="editingChanged" id="RIG-BC-5Kd"/>
                                     <action selector="DiametreChange:forEvent:" destination="30q-bo-z8Z" eventType="editingChanged" id="XPC-7W-MzL"/>
                                 </connections>
                             </textField>
@@ -1883,6 +1881,8 @@
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="Language" destination="Q6y-dC-UHc" id="Tn5-21-NnH"/>
+                        <outlet property="SpaciesName" destination="1Up-pr-80d" id="e2G-6t-8XG"/>
                         <outlet property="aspectExplication" destination="x72-8L-quc" id="Au0-0D-iuF"/>
                         <outlet property="popCouleur" destination="VQk-fG-oxs" id="tte-Ho-YXH"/>
                         <outlet property="popCouleurPresentation" destination="h9x-NK-B6v" id="lCm-hx-Tz6"/>
@@ -1902,6 +1902,20 @@
                         <outletCollection property="shadowButtons" destination="y9P-ue-Iyb" collectionClass="NSMutableArray" id="sLt-li-ghg"/>
                         <outletCollection property="shadowButtons" destination="iKX-bk-939" collectionClass="NSMutableArray" id="AdP-4z-cpv"/>
                         <outletCollection property="shadowButtons" destination="tv9-W9-oCC" collectionClass="NSMutableArray" id="lv1-JR-4dL"/>
+                        <outletCollection property="CaractersButton" destination="Wnj-es-X5c" collectionClass="NSMutableArray" id="mMK-hL-Ay3"/>
+                        <outletCollection property="CaractersButton" destination="OKE-sS-6WT" collectionClass="NSMutableArray" id="Cmn-0Y-pw8"/>
+                        <outletCollection property="CaractersButton" destination="gUH-UA-hXC" collectionClass="NSMutableArray" id="YWV-LC-6YD"/>
+                        <outletCollection property="CaractersButton" destination="DMa-Kv-ktz" collectionClass="NSMutableArray" id="c1M-nx-dJp"/>
+                        <outletCollection property="CaractersButton" destination="NSc-hZ-xCi" collectionClass="NSMutableArray" id="Ex0-xi-maa"/>
+                        <outletCollection property="CaractersButton" destination="F1W-rN-kwR" collectionClass="NSMutableArray" id="dna-GN-5OT"/>
+                        <outletCollection property="CaractersButton" destination="d5d-cl-pbo" collectionClass="NSMutableArray" id="33X-ic-LBF"/>
+                        <outletCollection property="CaractersButton" destination="8hQ-3m-VSU" collectionClass="NSMutableArray" id="q6X-my-djb"/>
+                        <outletCollection property="CaractersButton" destination="qxW-mK-tgS" collectionClass="NSMutableArray" id="HhP-bU-gps"/>
+                        <outletCollection property="CaractersButton" destination="hfe-fS-q9M" collectionClass="NSMutableArray" id="gRP-KF-7xY"/>
+                        <outletCollection property="CaractersButton" destination="A9S-XJ-CBj" collectionClass="NSMutableArray" id="l2o-qs-Flz"/>
+                        <outletCollection property="CaractersButton" destination="y9P-ue-Iyb" collectionClass="NSMutableArray" id="fxY-UE-Vk2"/>
+                        <outletCollection property="CaractersButton" destination="iKX-bk-939" collectionClass="NSMutableArray" id="nIR-M3-tlD"/>
+                        <outletCollection property="CaractersButton" destination="tv9-W9-oCC" collectionClass="NSMutableArray" id="hcK-Zp-DPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0Y-Vh-Y2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2143,7 +2157,7 @@
             <objects>
                 <viewController id="auD-uo-i0X" customClass="ImageParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vf7-N5-jce">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-FS-U6a">
@@ -2321,7 +2335,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="auD-uo-i0X" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="H1P-i7-Top"/>
+                                    <segue destination="auD-uo-i0X" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="H1P-i7-Top"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Craniates non tétrapodes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-6f-7NP">
@@ -2346,9 +2360,16 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oAF-3f-wrG"/>
-        <segue reference="q8I-Oa-Usq"/>
-        <segue reference="R4Z-v9-fKz"/>
+        <segue reference="H1P-i7-Top"/>
+        <segue reference="Swf-pg-cz0"/>
+        <segue reference="2cy-Wv-reI"/>
+        <segue reference="2Gf-cW-ct0"/>
+        <segue reference="ceD-0g-6m6"/>
+        <segue reference="ifD-Aj-PU2"/>
+        <segue reference="4zn-IY-Soy"/>
+        <segue reference="7D5-AL-lCR"/>
+        <segue reference="ZjQ-bR-pIb"/>
+        <segue reference="fc5-qK-PQB"/>
         <segue reference="RCI-gK-yOE"/>
         <segue reference="3n0-SR-2h7"/>
         <segue reference="Zqr-IF-D9Q"/>
@@ -2356,7 +2377,7 @@
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="qRp-eg-gzX"/>
-        <segue reference="fc5-qK-PQB"/>
+        <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
