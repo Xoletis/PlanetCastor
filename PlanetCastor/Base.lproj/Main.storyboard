@@ -32,7 +32,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ifD-Aj-PU2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4r-hn-cLY">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4r-hn-cLY">
                                 <rect key="frame" x="18" y="135" width="163" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="15" height="110"/>
@@ -47,7 +47,7 @@
                                     <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ZjQ-bR-pIb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-hL-uG9">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-hL-uG9">
                                 <rect key="frame" x="18" y="320" width="163" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="15" height="110"/>
@@ -56,11 +56,13 @@
                                     <backgroundConfiguration key="background" image="PlaneteAride" imageContentMode="scaleAspectFit" strokeWidth="1">
                                         <color key="strokeColor" systemColor="labelColor"/>
                                     </backgroundConfiguration>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qRp-eg-gzX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZw-uE-VEp">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZw-uE-VEp">
                                 <rect key="frame" x="214" y="135" width="163" height="156"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="15" height="110"/>
@@ -71,6 +73,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Hr9-fW-bbn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NABOO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-4u-FNn">
                                 <rect key="frame" x="263" y="200" width="64" height="26"/>
@@ -2345,14 +2350,14 @@
         <segue reference="ifD-Aj-PU2"/>
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
-        <segue reference="ZjQ-bR-pIb"/>
+        <segue reference="qRp-eg-gzX"/>
         <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
         <image name="Kashyyk" width="500" height="500"/>
         <image name="PlaneteAride" width="300" height="300"/>
-        <image name="PlaneteMarecageuse" width="322.5" height="193.5"/>
+        <image name="PlaneteMarecageuse" width="645" height="387"/>
         <image name="PlaneteTerrestre" width="183.33332824707031" height="183.33332824707031"/>
         <image name="Planète castor" width="365" height="141"/>
         <image name="aquatique" width="390" height="844"/>
