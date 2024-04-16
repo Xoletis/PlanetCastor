@@ -19,6 +19,8 @@ class PopulationParameter: UIViewController {
     @IBOutlet weak var regimeExplication: UILabel!
     let aspectButton = UIButton(primaryAction: nil)
     let regimeButton = UIButton(primaryAction: nil)
+    let avanceeButton = UIButton(primaryAction: nil)
+      
     let data = Database.shared
     @IBOutlet var CaractersButton: [UIButton]!
     
@@ -55,6 +57,8 @@ class PopulationParameter: UIViewController {
                             "Fédéralisme": "Un système politique dans lequel le pouvoir est partagé entre un gouvernement central et des entités subnationales, telles que des États ou des provinces, qui conservent une certaine autonomie politique.",
                             "Militarisme": "Un système politique dans lequel le pouvoir est partagé entre un gouvernement central et des entités subnationales, telles que des États ou des provinces, qui conservent une certaine autonomie politique.",
                             "Autarcie": "Un système politique dans lequel un pays cherche à être économiquement autonome en produisant tous les biens et services nécessaires sur son propre territoire, souvent en fermant ses frontières aux échanges internationaux."]
+    
+    var dataSourceAvancee = ["Antiquité ", "Ere Classique", "Renaissance", "Révolution industrielle", "Moyen Âge", "Ere de l'information", "Ere atomique", "Ere moderne", "Ere de l'espace"]
   
     
     override func viewDidLoad() {
@@ -89,6 +93,9 @@ class PopulationParameter: UIViewController {
         let actionRegimeExplicationsClosure = { (action: UIAction) in
             self.regimeExplication.text = self.dataSourceRegime[action.title]
         }
+        let actionAvanceeClosure = { (action: UIAction) in
+            print()
+        }
         
         let defaultAspect = (data.getPlanetParameter(id: id, parametre: data.aspect) ?? "Humanoïde") as String
         
@@ -105,19 +112,7 @@ class PopulationParameter: UIViewController {
         
         aspectButton.showsMenuAsPrimaryAction = true
         aspectButton.changesSelectionAsPrimaryAction = true
-           
         aspectButton.frame = CGRect(x: 160, y: 286, width: 126, height: 30)
-        aspectButton.layer.backgroundColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
-        aspectButton.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        aspectButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
-        aspectButton.layer.shadowOpacity = 0.9
-        aspectButton.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
-        aspectButton.layer.shadowRadius = 2
-        aspectButton.layer.cornerRadius = 4.0
-        aspectButton.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        aspectButton.layer.borderWidth = 1.0
-        aspectButton.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
-        aspectButton.tag = 1
         self.view.addSubview(aspectButton)
         aspectExplication.text = dataSourceAspect.first(where: { $0.0 == defaultAspect })?.1 ?? ""
         
@@ -136,19 +131,7 @@ class PopulationParameter: UIViewController {
         regimeButton.menu = UIMenu(options: .displayInline, children: menuChildrenRegime)
         regimeButton.showsMenuAsPrimaryAction = true
         regimeButton.changesSelectionAsPrimaryAction = true
-           
         regimeButton.frame = CGRect(x: 160, y: 426, width: 126, height: 30)
-        regimeButton.layer.backgroundColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
-        regimeButton.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        regimeButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
-        regimeButton.layer.shadowOpacity = 0.9
-        regimeButton.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
-        regimeButton.layer.shadowRadius = 2
-        regimeButton.layer.cornerRadius = 4.0
-        regimeButton.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-        regimeButton.layer.borderWidth = 1.0
-        regimeButton.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
-        regimeButton.tag = 2
         self.view.addSubview(regimeButton)
         regimeExplication.text = dataSourceRegime.first(where: { $0.0 == defaultPol })?.1 ?? ""
         
@@ -174,7 +157,29 @@ class PopulationParameter: UIViewController {
     }
     
     @objc private func changeAspect(){
-        print("aa")
+        var menuChildrenAvancee: [UIMenuElement] = []
+        for element in dataSourceAvancee {
+            menuChildrenAvancee.append(UIAction(title: element, handler: actionAvanceeClosure))
+        }
+        avanceeButton.menu = UIMenu(options: .displayInline, children: menuChildrenAvancee)
+        avanceeButton.showsMenuAsPrimaryAction = true
+        avanceeButton.changesSelectionAsPrimaryAction = true
+        avanceeButton.frame = CGRect(x: 210, y: 776, width: 160, height: 30)
+        self.view.addSubview(avanceeButton)
+        
+        var dropDownMenus = [avanceeButton, regimeButton, aspectButton]
+        for button in dropDownMenus {
+            button.layer.backgroundColor = CGColor(red: 1, green: 1, blue: 1, alpha: 1)
+            button.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
+            button.layer.shadowOpacity = 0.9
+            button.layer.shadowOffset = CGSize(width: 1.5, height: 4.0)
+            button.layer.shadowRadius = 2
+            button.layer.cornerRadius = 4.0
+            button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+            button.layer.borderWidth = 1.0
+            button.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
+        }
     }
     
     @objc private func colorChanged() {
