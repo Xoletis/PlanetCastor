@@ -10,6 +10,8 @@ import UIKit
 
 class PopulationParameter: UIViewController {
     
+    @IBOutlet weak var Language: UITextField!
+    @IBOutlet weak var SpaciesName: UITextField!
     @IBOutlet var shadowButtons: [UIButton]!
     @IBOutlet weak var popCouleur: UIColorWell!
     @IBOutlet weak var popCouleurPresentation: UIButton!
@@ -17,6 +19,7 @@ class PopulationParameter: UIViewController {
     @IBOutlet weak var regimeExplication: UILabel!
     let aspectButton = UIButton(primaryAction: nil)
     let regimeButton = UIButton(primaryAction: nil)
+    let data = Database.shared
     
     var dataSourceAspect = ["Humanoïde": "Une population qui ressemble à celle de la planète Terre.",
                             "Avianoïde": "Une population ailée, évoquant les oiseaux ou les anges.",
@@ -53,7 +56,20 @@ class PopulationParameter: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let id = data.getLastId()
+        
+        
         popCouleur.addTarget(self, action: #selector(colorChanged), for: .valueChanged)
+        popCouleur.selectedColor = UIColor(cgColor: CGColor(
+            red: CGFloat(data.getPlanetParameter(id: id, parametre: data.color_r) ?? 0) / 255,
+            green: CGFloat(data.getPlanetParameter(id: id, parametre: data.color_g) ?? 0) / 255,
+            blue: CGFloat(data.getPlanetParameter(id: id, parametre: data.color_b) ?? 0) / 255,
+            alpha: 1))
+        
+        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_r) ?? 0))
+        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_g) ?? 0))
+        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_b) ?? 0))
+        
         popCouleurPresentation.layer.backgroundColor = popCouleur.selectedColor?.cgColor
         
         for button in shadowButtons {
@@ -116,10 +132,49 @@ class PopulationParameter: UIViewController {
         regimeButton.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
         self.view.addSubview(regimeButton)
         regimeExplication.text = dataSourceRegime[(regimeButton.titleLabel?.text)!]
+        
+        SpaciesName.placeholder = data.getPlanetParameter(id: data.getLastId(), parametre: data.habitantName)
+        
+        
     }
     
     @objc private func colorChanged() {
         popCouleurPresentation.layer.backgroundColor = popCouleur.selectedColor?.cgColor
+        
+        var r : CGFloat = 0
+        var g : CGFloat = 0
+        var b : CGFloat = 0
+        var a: CGFloat = 0
+        let bgColor = popCouleurPresentation.backgroundColor!
+        bgColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        
+        data.setPlanetParameter(id: data.getLastId(), parametre: data.color_r, value: Int(r * 255))
+        
+        data.setPlanetParameter(id: data.getLastId(), parametre: data.color_g, value: Int(g * 255))
+        
+        data.setPlanetParameter(id: data.getLastId(), parametre: data.color_b, value: Int(b * 255))
+    }
+    
+    
+    
+    @IBAction func ChooseNom(_ sender: UITextField) {
+        data.setPlanetParameter(id: data.getLastId(), parametre: data.habitantName, value: sender.text!)
+
+    }
+    
+    
+    
+    @IBAction func NextPage(_ sender: UIButton) {
+        let spacies = SpaciesName.text
+        var r : CGFloat = 0
+        var g : CGFloat = 0
+        var b : CGFloat = 0
+        var a: CGFloat = 0
+        let bgColor = popCouleurPresentation.backgroundColor!
+        bgColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let aspect = aspectButton.titleLabel?.text
+        let regime = regimeButton.titleLabel?.text
+        let langue = Language.text
     }
     
 }

@@ -1508,6 +1508,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="NextPage:" destination="nOW-Xc-hk9" eventType="touchUpInside" id="EIa-CF-TqO"/>
                                     <segue destination="3dv-Wq-tIC" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="oAF-3f-wrG"/>
                                 </connections>
                             </button>
@@ -1542,6 +1543,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
+                                    <action selector="ChooseNom:" destination="nOW-Xc-hk9" eventType="editingChanged" id="0hL-3k-cUh"/>
                                     <action selector="DiametreChange:forEvent:" destination="30q-bo-z8Z" eventType="editingChanged" id="l3S-6P-GPN"/>
                                 </connections>
                             </textField>
@@ -1855,6 +1857,8 @@
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="Language" destination="Q6y-dC-UHc" id="Tn5-21-NnH"/>
+                        <outlet property="SpaciesName" destination="1Up-pr-80d" id="e2G-6t-8XG"/>
                         <outlet property="aspectExplication" destination="x72-8L-quc" id="Au0-0D-iuF"/>
                         <outlet property="popCouleur" destination="VQk-fG-oxs" id="tte-Ho-YXH"/>
                         <outlet property="popCouleurPresentation" destination="h9x-NK-B6v" id="lCm-hx-Tz6"/>
@@ -2323,10 +2327,10 @@
         <segue reference="RCI-gK-yOE"/>
         <segue reference="2Gf-cW-ct0"/>
         <segue reference="ceD-0g-6m6"/>
-        <segue reference="crU-cG-5eZ"/>
+        <segue reference="ifD-Aj-PU2"/>
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
-        <segue reference="q43-GV-fje"/>
+        <segue reference="ZjQ-bR-pIb"/>
         <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
