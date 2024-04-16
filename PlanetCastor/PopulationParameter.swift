@@ -20,6 +20,7 @@ class PopulationParameter: UIViewController {
     let aspectButton = UIButton(primaryAction: nil)
     let regimeButton = UIButton(primaryAction: nil)
     let data = Database.shared
+    @IBOutlet var CaractersButton: [UIButton]!
     
     var dataSourceAspect = ["Humanoïde": "Une population qui ressemble à celle de la planète Terre.",
                             "Avianoïde": "Une population ailée, évoquant les oiseaux ou les anges.",
@@ -87,12 +88,19 @@ class PopulationParameter: UIViewController {
             self.regimeExplication.text = self.dataSourceRegime[action.title]
         }
         
+        let defaultAspect = (data.getPlanetParameter(id: id, parametre: data.aspect) ?? "Humanoïde") as String
+        
         var menuChildrenAspect: [UIMenuElement] = []
         for element in dataSourceAspect {
-            menuChildrenAspect.append(UIAction(title: element.0, handler: actionAspectExplicationsClosure))
+            let action = UIAction(title: element.0, handler: actionAspectExplicationsClosure)
+               if element.0 == defaultAspect {
+                   action.state = .on
+               }
+               menuChildrenAspect.append(action)
         }
+        
         aspectButton.menu = UIMenu(options: .displayInline, children: menuChildrenAspect)
-           
+        
         aspectButton.showsMenuAsPrimaryAction = true
         aspectButton.changesSelectionAsPrimaryAction = true
            
@@ -107,13 +115,21 @@ class PopulationParameter: UIViewController {
         aspectButton.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         aspectButton.layer.borderWidth = 1.0
         aspectButton.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
+        aspectButton.tag = 1
         self.view.addSubview(aspectButton)
-        aspectExplication.text = dataSourceAspect[(aspectButton.titleLabel?.text)!]
+        aspectExplication.text = dataSourceAspect.first(where: { $0.0 == defaultAspect })?.1 ?? ""
         
+        aspectButton.addObserver(self, forKeyPath: "titleLabel.text", options: .new, context: nil)
+        
+        let defaultPol = (data.getPlanetParameter(id: id, parametre: data.politique) ?? "Ploutocratie") as String
         
         var menuChildrenRegime: [UIMenuElement] = []
         for element in dataSourceRegime {
-            menuChildrenRegime.append(UIAction(title: element.0, handler: actionRegimeExplicationsClosure))
+            let action = UIAction(title: element.0, handler: actionRegimeExplicationsClosure)
+               if element.0 == defaultPol {
+                   action.state = .on
+               }
+               menuChildrenRegime.append(action)
         }
         regimeButton.menu = UIMenu(options: .displayInline, children: menuChildrenRegime)
         regimeButton.showsMenuAsPrimaryAction = true
@@ -130,12 +146,19 @@ class PopulationParameter: UIViewController {
         regimeButton.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
         regimeButton.layer.borderWidth = 1.0
         regimeButton.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
+        regimeButton.tag = 2
         self.view.addSubview(regimeButton)
-        regimeExplication.text = dataSourceRegime[(regimeButton.titleLabel?.text)!]
+        regimeExplication.text = dataSourceRegime.first(where: { $0.0 == defaultPol })?.1 ?? ""
+        
+        regimeButton.addObserver(self, forKeyPath: "titleLabel.text", options: .new, context: nil)
         
         SpaciesName.placeholder = data.getPlanetParameter(id: data.getLastId(), parametre: data.habitantName)
         
-        
+        Language.placeholder = data.getPlanetParameter(id: data.getLastId(), parametre: data.langue)
+    }
+    
+    @objc private func changeAspect(){
+        print("aa")
     }
     
     @objc private func colorChanged() {
@@ -162,20 +185,22 @@ class PopulationParameter: UIViewController {
 
     }
     
-    
-    
-    @IBAction func NextPage(_ sender: UIButton) {
-        let spacies = SpaciesName.text
-        var r : CGFloat = 0
-        var g : CGFloat = 0
-        var b : CGFloat = 0
-        var a: CGFloat = 0
-        let bgColor = popCouleurPresentation.backgroundColor!
-        bgColor.getRed(&r, green: &g, blue: &b, alpha: &a)
-        let aspect = aspectButton.titleLabel?.text
-        let regime = regimeButton.titleLabel?.text
-        let langue = Language.text
+    @IBAction func ChooseLangue(_ sender: UITextField) {
+        data.setPlanetParameter(id: data.getLastId(), parametre: data.langue, value: sender.text!)
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let object = object as? UIButton, let keyPath = keyPath, keyPath == "titleLabel.text" {
+            let newTitle = change?[.newKey] as? String
+            if(object.tag == 1){
+                data.setPlanetParameter(id: data.getLastId(), parametre: data.aspect, value: newTitle!)
+            }else if (object.tag == 2){
+                data.setPlanetParameter(id: data.getLastId(), parametre: data.politique, value: newTitle!)
+            }
+        }
+    }
+    
+    @IBAction func NextPage(_ sender: UIButton) {}
     
 }
         

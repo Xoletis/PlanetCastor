@@ -1590,6 +1590,7 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                                 <connections>
+                                    <action selector="ChooseLangue:" destination="nOW-Xc-hk9" eventType="editingChanged" id="RIG-BC-5Kd"/>
                                     <action selector="DiametreChange:forEvent:" destination="30q-bo-z8Z" eventType="editingChanged" id="XPC-7W-MzL"/>
                                 </connections>
                             </textField>
@@ -1878,6 +1879,20 @@
                         <outletCollection property="shadowButtons" destination="y9P-ue-Iyb" collectionClass="NSMutableArray" id="sLt-li-ghg"/>
                         <outletCollection property="shadowButtons" destination="iKX-bk-939" collectionClass="NSMutableArray" id="AdP-4z-cpv"/>
                         <outletCollection property="shadowButtons" destination="tv9-W9-oCC" collectionClass="NSMutableArray" id="lv1-JR-4dL"/>
+                        <outletCollection property="CaractersButton" destination="Wnj-es-X5c" collectionClass="NSMutableArray" id="mMK-hL-Ay3"/>
+                        <outletCollection property="CaractersButton" destination="OKE-sS-6WT" collectionClass="NSMutableArray" id="Cmn-0Y-pw8"/>
+                        <outletCollection property="CaractersButton" destination="gUH-UA-hXC" collectionClass="NSMutableArray" id="YWV-LC-6YD"/>
+                        <outletCollection property="CaractersButton" destination="DMa-Kv-ktz" collectionClass="NSMutableArray" id="c1M-nx-dJp"/>
+                        <outletCollection property="CaractersButton" destination="NSc-hZ-xCi" collectionClass="NSMutableArray" id="Ex0-xi-maa"/>
+                        <outletCollection property="CaractersButton" destination="F1W-rN-kwR" collectionClass="NSMutableArray" id="dna-GN-5OT"/>
+                        <outletCollection property="CaractersButton" destination="d5d-cl-pbo" collectionClass="NSMutableArray" id="33X-ic-LBF"/>
+                        <outletCollection property="CaractersButton" destination="8hQ-3m-VSU" collectionClass="NSMutableArray" id="q6X-my-djb"/>
+                        <outletCollection property="CaractersButton" destination="qxW-mK-tgS" collectionClass="NSMutableArray" id="HhP-bU-gps"/>
+                        <outletCollection property="CaractersButton" destination="hfe-fS-q9M" collectionClass="NSMutableArray" id="gRP-KF-7xY"/>
+                        <outletCollection property="CaractersButton" destination="A9S-XJ-CBj" collectionClass="NSMutableArray" id="l2o-qs-Flz"/>
+                        <outletCollection property="CaractersButton" destination="y9P-ue-Iyb" collectionClass="NSMutableArray" id="fxY-UE-Vk2"/>
+                        <outletCollection property="CaractersButton" destination="iKX-bk-939" collectionClass="NSMutableArray" id="nIR-M3-tlD"/>
+                        <outletCollection property="CaractersButton" destination="tv9-W9-oCC" collectionClass="NSMutableArray" id="hcK-Zp-DPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V0Y-Vh-Y2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -43,6 +43,9 @@ class Database{
     let color_r = Expression<Int>("color_r")
     let color_g = Expression<Int>("color_g")
     let color_b = Expression<Int>("color_b")
+    let langue = Expression<String>("langue")
+    let aspect = Expression<String>("aspect")
+    let politique = Expression<String>("politique")
     
     let atm_name = Expression<String>("atm_name")
     let res_name = Expression<String>("res_name")
@@ -101,6 +104,9 @@ class Database{
                 table.column(self.color_r, defaultValue: 0)
                 table.column(self.color_g, defaultValue: 0)
                 table.column(self.color_b, defaultValue: 0)
+                table.column(self.langue, defaultValue: "Français")
+                table.column(self.aspect, defaultValue: "Humanoïde")
+                table.column(self.politique, defaultValue: "Ploutocratie")
             })
             
             createOrDeleteTable(table: self.athmosphereTabe.create{ (table) in
