@@ -22,6 +22,8 @@ class PopulationParameter: UIViewController {
     let data = Database.shared
     @IBOutlet var CaractersButton: [UIButton]!
     
+    var caractereChoisies: [String?] = []
+    
     var dataSourceAspect = ["Humanoïde": "Une population qui ressemble à celle de la planète Terre.",
                             "Avianoïde": "Une population ailée, évoquant les oiseaux ou les anges.",
                             "Aquaréen": "Des êtres aquatiques rappelant les créatures marines.",
@@ -202,5 +204,23 @@ class PopulationParameter: UIViewController {
     
     @IBAction func NextPage(_ sender: UIButton) {}
     
+    @IBAction func CaractereChoose(_ sender: UIButton) {
+        let tag = sender.tag
+        
+        if caractereChoisies.contains(sender.titleLabel?.text) == false {
+            caractereChoisies.append(sender.titleLabel?.text)
+            sender.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+            sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+            sender.layer.borderWidth = 3
+            sender.layer.cornerRadius = 16
+            sender.layer.cornerCurve = .continuous
+        } else {
+            let indexElement = caractereChoisies.firstIndex(of: sender.titleLabel?.text)
+            caractereChoisies.remove(at: indexElement!)
+            sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
+            sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+            sender.layer.borderWidth = 1
+        }
+    }
 }
         
