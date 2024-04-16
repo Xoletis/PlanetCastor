@@ -77,7 +77,7 @@ class ImageParameter: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view2 = storyboard.instantiateViewController(withIdentifier: "listbiodiv") as! BiodiversiteView
         view2.name = (sender.titleLabel?.text)!
-        view2.modalPresentationStyle = .overCurrentContext
+        view2.modalPresentationStyle = .fullScreen
         present(view2, animated: false, completion: nil)
     }
     
@@ -99,7 +99,6 @@ class ImageParameter: UIViewController {
             let t = touches.randomElement()!
             let p = t.location(in: view)
             moveImages[objectTouch].center = p
-            
             ImagesList.images[objectTouch].x = p.x
             ImagesList.images[objectTouch].y = p.y
         }

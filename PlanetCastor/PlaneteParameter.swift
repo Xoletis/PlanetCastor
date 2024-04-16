@@ -28,6 +28,8 @@ class PlaneteParameter: UIViewController {
     @IBOutlet weak var HumiditePatameter: UISlider!
     @IBOutlet weak var PressionPatameter: UISlider!
     
+    let data = Database.shared
+    
     var receivedData: Bool?
     
     var atmospheresChoisies: [String?] = []
@@ -58,7 +60,7 @@ class PlaneteParameter: UIViewController {
             }
             
             ImageSpawns.shared.images = []
-            Database.shared.createTable()
+            data.createTable()
         }
         if ButtonsAtmosphere != nil {
             for button in ButtonsAtmosphere {
@@ -88,17 +90,17 @@ class PlaneteParameter: UIViewController {
                 }
             }
             
-            planetId = Database.shared.createPlanet()
+            planetId = data.createPlanet()
         }else{
-            planetId = Database.shared.getLastId()
+            planetId = data.getLastId()
         }
         
         if DiametreParameter != nil{
-            let diametre = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.diametre)
-            let continent = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.continent)
-            let temperature = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.temperature)
-            let humidite = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.humidite)
-            let pression = Database.shared.getPlanetParameter(id: planetId, parametre: Database.shared.pression)
+            let diametre = data.getPlanetParameter(id: planetId, parametre: data.diametre)
+            let continent = data.getPlanetParameter(id: planetId, parametre: data.continent)
+            let temperature = data.getPlanetParameter(id: planetId, parametre: data.temperature)
+            let humidite = data.getPlanetParameter(id: planetId, parametre: data.humidite)
+            let pression = data.getPlanetParameter(id: planetId, parametre: data.pression)
             
             DiametreParameter.placeholder = "\(diametre!)"
             ContinentPatameter.placeholder = "\(continent!)"
@@ -110,7 +112,7 @@ class PlaneteParameter: UIViewController {
             humiditeLabel.text = "\(humidite!)"
             pressionLabel.text = "\(pression!)"
             
-            let atmospheres = Database.shared.getPlanetAthmosphere(id : planetId)
+            let atmospheres = data.getPlanetAthmosphere(id : planetId)
             
             for atm in ButtonsAtmosphere{
                 let name = atm.titleLabel?.text
@@ -123,7 +125,7 @@ class PlaneteParameter: UIViewController {
                 }
             }
             
-            let ressources = Database.shared.getPlanetRessource(id : planetId)
+            let ressources = data.getPlanetRessource(id : planetId)
             
             for res in ButtonsRessources{
                 let name = res.titleLabel?.text
@@ -143,17 +145,17 @@ class PlaneteParameter: UIViewController {
     
     @IBAction func ChooseTemperature(_ sender: UISlider) {
         temperatureLabel.text! = Int(sender.value).description + " °C"
-        Database.shared.setTemperature(temperature: Int(sender.value), id: self.planetId)
+        data.setPlanetParameter(id: self.planetId, parametre: data.temperature, value: Int(sender.value))
     }
     
     @IBAction func ChooseHumidite(_ sender: UISlider) {
         humiditeLabel.text! = Int(sender.value).description + " %"
-        Database.shared.setHumidite(humidite: Int(sender.value), id: self.planetId)
+        data.setPlanetParameter(id: self.planetId, parametre: data.humidite, value: Int(sender.value))
     }
     
     @IBAction func ChoosePression(_ sender: UISlider) {
         pressionLabel.text! = Int(sender.value).description + " atm"
-        Database.shared.setPression(pression: Int(sender.value), id: self.planetId)
+        data.setPlanetParameter(id: self.planetId, parametre: data.pression, value: Int(sender.value))
     }
     
     @IBAction func ClickAtmosphereButton(_ sender: UIButton) {
@@ -166,14 +168,14 @@ class PlaneteParameter: UIViewController {
             sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
             sender.layer.borderWidth = 3
             sender.layer.cornerCurve = .continuous
-            Database.shared.addAtmosphere(atmosphereID: tag, planetID: self.planetId)
+            data.addAtmosphere(atmosphereID: tag, planetID: self.planetId)
         } else {
             let indexElement = atmospheresChoisies.firstIndex(of: sender.titleLabel?.text)
             atmospheresChoisies.remove(at: indexElement!)
             sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
             sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             sender.layer.borderWidth = 1
-            Database.shared.removeAtmosphere(atmosphereID: tag, planetID: self.planetId)
+            data.removeAtmosphere(atmosphereID: tag, planetID: self.planetId)
         }
     }
     
@@ -186,14 +188,14 @@ class PlaneteParameter: UIViewController {
             sender.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
             sender.layer.borderWidth = 3
             sender.layer.cornerCurve = .continuous
-            Database.shared.addRessource(ressourceID: tag, planetID: self.planetId)
+            data.addRessource(ressourceID: tag, planetID: self.planetId)
         } else {
             let indexElement = ressourcesChoisies.firstIndex(of: sender.titleLabel?.text)
             ressourcesChoisies.remove(at: indexElement!)
             sender.configuration?.baseForegroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1);
             sender.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             sender.layer.borderWidth = 1
-            Database.shared.removeRessource(ressourceID: tag, planetID: self.planetId)
+            data.removeRessource(ressourceID: tag, planetID: self.planetId)
         }
     }
     
@@ -212,7 +214,7 @@ class PlaneteParameter: UIViewController {
             NextPageType.isEnabled = true
         }
         
-        Database.shared.setType(type: planetType, id: planetId)
+        data.setPlanetParameter(id: planetId, parametre: data.type, value: planetType)
     }
     
     @IBAction func ClickOnInfo(_ sender: UIButton) {
@@ -225,14 +227,14 @@ class PlaneteParameter: UIViewController {
     @IBAction func DiametreChange(_ sender: UITextField, forEvent event: UIEvent) {
         let text = sender.text!
         if let diametre = Int(text) {
-            Database.shared.setDiametre(diametre: diametre, id: planetId)
+            data.setPlanetParameter(id: self.planetId, parametre: data.diametre, value: diametre)
         }
     }
     
     @IBAction func ContinentChange(_ sender: UITextField) {
         let text = sender.text!
         if let continent = Int(text){
-            Database.shared.setContinent(continent: continent, id: planetId)
+            data.setPlanetParameter(id: self.planetId, parametre: data.continent, value: continent)
         }
     }
     
