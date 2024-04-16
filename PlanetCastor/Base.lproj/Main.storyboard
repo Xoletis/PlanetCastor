@@ -533,8 +533,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kashyyk" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-tJ-R9Q">
-                                <rect key="frame" x="-214" y="116" width="821" height="493"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Teth" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-tJ-R9Q">
+                                <rect key="frame" x="-146" y="121" width="688" height="412"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="330-eQ-9aE">
@@ -583,7 +583,7 @@
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
-                                <rect key="frame" x="14" y="391" width="365" height="141"/>
+                                <rect key="frame" x="16" y="392" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -715,6 +715,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="7jB-Kl-G8n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yr-oR-tCv">
                                 <rect key="frame" x="22" y="616" width="160" height="90"/>
@@ -801,7 +804,7 @@
                                     <action selector="ClickOnTypePlanete:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="Gw5-Ao-YYA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="PlaneteTerrestre" translatesAutoresizingMaskIntoConstraints="NO" id="M0h-tS-ahl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="PlaneteTerrestre" translatesAutoresizingMaskIntoConstraints="NO" id="M0h-tS-ahl">
                                 <rect key="frame" x="104" y="87" width="185" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -822,6 +825,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="NextPageType" destination="aLI-eU-1bV" id="Cws-9i-hOp"/>
+                        <outlet property="imagePlanete" destination="M0h-tS-ahl" id="gAp-0o-H1K"/>
                         <outletCollection property="ButtonsTypePlanet" destination="XoX-CB-NvQ" collectionClass="NSMutableArray" id="Eel-OJ-b81"/>
                         <outletCollection property="ButtonsTypePlanet" destination="yHr-oK-a3g" collectionClass="NSMutableArray" id="5D1-oI-Aog"/>
                         <outletCollection property="ButtonsTypePlanet" destination="EBj-EV-8n7" collectionClass="NSMutableArray" id="4dY-Fs-0TZ"/>
@@ -2347,19 +2351,19 @@
         <segue reference="RCI-gK-yOE"/>
         <segue reference="3n0-SR-2h7"/>
         <segue reference="Zqr-IF-D9Q"/>
-        <segue reference="ifD-Aj-PU2"/>
+        <segue reference="crU-cG-5eZ"/>
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="qRp-eg-gzX"/>
-        <segue reference="fc5-qK-PQB"/>
+        <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
-        <image name="Kashyyk" width="500" height="500"/>
         <image name="PlaneteAride" width="300" height="300"/>
         <image name="PlaneteMarecageuse" width="645" height="387"/>
         <image name="PlaneteTerrestre" width="183.33332824707031" height="183.33332824707031"/>
         <image name="Planète castor" width="365" height="141"/>
+        <image name="Teth" width="500" height="500"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="bouton croix" width="37" height="31"/>
         <image name="bouton retour choix" width="37" height="31"/>
