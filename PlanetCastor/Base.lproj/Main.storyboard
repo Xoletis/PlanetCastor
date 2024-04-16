@@ -1465,12 +1465,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="auD-uo-i0X" kind="popoverPresentation" popoverAnchorView="h8D-GH-APj" id="q8I-Oa-Usq">
-                                        <popoverArrowDirection key="popoverArrowDirection" left="YES" right="YES"/>
-                                        <popoverPassthroughViews>
-                                            <imageView reference="b7o-G0-iMT"/>
-                                        </popoverPassthroughViews>
-                                    </segue>
+                                    <segue destination="auD-uo-i0X" kind="presentation" modalPresentationStyle="fullScreen" id="q8I-Oa-Usq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2134,7 +2129,7 @@
             <objects>
                 <viewController id="auD-uo-i0X" customClass="ImageParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vf7-N5-jce">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoG-FS-U6a">
@@ -2312,7 +2307,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="auD-uo-i0X" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="H1P-i7-Top"/>
+                                    <segue destination="auD-uo-i0X" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="H1P-i7-Top"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Craniates non tétrapodes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-6f-7NP">
@@ -2337,9 +2332,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q8I-Oa-Usq"/>
+        <segue reference="H1P-i7-Top"/>
         <segue reference="Swf-pg-cz0"/>
-        <segue reference="RCI-gK-yOE"/>
+        <segue reference="2cy-Wv-reI"/>
         <segue reference="2Gf-cW-ct0"/>
         <segue reference="ceD-0g-6m6"/>
         <segue reference="ifD-Aj-PU2"/>
