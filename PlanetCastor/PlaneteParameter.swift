@@ -14,6 +14,8 @@ class PlaneteParameter: UIViewController {
     @IBOutlet var ButtonsAtmosphere: [UIButton]!
     @IBOutlet var ButtonsRessources: [UIButton]!
     
+    @IBOutlet weak var imagePlanete: UIImageView!
+    
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var pressionLabel: UILabel!
     @IBOutlet weak var humiditeLabel: UILabel!
@@ -204,6 +206,8 @@ class PlaneteParameter: UIViewController {
         sender.configuration?.baseBackgroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
         
         planetType = sender.configuration?.title?.lowercased();
+        imagePlanete.image = UIImage(named: "Planete\((sender.configuration?.title)!.prefix(1) + ((sender.configuration?.title)!.suffix(planetType.count - 1)).lowercased())")
+        
         if planetType == "nil"{
             NextPageType.isEnabled = false
         }else{

@@ -51,6 +51,7 @@ class GalerieParameter: UIViewController {
             }
             
             nomPlanete.text = "Terre"
+            imagePlanete.image = UIImage(named: "Planete\(typePlanete.text!)")
             
             let planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.uppercased();
             typePlanete.text = planetType

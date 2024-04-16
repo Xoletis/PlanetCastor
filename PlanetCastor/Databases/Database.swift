@@ -181,21 +181,58 @@ class Database{
                 table.column(self.planetId)
             })
             
-            createExamplePlanet()
+            createPlanetesBase()
         }
     }
     
-    func createExamplePlanet(){
-        let commetuveux = self.planetsTable.insert(self.type<-"aride", self.diametre<-5000, self.continent<-8, self.temperature<-45, self.humidite<-89, self.pression<-6)
+    func createPlanetesBase(){
+        let terre = self.planetsTable.insert(self.type<-"terrestre", self.diametre<-12742, self.continent<-7, self.temperature<-15, self.humidite<-30, self.pression<-1)
         do {
-            try self.database.run(commetuveux)
+            try self.database.run(terre)
         } catch {
             print("error")
         }
+        self.addAtmosphere(atmosphereID: 1, planetID: 1)
+        self.addAtmosphere(atmosphereID: 2, planetID: 1)
+        self.addAtmosphere(atmosphereID: 3, planetID: 1)
+        self.addAtmosphere(atmosphereID: 4, planetID: 1)
         self.addAtmosphere(atmosphereID: 5, planetID: 1)
+        self.addAtmosphere(atmosphereID: 6, planetID: 1)
+        self.addAtmosphere(atmosphereID: 8, planetID: 1)
+        self.addAtmosphere(atmosphereID: 9, planetID: 1)
+        
+        self.addRessource(ressourceID: 1, planetID: 1)
+        self.addRessource(ressourceID: 2, planetID: 1)
+        self.addRessource(ressourceID: 3, planetID: 1)
         self.addRessource(ressourceID: 4, planetID: 1)
+        self.addRessource(ressourceID: 5, planetID: 1)
+        self.addRessource(ressourceID: 6, planetID: 1)
+        self.addRessource(ressourceID: 7, planetID: 1)
+        self.addRessource(ressourceID: 8, planetID: 1)
+        self.addRessource(ressourceID: 9, planetID: 1)
         
         self.addSpaciesOnPlanet(planet: 1, img: "bs_1", x: 410/2, y: 939/2)
+        
+        
+        let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1)
+        do {
+            try self.database.run(naboo)
+        } catch {
+            print("error")
+        }
+        self.addAtmosphere(atmosphereID: 1, planetID: 2)
+        self.addAtmosphere(atmosphereID: 2, planetID: 2)
+        self.addAtmosphere(atmosphereID: 3, planetID: 2)
+        self.addAtmosphere(atmosphereID: 4, planetID: 2)
+        self.addAtmosphere(atmosphereID: 5, planetID: 2)
+        self.addAtmosphere(atmosphereID: 6, planetID: 2)
+        self.addAtmosphere(atmosphereID: 8, planetID: 2)
+        self.addAtmosphere(atmosphereID: 9, planetID: 2)
+        
+        self.addRessource(ressourceID: 1, planetID: 2)
+        self.addRessource(ressourceID: 9, planetID: 2)
+        
+        self.addSpaciesOnPlanet(planet: 2, img: "bs_1", x: 410/2, y: 939/2)
     }
     
     func createAthmosphere(name: String){
