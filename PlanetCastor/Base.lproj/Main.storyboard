@@ -2346,8 +2346,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="oAF-3f-wrG"/>
         <segue reference="q8I-Oa-Usq"/>
-        <segue reference="Swf-pg-cz0"/>
+        <segue reference="R4Z-v9-fKz"/>
         <segue reference="RCI-gK-yOE"/>
         <segue reference="3n0-SR-2h7"/>
         <segue reference="Zqr-IF-D9Q"/>
@@ -2355,7 +2356,7 @@
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="qRp-eg-gzX"/>
-        <segue reference="0Qz-Yd-Ahw"/>
+        <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>

@@ -99,7 +99,7 @@ class ImageParameter: UIViewController {
             let t = touches.randomElement()!
             let p = t.location(in: view)
             moveImages[objectTouch].center = p
-            
+            print(ImagesList)
             ImagesList.images[objectTouch].x = p.x
             ImagesList.images[objectTouch].y = p.y
         }
