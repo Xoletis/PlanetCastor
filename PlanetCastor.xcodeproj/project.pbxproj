@@ -200,6 +200,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		CC53DA782BC83D940074C619 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CC53DA812BC83DAC0074C619 /* ImageSpawn.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		CC5FB3382BBED3BD00A6D853 = {
 			isa = PBXGroup;
 			children = (
