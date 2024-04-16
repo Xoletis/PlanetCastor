@@ -143,20 +143,6 @@ class PopulationParameter: UIViewController {
         
         let car = data.getPlanetCar(id: data.getLastId())
         
-        for carbtn in CaractersButton{
-            let name = carbtn.titleLabel?.text
-            if car.contains(name!.lowercased()){
-                caractereChoisies.append(name)
-                carbtn.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
-                carbtn.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
-                carbtn.layer.borderWidth = 3
-                carbtn.layer.cornerCurve = .continuous
-                carbtn.layer.cornerRadius = 16
-            }
-        }
-    }
-    
-    @objc private func changeAspect(){
         var menuChildrenAvancee: [UIMenuElement] = []
         for element in dataSourceAvancee {
             menuChildrenAvancee.append(UIAction(title: element, handler: actionAvanceeClosure))
@@ -179,6 +165,18 @@ class PopulationParameter: UIViewController {
             button.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
             button.layer.borderWidth = 1.0
             button.titleLabel?.font = UIFont(name: "Marker Felt Wide", size: 17.0)
+        }
+        
+        for carbtn in CaractersButton{
+            let name = carbtn.titleLabel?.text
+            if car.contains(name!.lowercased()){
+                caractereChoisies.append(name)
+                carbtn.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
+                carbtn.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
+                carbtn.layer.borderWidth = 3
+                carbtn.layer.cornerCurve = .continuous
+                carbtn.layer.cornerRadius = 16
+            }
         }
     }
     
