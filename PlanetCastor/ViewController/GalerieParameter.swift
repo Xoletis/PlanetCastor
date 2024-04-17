@@ -30,6 +30,8 @@ class GalerieParameter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let data = Database.shared
+        
         for button in buttonsShadow {
             button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
             button.layer.shadowOpacity = 0.9
@@ -51,10 +53,14 @@ class GalerieParameter: UIViewController {
             }
             
             nomPlanete.text = "Terre"
-            imagePlanete.image = UIImage(named: "Planete\(typePlanete.text!)")
+            
+            let name = (data.getPlanetParameter(id: planetID, parametre: data.type)?.uppercased())!
+            let namel = name.lowercased()
+            let img = "Planete\(name.prefix(1) + (name.suffix(namel.count - 1)).lowercased())"
+            
+            imagePlanete.image = UIImage(named: img)
             
             let planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.uppercased();
-            print(Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type))
             typePlanete.text = planetType
 
             let planetDiametre = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.diametre);

@@ -15,7 +15,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = false
+    let updateTable = true
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
@@ -51,6 +51,7 @@ class Database{
     let langue = Expression<String>("langue")
     let aspect = Expression<String>("aspect")
     let politique = Expression<String>("politique")
+    let tech = Expression<String>("tech")
     
     let atm_name = Expression<String>("atm_name")
     let res_name = Expression<String>("res_name")
@@ -133,6 +134,7 @@ class Database{
                 table.column(self.langue, defaultValue: "Français")
                 table.column(self.aspect, defaultValue: "Humanoïde")
                 table.column(self.politique, defaultValue: "Ploutocratie")
+                table.column(self.tech, defaultValue: "Antiquité")
             })
             
             createOrDeleteTable(table: self.athmosphereTabe.create{ (table) in

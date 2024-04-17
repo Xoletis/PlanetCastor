@@ -58,7 +58,7 @@ class PopulationParameter: UIViewController {
                             "Militarisme": "Un système politique dans lequel le pouvoir est partagé entre un gouvernement central et des entités subnationales, telles que des États ou des provinces, qui conservent une certaine autonomie politique.",
                             "Autarcie": "Un système politique dans lequel un pays cherche à être économiquement autonome en produisant tous les biens et services nécessaires sur son propre territoire, souvent en fermant ses frontières aux échanges internationaux."]
     
-    var dataSourceAvancee = ["Antiquité ", "Ere Classique", "Renaissance", "Révolution industrielle", "Moyen Âge", "Ere de l'information", "Ere atomique", "Ere moderne", "Ere de l'espace"]
+    var dataSourceAvancee = ["Antiquité ", "Ere Classique","Moyen Âge", "Renaissance", "Révolution industrielle", "Ere atomique", "Ere moderne", "Ere de l'information", "Ere de l'espace"]
   
     
     override func viewDidLoad() {
@@ -96,7 +96,6 @@ class PopulationParameter: UIViewController {
         let actionAvanceeClosure = { (action: UIAction) in
             print()
         }
-        
         let defaultAspect = (data.getPlanetParameter(id: id, parametre: data.aspect) ?? "Humanoïde") as String
         
         var menuChildrenAspect: [UIMenuElement] = []
@@ -109,7 +108,7 @@ class PopulationParameter: UIViewController {
         }
         
         aspectButton.menu = UIMenu(options: .displayInline, children: menuChildrenAspect)
-        
+        aspectButton.tag = 1
         aspectButton.showsMenuAsPrimaryAction = true
         aspectButton.changesSelectionAsPrimaryAction = true
         aspectButton.frame = CGRect(x: 160, y: 286, width: 126, height: 30)
@@ -129,6 +128,7 @@ class PopulationParameter: UIViewController {
                menuChildrenRegime.append(action)
         }
         regimeButton.menu = UIMenu(options: .displayInline, children: menuChildrenRegime)
+        regimeButton.tag = 2
         regimeButton.showsMenuAsPrimaryAction = true
         regimeButton.changesSelectionAsPrimaryAction = true
         regimeButton.frame = CGRect(x: 160, y: 426, width: 126, height: 30)
@@ -143,14 +143,24 @@ class PopulationParameter: UIViewController {
         
         let car = data.getPlanetCar(id: data.getLastId())
         
+        let defaultTech = (data.getPlanetParameter(id: id, parametre: data.tech) ?? "Antiquité") as String
+        
         var menuChildrenAvancee: [UIMenuElement] = []
         for element in dataSourceAvancee {
-            menuChildrenAvancee.append(UIAction(title: element, handler: actionAvanceeClosure))
+            let action = UIAction(title: element, handler: actionAvanceeClosure)
+               if element == defaultTech {
+                   action.state = .on
+               }
+               menuChildrenAvancee.append(action)
         }
         avanceeButton.menu = UIMenu(options: .displayInline, children: menuChildrenAvancee)
+        avanceeButton.tag = 3
         avanceeButton.showsMenuAsPrimaryAction = true
         avanceeButton.changesSelectionAsPrimaryAction = true
         avanceeButton.frame = CGRect(x: 210, y: 776, width: 160, height: 30)
+        
+        avanceeButton.addObserver(self, forKeyPath: "titleLabel.text", options: .new, context: nil)
+        
         self.view.addSubview(avanceeButton)
         
         var dropDownMenus = [avanceeButton, regimeButton, aspectButton]
@@ -210,11 +220,14 @@ class PopulationParameter: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let object = object as? UIButton, let keyPath = keyPath, keyPath == "titleLabel.text" {
+            print (object.tag)
             let newTitle = change?[.newKey] as? String
             if(object.tag == 1){
                 data.setPlanetParameter(id: data.getLastId(), parametre: data.aspect, value: newTitle!)
             }else if (object.tag == 2){
                 data.setPlanetParameter(id: data.getLastId(), parametre: data.politique, value: newTitle!)
+            }else if (object.tag == 3){
+                data.setPlanetParameter(id: data.getLastId(), parametre: data.tech, value: newTitle!)
             }
         }
     }
