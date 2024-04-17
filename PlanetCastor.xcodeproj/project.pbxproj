@@ -30,6 +30,7 @@
 		CC5FB3662BBED3BF00A6D853 /* PlanetCastorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */; };
 		CC5FB3682BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */; };
 		CC6A99962BBEE59E00CBDAC3 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = CC6A99952BBEE59E00CBDAC3 /* Fonts */; };
+		CC789B0B2BCFCB9B00AB497B /* GalerieScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC789B0A2BCFCB9B00AB497B /* GalerieScrollView.swift */; };
 		CC7C5BF42BCEC44E0058CD4B /* GaleriePop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */; };
 		CC7C5BFD2BCEC4660058CD4B /* GalerieId.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */; };
 		CC7C7A1A2BC3FC130054D210 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7C7A192BC3FC120054D210 /* Database.swift */; };
@@ -140,6 +141,7 @@
 		CC5FB3652BBED3BF00A6D853 /* PlanetCastorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITests.swift; sourceTree = "<group>"; };
 		CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCastorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC6A99952BBEE59E00CBDAC3 /* Fonts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fonts; sourceTree = SOURCE_ROOT; };
+		CC789B0A2BCFCB9B00AB497B /* GalerieScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalerieScrollView.swift; sourceTree = "<group>"; };
 		CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleriePop.swift; sourceTree = "<group>"; };
 		CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalerieId.swift; sourceTree = "<group>"; };
 		CC7C7A192BC3FC120054D210 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -231,15 +233,7 @@
 				CC5FB34F2BBED3BF00A6D853 /* LaunchScreen.storyboard */,
 				287B97B92BC0265F009C1072 /* Assets.xcassets */,
 				CC5FB3522BBED3BF00A6D853 /* Info.plist */,
-				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
-				CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */,
-				CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */,
-				CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */,
-				CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */,
-				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
-				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
-				2825F6342BC7F25B008BA088 /* PopulationParameter.swift */,
-				28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */,
+				CC789B022BCFCB6200AB497B /* ViewController */,
 			);
 			path = PlanetCastor;
 			sourceTree = "<group>";
@@ -259,6 +253,23 @@
 				CC5FB3672BBED3BF00A6D853 /* PlanetCastorUITestsLaunchTests.swift */,
 			);
 			path = PlanetCastorUITests;
+			sourceTree = "<group>";
+		};
+		CC789B022BCFCB6200AB497B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
+				CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */,
+				CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */,
+				CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */,
+				CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */,
+				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
+				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
+				2825F6342BC7F25B008BA088 /* PopulationParameter.swift */,
+				28A11BE72BCD572A00F7BD4F /* IdentiteParameter.swift */,
+				CC789B0A2BCFCB9B00AB497B /* GalerieScrollView.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CC7C7A182BC3FBF00054D210 /* Databases */ = {
@@ -479,6 +490,7 @@
 				CCB9397A2BC6C94A00D7A231 /* BiodiversiteView.swift in Sources */,
 				CC7C5BF42BCEC44E0058CD4B /* GaleriePop.swift in Sources */,
 				287E097F2BC6E34400C73ED1 /* ImageResultatParameter.swift in Sources */,
+				CC789B0B2BCFCB9B00AB497B /* GalerieScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

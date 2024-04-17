@@ -16,7 +16,7 @@
         <!--Votre Galerie-->
         <scene sceneID="pVu-vf-yUp">
             <objects>
-                <viewController id="oA4-8K-wxl" customClass="GalerieParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oA4-8K-wxl" customClass="GalerieScrollView" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp9-SO-2CI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,94 +32,20 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ifD-Aj-PU2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4r-hn-cLY">
-                                <rect key="frame" x="18" y="135" width="163" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <size key="titleShadowOffset" width="15" height="110"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <backgroundConfiguration key="background" image="PlaneteTerrestre" imageContentMode="scaleAspectFit" strokeWidth="1">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ZjQ-bR-pIb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-hL-uG9">
-                                <rect key="frame" x="18" y="320" width="163" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <size key="titleShadowOffset" width="15" height="110"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <backgroundConfiguration key="background" image="PlaneteAride" imageContentMode="scaleAspectFit" strokeWidth="1">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="qRp-eg-gzX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZw-uE-VEp">
-                                <rect key="frame" x="214" y="135" width="163" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <size key="titleShadowOffset" width="15" height="110"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
-                                    <backgroundConfiguration key="background" image="PlaneteMarecageuse" imageContentMode="scaleAspectFill" strokeWidth="1">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseBackgroundColor" systemColor="systemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="hF2-xs-tXq" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="Hr9-fW-bbn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NABOO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-4u-FNn">
-                                <rect key="frame" x="263" y="200" width="64" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TERRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKc-TJ-UIG">
-                                <rect key="frame" x="70" y="200" width="58" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ARAKIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-3Y-1qO">
-                                <rect key="frame" x="65" y="376" width="69" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZz-ay-SYp"/>
                         <color key="backgroundColor" red="0.93333333730000001" green="0.87843137979999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Votre Galerie" id="2GB-Hu-lrG"/>
-                    <connections>
-                        <outletCollection property="buttonsShadow" destination="b4r-hn-cLY" collectionClass="NSMutableArray" id="dzD-UH-Fqv"/>
-                        <outletCollection property="buttonsShadow" destination="IZw-uE-VEp" collectionClass="NSMutableArray" id="DuS-LR-vGo"/>
-                        <outletCollection property="buttonsShadow" destination="qDU-hL-uG9" collectionClass="NSMutableArray" id="ZAS-BC-5vh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVm-EN-ZOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.5190839694656" y="362.67605633802816"/>
         </scene>
-        <!--Galerie Parameter-->
+        <!--glrView-->
         <scene sceneID="Lqy-oZ-hCF">
             <objects>
-                <viewController id="hF2-xs-tXq" customClass="GalerieParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="glrView" storyboardIdentifier="glrView" title="glrView" id="hF2-xs-tXq" customClass="GalerieParameter" customModule="PlanetCastor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j6M-js-Q8n">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -582,7 +508,7 @@
                                     <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Planète castor 1" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
                                 <rect key="frame" x="16" y="392" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2350,19 +2276,17 @@
         <segue reference="Swf-pg-cz0"/>
         <segue reference="RCI-gK-yOE"/>
         <segue reference="3n0-SR-2h7"/>
-        <segue reference="ceD-0g-6m6"/>
-        <segue reference="crU-cG-5eZ"/>
-        <segue reference="SeJ-w6-jn9"/>
-        <segue reference="pjE-YZ-iZi"/>
-        <segue reference="q43-GV-fje"/>
-        <segue reference="fc5-qK-PQB"/>
+        <segue reference="Zqr-IF-D9Q"/>
+        <segue reference="ifD-Aj-PU2"/>
+        <segue reference="4zn-IY-Soy"/>
+        <segue reference="7D5-AL-lCR"/>
+        <segue reference="uBA-6q-YSO"/>
+        <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>
-        <image name="PlaneteAride" width="300" height="300"/>
-        <image name="PlaneteMarecageuse" width="645" height="387"/>
         <image name="PlaneteTerrestre" width="183.33332824707031" height="183.33332824707031"/>
-        <image name="Planète castor" width="365" height="141"/>
+        <image name="Planète castor 1" width="365" height="141"/>
         <image name="Teth" width="500" height="500"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="bouton croix" width="37" height="31"/>

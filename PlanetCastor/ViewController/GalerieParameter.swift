@@ -54,6 +54,7 @@ class GalerieParameter: UIViewController {
             imagePlanete.image = UIImage(named: "Planete\(typePlanete.text!)")
             
             let planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.uppercased();
+            print(Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type))
             typePlanete.text = planetType
 
             let planetDiametre = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.diametre);

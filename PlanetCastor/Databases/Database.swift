@@ -15,7 +15,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = true
+    let updateTable = false
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
@@ -91,7 +91,22 @@ class Database{
     
     func createTable(){
         
-        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "aquatique_type") || !tableExists(tableName: "biodiv_spacies_img") || !tableExists(tableName: "biodiv_planet") || !tableExists(tableName: "caracter") || !tableExists(tableName: "Link_CP"){
+        print("1 : ", updateTable)
+        print("2 : ", !tableExists( tableName: "planets"))
+        print("3 : ", !tableExists( tableName: "athmosphere"))
+        print("4 : ", !tableExists( tableName: "planet_atmosphere"))
+        print("5 : ", !tableExists(tableName: "ressources"))
+        print("6 : ", !tableExists(tableName: "planet_ressource"))
+        print("7 : ", !tableExists(tableName: "biodiv_type"))
+        print("8 : ", !tableExists(tableName: "biodiv_spacies"))
+        print("9 : ", !tableExists(tableName: "biodiv_planet"))
+        print("10 : ", !tableExists(tableName: "caracter"))
+        print("11 : ", !tableExists(tableName: "Link_CP"))
+        
+        if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "biodiv_type") || !tableExists(tableName: "biodiv_spacies") || !tableExists(tableName: "biodiv_planet") || !tableExists(tableName: "caracter") || !tableExists(tableName: "Link_CP"){
+            
+            print("reset")
+            
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
@@ -220,6 +235,8 @@ class Database{
             
             createPlanetesBase()
         }
+        
+        deletePlanetIfTypeNull()
     }
     
     func createPlanetesBase(){
@@ -270,6 +287,16 @@ class Database{
         self.addRessource(ressourceID: 9, planetID: 2)
         
         self.addSpaciesOnPlanet(planet: 2, img: "bs_1", x: 410/2, y: 939/2)
+    }
+    
+    func deletePlanetIfTypeNull(){
+        let planet = self.planetsTable.filter(self.type == "null")
+        let planetDelet = planet.delete()
+        do{
+            try self.database.run(planetDelet)
+        }catch{
+            print(error)
+        }
     }
     
     func createAthmosphere(name: String){
@@ -324,48 +351,6 @@ class Database{
         updateDatabase(method: updatePlanet)
     }
     
-    func showPlanet(id: Int){
-        var text = ""
-        
-        let linkAP_Query = self.planetsTable
-            .join(self.planetatmospheretable, on: self.planetId == self.linkAP_planetId)
-            .join(self.athmosphereTabe, on: self.atmosphereId == self.linkAP_athmosphereId)
-            .filter(self.planetId == id)
-        
-        let linkRP_Query = self.planetsTable
-            .join(self.planetressourcetable, on: self.planetId == self.linkRP_planetId)
-            .join(self.ressourcesTable, on: self.resourceId == self.linkRP_ressourceId)
-            .filter(self.planetId == id)
-        
-        do {
-            let planets = try self.database.prepare(self.planetsTable)
-            for planet in planets {
-                if(planet[self.planetId] == id){
-                    text += "id: \(planet[self.planetId]), type: \(planet[self.type]), diamètre: \(planet[self.diametre]), contient: \(planet[self.continent]), temperature: \(planet[self.temperature]), humidité: \(planet[self.humidite]), pression: \(planet[self.pression]), habitants : \(planet[self.habitantName]), couleur = [\(planet[self.color_r]), \(planet[self.color_g]), \(planet[self.color_b])]"
-                }
-            }
-            
-            text += ", atmospheres : "
-            
-            for row in try self.database.prepare(linkAP_Query) {
-                let name = try row.get(self.atm_name)
-                text += "\(name), "
-            }
-            
-            text += " ressources : "
-            
-            for row in try self.database.prepare(linkRP_Query) {
-                let name = try row.get(self.res_name)
-                text += "\(name), "
-            }
-            
-        } catch {
-            print("Erreur lors de l'exécution de la requête: \(error)")
-        }
-        
-        print(text)
-    }
-    
     func getLastId() -> Int{
        var id = 1
         do{
@@ -395,7 +380,6 @@ class Database{
         }catch{
             print(error)
         }
-        showPlanet(id: getLastId())
     }
     
     func createOrDeleteTable(table: String){
@@ -423,8 +407,6 @@ class Database{
         }catch{
             print(error)
         }
-        
-        showPlanet(id: planetID)
     }
     
     func removeAtmosphere(atmosphereID : Int, planetID : Int){
@@ -436,7 +418,7 @@ class Database{
             print(error)
         }
         
-        showPlanet(id: planetID)
+        //showPlanet(id: planetID)
     }
     
     func addRessource(ressourceID : Int, planetID : Int){
@@ -447,7 +429,7 @@ class Database{
             print(error)
         }
         
-        showPlanet(id: planetID)
+        //showPlanet(id: planetID)
     }
     
     func removeRessource(ressourceID : Int, planetID : Int){
@@ -459,7 +441,7 @@ class Database{
             print(error)
         }
         
-        showPlanet(id: planetID)
+        //showPlanet(id: planetID)
     }
     
     func addCar(carID : Int, planetID : Int){
@@ -470,7 +452,7 @@ class Database{
             print(error)
         }
         
-        showPlanet(id: planetID)
+        //showPlanet(id: planetID)
     }
     
     func removecar(carID : Int, planetID : Int){
@@ -482,7 +464,7 @@ class Database{
             print(error)
         }
         
-        showPlanet(id: planetID)
+        //showPlanet(id: planetID)
     }
     
     func getPlanetParameter<V : Value>(id : Int, parametre : Expression<V>) -> V? {
@@ -640,5 +622,4 @@ class Database{
         
         return texts
     }
-    
 }

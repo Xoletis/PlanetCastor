@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorImage = backImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
         
+        Database.shared.createTable()
+        
         for button in buttons {
             button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.40).cgColor
             button.layer.shadowOpacity = 0.9
