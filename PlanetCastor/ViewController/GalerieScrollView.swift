@@ -153,7 +153,7 @@ class GalerieScrollView: UIViewController {
         
         let btn = sender.view as! UIButton
         
-        view2.planetID = btn.tag
+        PlanetShow.shared.planetToShowId = btn.tag
         view2.modalPresentationStyle = .fullScreen
         present(view2, animated: false, completion: nil)
     }

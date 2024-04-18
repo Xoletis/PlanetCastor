@@ -15,7 +15,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = true
+    let updateTable = false
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
@@ -37,7 +37,8 @@ class Database{
     let linkRPId = Expression<Int>("linkrp_id")
     let linkCPId = Expression<Int>("linkcp_ID")
     
-    
+    let planetname = Expression<String>("name")
+    let planetdesc = Expression<String>("desc")
     let type = Expression<String>("type")
     let diametre = Expression<Int>("diametre")
     let continent = Expression<Int>("continent")
@@ -52,6 +53,9 @@ class Database{
     let aspect = Expression<String>("aspect")
     let politique = Expression<String>("politique")
     let tech = Expression<String>("tech")
+    let moon = Expression<Int>("moon")
+    let starname = Expression<String>("star_name")
+    let startype = Expression<Int>("star_type")
     
     let atm_name = Expression<String>("atm_name")
     let res_name = Expression<String>("res_name")
@@ -92,18 +96,6 @@ class Database{
     
     func createTable(){
         
-        print("1 : ", updateTable)
-        print("2 : ", !tableExists( tableName: "planets"))
-        print("3 : ", !tableExists( tableName: "athmosphere"))
-        print("4 : ", !tableExists( tableName: "planet_atmosphere"))
-        print("5 : ", !tableExists(tableName: "ressources"))
-        print("6 : ", !tableExists(tableName: "planet_ressource"))
-        print("7 : ", !tableExists(tableName: "biodiv_type"))
-        print("8 : ", !tableExists(tableName: "biodiv_spacies"))
-        print("9 : ", !tableExists(tableName: "biodiv_planet"))
-        print("10 : ", !tableExists(tableName: "caracter"))
-        print("11 : ", !tableExists(tableName: "Link_CP"))
-        
         if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "biodiv_type") || !tableExists(tableName: "biodiv_spacies") || !tableExists(tableName: "biodiv_planet") || !tableExists(tableName: "caracter") || !tableExists(tableName: "Link_CP"){
             
             print("reset")
@@ -121,6 +113,8 @@ class Database{
             
             createOrDeleteTable(table: self.planetsTable.create{ (table) in
                 table.column(self.planetId, primaryKey: true)
+                table.column(self.planetname, defaultValue: "Terre")
+                table.column(self.planetdesc, defaultValue: "Ecrivez votre description")
                 table.column(self.type)
                 table.column(self.continent, defaultValue: 7)
                 table.column(self.diametre, defaultValue: 12742)
@@ -135,6 +129,9 @@ class Database{
                 table.column(self.aspect, defaultValue: "Humanoïde")
                 table.column(self.politique, defaultValue: "Ploutocratie")
                 table.column(self.tech, defaultValue: "Antiquité")
+                table.column(self.moon, defaultValue: 1)
+                table.column(self.starname, defaultValue: "Soleil")
+                table.column(self.startype, defaultValue: 1)
             })
             
             createOrDeleteTable(table: self.athmosphereTabe.create{ (table) in

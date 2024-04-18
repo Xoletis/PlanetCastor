@@ -30,6 +30,8 @@ class GalerieParameter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        planetID = PlanetShow.shared.planetToShowId
+        
         let data = Database.shared
         
         for button in buttonsShadow {
@@ -109,3 +111,15 @@ class GalerieParameter: UIViewController {
     }
 }
     
+
+class PlanetShow{
+    
+    static let shared = PlanetShow()
+    
+    var planetToShowId = 1
+    
+    init(){
+        
+    }
+    
+}
