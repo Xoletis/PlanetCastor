@@ -77,8 +77,6 @@ class GalerieScrollView: UIViewController {
                     
                     let img = "Planete\(name.prefix(1) + (name.suffix(namel.count - 1)).lowercased())"
                     
-                    print(img)
-                    
                     button.isUserInteractionEnabled = true
                     button.setImage(UIImage(named: img), for: .normal)
                     button.contentMode = .scaleAspectFill
@@ -99,6 +97,22 @@ class GalerieScrollView: UIViewController {
                 
                 planetButton.append(button)
                 
+                if(i <= planetCount){
+                    let textView = UITextView()
+                    textView.text = data.getPlanetParameter(id: i, parametre: data.planetname)?.uppercased()
+                    textView.textAlignment = .center
+                    textView.isEditable = false
+                    textView.textColor = UIColor.black
+                    textView.font = UIFont(name: "MarkerFelt-Wide", size: 20)
+                    textView.sizeToFit()
+                    
+                    
+                    textView.center = CGPoint(x: 81.5, y: 78)
+                    
+                    button.addSubview(textView)
+                }
+               
+                
                 if(j == 1){
                     let button = UIButton()
                     button.isUserInteractionEnabled = false
@@ -114,7 +128,6 @@ class GalerieScrollView: UIViewController {
                 }
             }
             
-            print("separateur")
             let button = UIButton()
             button.isUserInteractionEnabled = false
             button.contentMode = .scaleAspectFit
@@ -135,16 +148,6 @@ class GalerieScrollView: UIViewController {
             let tabGesture = UITapGestureRecognizer(target: self, action: #selector(choosePlanet(_:)))
             button.addGestureRecognizer(tabGesture)
         }
-        
-        
-        /*let text = UITextView()
-        text.isUserInteractionEnabled = true
-        text.text = "TERRE"
-        text.textColor = UIColor.black
-        text.backgroundColor = UIColor.white
-        text.widthAnchor.constraint(equalToConstant: CGFloat(26)).isActive = true
-        text.heightAnchor.constraint(equalToConstant: CGFloat(69)).isActive = true
-        button.addSubview(text)*/
     }
     
     @objc func choosePlanet(_ sender: UITapGestureRecognizer){

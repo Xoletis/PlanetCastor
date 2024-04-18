@@ -2352,6 +2352,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="VPd-c6-gbo"/>
         <segue reference="q8I-Oa-Usq"/>
         <segue reference="9d4-kf-HKi"/>
         <segue reference="Swf-pg-cz0"/>
