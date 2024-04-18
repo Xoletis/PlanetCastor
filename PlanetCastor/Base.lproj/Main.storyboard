@@ -523,6 +523,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="fPI-LV-fmh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ImagePrincipal" destination="xL9-tJ-R9Q" id="ifo-OS-JKW"/>
                         <outletCollection property="buttons" destination="330-eQ-9aE" collectionClass="NSMutableArray" id="6s7-hJ-1y3"/>
                         <outletCollection property="buttons" destination="3Ml-Q9-bCk" collectionClass="NSMutableArray" id="LhP-Fd-tJf"/>
                         <outletCollection property="buttons" destination="Ceh-44-RhC" collectionClass="NSMutableArray" id="pZf-k2-up7"/>
@@ -2445,7 +2446,7 @@
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="Qh1-tv-kLr"/>
-        <segue reference="fc5-qK-PQB"/>
+        <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Créer" width="59" height="21"/>

@@ -12,11 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet var buttons: [UIButton]!
     
+    @IBOutlet weak var ImagePrincipal: UIImageView!
+    
+    let imagesList : [String] = ["Teth", "PlaneteVolcanique", "PlaneteUrbaine", "PlaneteTropicale", "PlaneteTerrestre", "PlaneteNuageuse", "PlaneteMarecageuse", "PlaneteGlaciaire", "PlaneteGazeuse", "PlaneteAride", "PlaneteAquatique", "Kashyyk", "Fondor"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backImage = UIImage(named: "boutonRetour")
-        self.navigationController?.navigationBar.backIndicatorImage = backImage
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        
         
         Database.shared.createTable()
         
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
             button.layer.shadowRadius = 2
             button.layer.cornerRadius = 4.0
         }
+        
+        ImagePrincipal.image = UIImage(named: imagesList.randomElement()!)
     }
 }
 
