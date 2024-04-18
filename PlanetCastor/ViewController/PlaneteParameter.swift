@@ -116,7 +116,7 @@ class PlaneteParameter: UIViewController {
             
             for atm in ButtonsAtmosphere{
                 let name = atm.titleLabel?.text
-                if atmospheres.contains(name!.lowercased()){
+                if atmospheres.contains(name!){
                     atmospheresChoisies.append(name)
                     atm.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
                     atm.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
@@ -129,7 +129,7 @@ class PlaneteParameter: UIViewController {
             
             for res in ButtonsRessources{
                 let name = res.titleLabel?.text
-                if ressources.contains(name!.lowercased()){
+                if ressources.contains(name!){
                     ressourcesChoisies.append(name)
                     res.configuration?.baseForegroundColor = UIColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1);
                     res.layer.borderColor = CGColor(red: 217/255, green: 169/255, blue: 255/255, alpha: 1)
@@ -215,7 +215,6 @@ class PlaneteParameter: UIViewController {
         }
         
         data.setPlanetParameter(id: planetId, parametre: data.type, value: planetType!)
-        print(data.getPlanetParameter(id: planetId, parametre: data.type)!)
     }
     
     @IBAction func ClickOnInfo(_ sender: UIButton) {

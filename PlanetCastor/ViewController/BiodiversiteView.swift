@@ -57,9 +57,6 @@ class BiodiversiteView: UIViewController {
         
         var id = 0
         
-        print(divider)
-        print(countModulo)
-        
         for _ in 1...countModulo{
             stackViewHori = UIStackView()
             stackView.addArrangedSubview(stackViewHori)
@@ -74,7 +71,6 @@ class BiodiversiteView: UIViewController {
             for _ in 1...divider{
                 let imageView = UIImageView()
                 imageView.isUserInteractionEnabled = true
-                print(spacies[id])
                 imageView.image = UIImage(named: spacies[id])
                 stackViewHori.addArrangedSubview(imageView)
                 imageView.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive = true

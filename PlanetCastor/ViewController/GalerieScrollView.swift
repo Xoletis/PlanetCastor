@@ -46,8 +46,6 @@ class GalerieScrollView: UIViewController {
         }
         var i = 0
         
-        print(count, " ", planetCount)
-        
         var stackViewHori : UIStackView
         
         for _ in 1...Int(count/2){

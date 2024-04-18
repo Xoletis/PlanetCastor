@@ -73,10 +73,6 @@ class PopulationParameter: UIViewController {
             blue: CGFloat(data.getPlanetParameter(id: id, parametre: data.color_b) ?? 0) / 255,
             alpha: 1))
         
-        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_r) ?? 0))
-        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_g) ?? 0))
-        print(CGFloat(data.getPlanetParameter(id: id, parametre: data.color_b) ?? 0))
-        
         popCouleurPresentation.layer.backgroundColor = popCouleur.selectedColor?.cgColor
         
         for button in shadowButtons {
@@ -220,7 +216,6 @@ class PopulationParameter: UIViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let object = object as? UIButton, let keyPath = keyPath, keyPath == "titleLabel.text" {
-            print (object.tag)
             let newTitle = change?[.newKey] as? String
             if(object.tag == 1){
                 data.setPlanetParameter(id: data.getLastId(), parametre: data.aspect, value: newTitle!)

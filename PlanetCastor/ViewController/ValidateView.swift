@@ -19,6 +19,11 @@ class ValidateView: UIViewController {
             Database.shared.addSpaciesOnPlanet(planet: Database.shared.getLastId(), img: bio.name, x: Int(bio.x), y: Int(bio.y))
         }
         
+        for img in ImageSpawns.shared.images{
+            print(img.name, " ,", img.x, ", ", img.y)
+        }
+        
+        
         ImageSpawns.shared.images = []
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

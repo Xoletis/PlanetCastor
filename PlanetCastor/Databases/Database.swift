@@ -98,8 +98,6 @@ class Database{
         
         if updateTable || !tableExists(tableName: "planets") || !tableExists(tableName: "athmosphere") ||  !tableExists(tableName: "planet_atmosphere") ||  !tableExists(tableName: "ressources") ||  !tableExists(tableName: "planet_ressource") || !tableExists(tableName: "biodiv_type") || !tableExists(tableName: "biodiv_spacies") || !tableExists(tableName: "biodiv_planet") || !tableExists(tableName: "caracter") || !tableExists(tableName: "Link_CP"){
             
-            print("reset")
-            
             createOrDeleteTable(table: self.planetsTable.drop())
             createOrDeleteTable(table: self.athmosphereTabe.drop())
             createOrDeleteTable(table: self.planetatmospheretable.drop())
@@ -139,15 +137,17 @@ class Database{
                 table.column(self.atm_name)
             })
             
-            createAthmosphere(name: "neon")
-            createAthmosphere(name: "argon")
-            createAthmosphere(name: "dihydrogene")
-            createAthmosphere(name: "helium")
-            createAthmosphere(name: "diazote")
-            createAthmosphere(name: "dioxygene")
-            createAthmosphere(name: "sodium")
-            createAthmosphere(name: "dioxyde de carbone")
-            createAthmosphere(name: "methane")
+            createAthmosphere(name: "Neon")
+            createAthmosphere(name: "Argon")
+            createAthmosphere(name: "Dihydrogene")
+            createAthmosphere(name: "Helium")
+            createAthmosphere(name: "Diazote")
+            createAthmosphere(name: "Dioxygene")
+            createAthmosphere(name: "Sodium")
+            createAthmosphere(name: "Dioxyde de carbone")
+            createAthmosphere(name: "Methane")
+            createAthmosphere(name: "Monoxyde de carbone")
+            createAthmosphere(name: "Amoniac")
             
             createOrDeleteTable(table: self.planetatmospheretable.create{ (table) in
                 table.column(self.linkAPId, primaryKey: true)
@@ -160,15 +160,17 @@ class Database{
                 table.column(self.res_name)
             })
             
-            createRessource(name: "bois")
-            createRessource(name: "charbon")
-            createRessource(name: "fer")
-            createRessource(name: "cuivre")
-            createRessource(name: "plomb")
-            createRessource(name: "or")
-            createRessource(name: "pierre")
-            createRessource(name: "petrole")
-            createRessource(name: "eau douce")
+            createRessource(name: "Bois")
+            createRessource(name: "Charbon")
+            createRessource(name: "Fer")
+            createRessource(name: "Cuivre")
+            createRessource(name: "Plomb")
+            createRessource(name: "Or")
+            createRessource(name: "Pierre")
+            createRessource(name: "Petrole")
+            createRessource(name: "Eau douce")
+            createRessource(name: "Uranium")
+            createRessource(name: "Quartz")
             
             createOrDeleteTable(table: self.caracterTable.create{ (table) in
                 table.column(self.carId, primaryKey: true)
@@ -208,6 +210,7 @@ class Database{
                 table.column(self.biodiv_type)
             })
             
+            //Aquatique
             createBiodiv(name: "Craniates non tétrapodes", Type: "aquatique")
             createBiodiv(name: "Céphalopodes", Type: "aquatique")
             createBiodiv(name: "Euselachii", Type: "aquatique")
@@ -216,9 +219,44 @@ class Database{
             createBiodiv(name: "Cryptodira", Type: "aquatique")
             createBiodiv(name: "Mollusques", Type: "aquatique")
             createBiodiv(name: "Hétérokontophytes", Type: "aquatique")
+            createBiodiv(name: "Laping", Type: "aquatique")
+            
+            //Aride
             createBiodiv(name: "Camélidés", Type: "aride")
+            createBiodiv(name: "Laping", Type: "aride")
+            
+            //Terrestre
             createBiodiv(name: "Cervidés", Type: "terrestre")
             createBiodiv(name: "Laping", Type: "terrestre")
+            createBiodiv(name: "Passéridés", Type: "terrestre")
+            
+            //Gazeuse
+            createBiodiv(name: "Laping", Type: "gazeuse")
+            
+            //Tropicale
+            createBiodiv(name: "Simia", Type: "tropicale")
+            createBiodiv(name: "Passéridés", Type: "tropicale")
+            createBiodiv(name: "Laping", Type: "tropicale")
+            
+            //Urbaine
+            createBiodiv(name: "Passéridés", Type: "urbaine")
+            createBiodiv(name: "Laping", Type: "urbaine")
+            
+            //Volcanique
+            createBiodiv(name: "Squamates", Type: "volcanique")
+            createBiodiv(name: "Laping", Type: "volcanique")
+            
+            //Glaciaire
+            createBiodiv(name: "Alcidés", Type: "glaciaire")
+            createBiodiv(name: "Laping", Type: "glaciaire")
+            
+            //Nuageuse
+            createBiodiv(name: "Passéridés", Type: "nuageuse")
+            createBiodiv(name: "Laping", Type: "nuageuse")
+            
+            //Marcageuse
+            createBiodiv(name: "Batraciens", Type: "marecageuse")
+            createBiodiv(name: "Laping", Type: "marecageuse")
             
             createOrDeleteTable(table: self.biodivSpacies.create{ (table) in
                 table.column(self.biodivspacies_id, primaryKey: true)
@@ -266,8 +304,15 @@ class Database{
         self.addRessource(ressourceID: 7, planetID: 1)
         self.addRessource(ressourceID: 8, planetID: 1)
         self.addRessource(ressourceID: 9, planetID: 1)
+        self.addRessource(ressourceID: 10, planetID: 1)
+        self.addRessource(ressourceID: 11, planetID: 1)
         
-        self.addSpaciesOnPlanet(planet: 1, img: "Craniates non tétrapodes_1", x: 410/2, y: 939/2)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_2", x: 59, y: 605)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_3", x: 66, y: 804)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_4", x: 146, y: 706)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping_4", x: 252, y: 606)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping_2", x: 323, y: 669)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping_2", x: 236, y: 698)
         
         
         let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo")
@@ -424,8 +469,6 @@ class Database{
     func removeLastPlanet(){
         let planet = self.planetsTable.filter(self.planetId == getLastId())
         
-        print(planet)
-        
         let planetDelete = planet.delete();
         do{
             try self.database.run(planetDelete)
@@ -515,7 +558,7 @@ class Database{
         do{
             for row in try self.database.prepare(linkAP_Query) {
                 let name = try row.get(self.atm_name)
-                atmospheres.append(name)
+                atmospheres.append(name.uppercased())
             }
         }catch{
             print(error)
@@ -557,7 +600,7 @@ class Database{
         do{
             for row in try self.database.prepare(linkRP_Query) {
                 let name = try row.get(self.res_name)
-                ressources.append(name)
+                ressources.append(name.uppercased())
             }
         }catch{
             print(error)
@@ -588,7 +631,7 @@ class Database{
         for _ in 1...14{
             createBiodivSpacies(Type: "Mollusques")
         }
-        for _ in 1...14{
+        for _ in 1...18{
             createBiodivSpacies(Type: "Hétérokontophytes")
         }
         for _ in 1...4{
@@ -596,6 +639,24 @@ class Database{
         }
         for _ in 1...4{
             createBiodivSpacies(Type: "Cervidés")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Laping")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Simia")
+        }
+        for _ in 1...6{
+            createBiodivSpacies(Type: "Squamates")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Alcidés")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Batraciens")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Passéridés")
         }
     }
     

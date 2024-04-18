@@ -86,7 +86,7 @@ class GalerieParameter: UIViewController {
             for element in planetAtmosphere {
                 atmospherePlanete.text! += element
                 if countAtmosphere > 6 {
-                    atmospherePlanete.font = UIFont(name: "Marker Felt Wide", size: 15.0)
+                    atmospherePlanete.font = UIFont(name: "Marker Felt Wide", size: 13.0)
                 }
                 if countAtmosphere != 1 {
                     atmospherePlanete.text! += " - "
@@ -100,7 +100,7 @@ class GalerieParameter: UIViewController {
             for ressource in planetRessources {
                 ressourcesPlanete.text! += ressource
                 if countRessources > 6 {
-                    ressourcesPlanete.font = UIFont(name: "Marker Felt Wide", size: 15.0)
+                    ressourcesPlanete.font = UIFont(name: "Marker Felt Wide", size: 13.0)
                 }
                 if countRessources != 1 {
                     ressourcesPlanete.text! += " - "
