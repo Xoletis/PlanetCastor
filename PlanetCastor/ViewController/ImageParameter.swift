@@ -31,8 +31,6 @@ class ImageParameter: UIViewController {
         
         planetID = Database.shared.getLastId()
         
-        //print(Database.shared.showPlanet(id: planetID))
-        
         planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.lowercased();
         if PlanetImage != nil{
             PlanetImage.image = UIImage(named: planetType!)

@@ -229,7 +229,7 @@ class Database{
                 table.column(self.BIP_img)
                 table.column(self.BIP_X)
                 table.column(self.BIP_Y)
-                table.column(self.planetId)
+                table.column(self.BIP_planet)
             })
             
             createPlanetesBase()
@@ -438,8 +438,6 @@ class Database{
         }catch{
             print(error)
         }
-        
-        //showPlanet(id: planetID)
     }
     
     func removeRessource(ressourceID : Int, planetID : Int){
@@ -450,8 +448,6 @@ class Database{
         }catch{
             print(error)
         }
-        
-        //showPlanet(id: planetID)
     }
     
     func addCar(carID : Int, planetID : Int){
@@ -461,8 +457,6 @@ class Database{
         }catch{
             print(error)
         }
-        
-        //showPlanet(id: planetID)
     }
     
     func removecar(carID : Int, planetID : Int){
@@ -473,8 +467,6 @@ class Database{
         }catch{
             print(error)
         }
-        
-        //showPlanet(id: planetID)
     }
     
     func getPlanetParameter<V : Value>(id : Int, parametre : Expression<V>) -> V? {
@@ -631,5 +623,27 @@ class Database{
         }
         
         return texts
+    }
+    
+    func getBiodivOnPlanet(id : Int) -> [Location]{
+        var locs : [Location] = []
+        
+        let table = self.planetsTable
+            .join(self.biodivInPlanet, on: self.planetId == self.BIP_planet)
+            .filter(self.planetId == id)
+        
+        do{
+            for row in try self.database.prepare(table) {
+                var loc = Location(name: "", x: 0, y: 0)
+                loc.name = try row.get(self.BIP_img)
+                loc.x = Double(try row.get(self.BIP_X))
+                loc.y = Double(try row.get(self.BIP_Y))
+                locs.append(loc)
+            }
+        }catch{
+            print(error)
+        }
+        
+        return locs
     }
 }
