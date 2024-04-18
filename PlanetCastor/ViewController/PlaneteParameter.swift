@@ -87,6 +87,7 @@ class PlaneteParameter: UIViewController {
             if planetType == "nil" {
                 if NextPageType != nil{
                     NextPageType.isEnabled = false
+                    NextPageType.setImage(UIImage(named: "bouton valider lock"), for: .normal)
                 }
             }
             
@@ -210,8 +211,10 @@ class PlaneteParameter: UIViewController {
         
         if planetType == "nil"{
             NextPageType.isEnabled = false
+            NextPageType.setImage(UIImage(named: "bouton valider lock"), for: .normal)
         }else{
             NextPageType.isEnabled = true
+            NextPageType.setImage(UIImage(named: "bouton valider"), for: .normal)
         }
         
         data.setPlanetParameter(id: planetId, parametre: data.type, value: planetType!)
