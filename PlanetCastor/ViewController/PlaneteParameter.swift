@@ -238,5 +238,15 @@ class PlaneteParameter: UIViewController {
         }
     }
     
+    @IBAction func BackToMainMenu(_ sender: UIButton) {
+        
+        data.removeLastPlanet()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let view2 = storyboard.instantiateViewController(withIdentifier: "MainMenu") as! ViewController
+        
+        view2.modalPresentationStyle = .fullScreen
+        present(view2, animated: false, completion: nil)
+    }
     
 }

@@ -267,7 +267,7 @@ class Database{
         self.addSpaciesOnPlanet(planet: 1, img: "bs_1", x: 410/2, y: 939/2)
         
         
-        let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1)
+        let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo")
         do {
             try self.database.run(naboo)
         } catch {
@@ -416,8 +416,19 @@ class Database{
         }catch{
             print(error)
         }
+    }
+    
+    func removeLastPlanet(){
+        let planet = self.planetsTable.filter(self.planetId == getLastId())
         
-        //showPlanet(id: planetID)
+        print(planet)
+        
+        let planetDelete = planet.delete();
+        do{
+            try self.database.run(planetDelete)
+        }catch{
+            print(error)
+        }
     }
     
     func addRessource(ressourceID : Int, planetID : Int){

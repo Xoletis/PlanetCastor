@@ -545,7 +545,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="crU-cG-5eZ"/>
+                                    <action selector="BackToMainMenu:" destination="Ifr-gA-Rgb" eventType="touchUpInside" id="AOx-Zw-vNH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLI-eU-1bV">
@@ -1286,7 +1286,7 @@
                                     <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Ifr-gA-Rgb" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="ceD-0g-6m6"/>
+                                    <action selector="BackToMainMenu:" destination="30q-bo-z8Z" eventType="touchUpInside" id="3fz-o8-N5M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLx-Gc-jqi">
@@ -2352,10 +2352,8 @@
         <segue reference="H1P-i7-Top"/>
         <segue reference="9d4-kf-HKi"/>
         <segue reference="R4Z-v9-fKz"/>
-        <segue reference="RCI-gK-yOE"/>
+        <segue reference="nhL-St-Ny4"/>
         <segue reference="3n0-SR-2h7"/>
-        <segue reference="Zqr-IF-D9Q"/>
-        <segue reference="ifD-Aj-PU2"/>
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="uBA-6q-YSO"/>

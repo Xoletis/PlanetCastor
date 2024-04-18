@@ -54,7 +54,7 @@ class GalerieParameter: UIViewController {
                 parameter.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor
             }
             
-            nomPlanete.text = "Terre"
+            nomPlanete.text = data.getPlanetParameter(id: planetID, parametre: data.planetname)
             
             let name = (data.getPlanetParameter(id: planetID, parametre: data.type)?.uppercased())!
             let namel = name.lowercased()
