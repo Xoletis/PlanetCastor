@@ -332,6 +332,7 @@ class Database{
         
         self.addRessource(ressourceID: 1, planetID: 2)
         self.addRessource(ressourceID: 9, planetID: 2)
+        self.addRessource(ressourceID: 10, planetID: 2)
         
         self.addSpaciesOnPlanet(planet: 2, img: "bs_1", x: 410/2, y: 939/2)
     }
