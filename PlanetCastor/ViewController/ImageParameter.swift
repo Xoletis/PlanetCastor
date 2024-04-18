@@ -25,6 +25,8 @@ class ImageParameter: UIViewController {
     var moveImages : [UIImageView] = []
     var objectTouch = -1
     let ImagesList = ImageSpawns.shared
+    
+    var dataBiodiv = [1: "1", 2: "1", 3: "1", 4: "1", 5: "1", 6: "1", 7: "1", 8: "1"]
 
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -56,25 +58,32 @@ class ImageParameter: UIViewController {
         
         if ButtonsType != nil{
             let types = Database.shared.getBiodivType(type: planetType!)
+            print(types)
             var i = 0
             for button in ButtonsType{
-                if types.count < i || types.count == 0{
+                if types.count <= i || types.count == 0{
                     button.isHidden = true
                 }else{
                     button.isHidden = false
                     button.titleLabel?.text = types[i]
+                    dataBiodiv[button.tag] = types[i]
                     i += 1
                 }
             }
         }
+        
+        print(dataBiodiv)
     }
     
     
     @IBAction func SelectType(_ sender: UIButton) {
-            
+        
+        print("aaaaaaaaaaaaa : ", dataBiodiv[sender.tag]!)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view2 = storyboard.instantiateViewController(withIdentifier: "listbiodiv") as! BiodiversiteView
-        view2.name = (sender.titleLabel?.text)!
+        view2.name = dataBiodiv[sender.tag]!
+        
         view2.modalPresentationStyle = .fullScreen
         present(view2, animated: false, completion: nil)
     }

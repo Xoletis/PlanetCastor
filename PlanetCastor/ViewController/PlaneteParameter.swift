@@ -214,7 +214,8 @@ class PlaneteParameter: UIViewController {
             NextPageType.isEnabled = true
         }
         
-        data.setPlanetParameter(id: planetId, parametre: data.type, value: planetType)
+        data.setPlanetParameter(id: planetId, parametre: data.type, value: planetType!)
+        print(data.getPlanetParameter(id: planetId, parametre: data.type)!)
     }
     
     @IBAction func ClickOnInfo(_ sender: UIButton) {

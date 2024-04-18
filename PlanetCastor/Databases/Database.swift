@@ -15,7 +15,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = false
+    let updateTable = true
     
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
@@ -216,6 +216,9 @@ class Database{
             createBiodiv(name: "Cryptodira", Type: "aquatique")
             createBiodiv(name: "Mollusques", Type: "aquatique")
             createBiodiv(name: "Hétérokontophytes", Type: "aquatique")
+            createBiodiv(name: "Camélidés", Type: "aride")
+            createBiodiv(name: "Cervidés", Type: "terrestre")
+            createBiodiv(name: "Laping", Type: "terrestre")
             
             createOrDeleteTable(table: self.biodivSpacies.create{ (table) in
                 table.column(self.biodivspacies_id, primaryKey: true)
@@ -264,7 +267,7 @@ class Database{
         self.addRessource(ressourceID: 8, planetID: 1)
         self.addRessource(ressourceID: 9, planetID: 1)
         
-        self.addSpaciesOnPlanet(planet: 1, img: "bs_1", x: 410/2, y: 939/2)
+        self.addSpaciesOnPlanet(planet: 1, img: "Craniates non tétrapodes_1", x: 410/2, y: 939/2)
         
         
         let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo")
@@ -585,8 +588,14 @@ class Database{
         for _ in 1...14{
             createBiodivSpacies(Type: "Mollusques")
         }
-        for _ in 1...18{
+        for _ in 1...14{
             createBiodivSpacies(Type: "Hétérokontophytes")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Camélidés")
+        }
+        for _ in 1...4{
+            createBiodivSpacies(Type: "Cervidés")
         }
     }
     
@@ -614,9 +623,10 @@ class Database{
         let biodiv = self.biodivSpacies.filter(self.biodivspacies_type == type)
         
         do{
+            var i : Int = 1
             for row in try self.database.prepare(biodiv) {
-                let name = try row.get(self.biodivspacies_id)
-                texts.append("bs_\(name)")
+                texts.append("\(type)_\(i)")
+                i += 1
             }
         }catch{
             print(error)
