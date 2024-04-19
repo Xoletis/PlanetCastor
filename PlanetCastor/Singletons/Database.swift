@@ -289,7 +289,7 @@ class Database{
     }
     
     func createPlanetesBase(){
-        let terre = self.planetsTable.insert(self.type<-"terrestre", self.diametre<-12742, self.continent<-7, self.temperature<-15, self.humidite<-30, self.pression<-1)
+        let terre = self.planetsTable.insert(self.type<-"terrestre", self.diametre<-12742, self.continent<-7, self.temperature<-15, self.humidite<-30, self.pression<-1, self.starname <- "Soleil", self.startype <- 1, self.planetdesc <- "La Terre est plus grande des planètes telluriques (ou rocheuses). Elle est recouverte à 71 % par des mers et des océans, d'où son surnom de \"planète bleue\". Elle est aussi la seule connue où l'eau est présente sous ses trois formes : solide, liquide et gazeuse, ce qui a permis notamment le développement de la vie.", self.habitantName <- "Humain", self.aspect <- "Humanoïde", self.politique <- "Ploutocratie", self.langue <- "Français, Anglais, Itaien, Allmend, Mandarin, Etc...", self.tech <- "Ere de l'information", self.color_b <- 48, self.color_g <- 160, self.color_r <- 139)
         do {
             try self.database.run(terre)
         } catch {
@@ -316,6 +316,18 @@ class Database{
         self.addRessource(ressourceID: 10, planetID: 1)
         self.addRessource(ressourceID: 11, planetID: 1)
         
+        self.addCar(carID: 3, planetID: 1)
+        self.addCar(carID: 4, planetID: 1)
+        self.addCar(carID: 5, planetID: 1)
+        self.addCar(carID: 6, planetID: 1)
+        self.addCar(carID: 8, planetID: 1)
+        
+        self.addCar(carID: 3, planetID: 2)
+        self.addCar(carID: 4, planetID: 2)
+        self.addCar(carID: 5, planetID: 2)
+        self.addCar(carID: 6, planetID: 2)
+        self.addCar(carID: 8, planetID: 2)
+        
         self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_2.png", x: 59, y: 605)
         self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_3.png", x: 66, y: 804)
         self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_4.png", x: 146, y: 706)
@@ -324,7 +336,7 @@ class Database{
         self.addSpaciesOnPlanet(planet: 1, img: "Laping/Laping_2.png", x: 236, y: 698)
         
         
-        let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo")
+        let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo", self.startype <- 5, self.moon <- 3, self.starname <- "Naboo", self.politique <- "Démocratie", self.langue <- "Basic", self.tech <- "Ere de l'espace", self.color_r <- 172, self.color_g <- 182, self.color_b <- 57, self.planetdesc <- "Naboo était une planète située dans la Bordure Médiane, dans le secteur Chommell. Les humains et les Gungans y cohabitaient bien qu'ils s'évitaient mutuellement, jusqu'à leur coalition contre les troupes d'invasion de la Fédération du commerce en 32 av.BY. Les premiers vivaient dans des villes à l'architecture vénitienne, les seconds vivaient dans des cités sous-marines d'architecture de genre art nouveau. La capitale de Naboo était la cité de Theed, située en bordure d'une haute falaise.", self.habitantName <- "Gungans", self.aspect <- "Aquaréen")
         do {
             try self.database.run(naboo)
         } catch {

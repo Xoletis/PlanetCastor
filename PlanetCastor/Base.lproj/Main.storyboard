@@ -547,14 +547,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiD-07-nUj">
-                                <rect key="frame" x="206" y="124" width="160" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Humannoïde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxX-PP-7FB">
                                 <rect key="frame" x="73" y="219" width="247" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -587,8 +579,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calmes, Feignants, Gourmands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xci-v7-aSy">
-                                <rect key="frame" x="25" y="705" width="341" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calmes, Feignants, Gourmands" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xci-v7-aSy">
+                                <rect key="frame" x="25" y="705" width="341" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
@@ -609,6 +601,13 @@
                                 <color key="textColor" red="0.72789309479999997" green="0.70766449210000004" blue="0.78369397539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg5-jJ-JV7">
+                                <rect key="frame" x="216" y="124" width="127" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vGV-Wh-Etj"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -623,12 +622,11 @@
                         <outlet property="aspectExplications" destination="bBD-Ph-0Xt" id="lYh-wG-pVS"/>
                         <outlet property="avanceeTechno" destination="NSe-yF-JsX" id="Tt0-ss-sPJ"/>
                         <outlet property="caractere" destination="Xci-v7-aSy" id="ux1-vi-RdQ"/>
-                        <outlet property="couleur" destination="oiD-07-nUj" id="tAZ-Xd-XEM"/>
+                        <outlet property="couleur" destination="Fg5-jJ-JV7" id="14z-an-OMS"/>
                         <outlet property="langue" destination="qrQ-Nx-t0s" id="K4C-G0-eaT"/>
                         <outlet property="nom" destination="4c1-Tg-v0x" id="5HV-zW-liE"/>
                         <outlet property="regimePolitique" destination="ijH-Ve-2SB" id="Z27-Bm-nEl"/>
                         <outletCollection property="popParameter" destination="4c1-Tg-v0x" collectionClass="NSMutableArray" id="d4G-oP-pnP"/>
-                        <outletCollection property="popParameter" destination="oiD-07-nUj" collectionClass="NSMutableArray" id="uBQ-F6-T2K"/>
                         <outletCollection property="popParameter" destination="ZxX-PP-7FB" collectionClass="NSMutableArray" id="2U1-De-3of"/>
                         <outletCollection property="popParameter" destination="qrQ-Nx-t0s" collectionClass="NSMutableArray" id="qta-gj-mu4"/>
                         <outletCollection property="popParameter" destination="ijH-Ve-2SB" collectionClass="NSMutableArray" id="NnS-dt-qXK"/>
@@ -2634,14 +2632,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="H1P-i7-Top"/>
+        <segue reference="q8I-Oa-Usq"/>
         <segue reference="oAF-3f-wrG"/>
-        <segue reference="Swf-pg-cz0"/>
+        <segue reference="R4Z-v9-fKz"/>
         <segue reference="RCI-gK-yOE"/>
-        <segue reference="3n0-SR-2h7"/>
-        <segue reference="SeJ-w6-jn9"/>
-        <segue reference="pjE-YZ-iZi"/>
-        <segue reference="uBA-6q-YSO"/>
+        <segue reference="2Gf-cW-ct0"/>
+        <segue reference="4zn-IY-Soy"/>
+        <segue reference="7D5-AL-lCR"/>
+        <segue reference="q43-GV-fje"/>
         <segue reference="fc5-qK-PQB"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2664,6 +2662,9 @@
         <image name="voirRendu" width="204" height="204"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
