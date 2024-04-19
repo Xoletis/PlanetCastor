@@ -243,6 +243,7 @@ class Database{
             //Tropicale
             createBiodiv(name: "Simia", Type: "tropicale")
             createBiodiv(name: "Passéridés", Type: "tropicale")
+            createBiodiv(name: "Batraciens", Type: "marecageuse")
             createBiodiv(name: "Laping", Type: "tropicale")
             
             //Urbaine
