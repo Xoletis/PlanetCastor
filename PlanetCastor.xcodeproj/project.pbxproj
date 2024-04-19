@@ -272,8 +272,8 @@
 			children = (
 				CCAECC172BC03A8300B07DE1 /* PlaneteParameter.swift */,
 				CCF2FC5B2BC695C4000CEF8F /* ImageParameter.swift */,
-				CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */,
 				CC7C5BFC2BCEC4660058CD4B /* GalerieId.swift */,
+				CC7C5BF32BCEC44E0058CD4B /* GaleriePop.swift */,
 				CCB939792BC6C94A00D7A231 /* BiodiversiteView.swift */,
 				287E097A2BC6CBC800C73ED1 /* GalerieParameter.swift */,
 				287E097E2BC6E34400C73ED1 /* ImageResultatParameter.swift */,
