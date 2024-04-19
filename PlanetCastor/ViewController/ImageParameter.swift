@@ -31,6 +31,9 @@ class ImageParameter: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         
+        let bundlePath = Bundle.main.path(forResource: "images", ofType: "bundle")!
+        let bundle = Bundle(path: bundlePath)
+        
         planetID = Database.shared.getLastId()
         
         planetType = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.type)?.lowercased();
@@ -48,7 +51,8 @@ class ImageParameter: UIViewController {
             
             for img in ImagesList.images{
                 let imageView = UIImageView(frame: CGRect(x: img.x - 50, y: img.y - 50, width: 100, height: 100))
-                imageView.image = UIImage(named: img.name)
+                
+                imageView.image = UIImage(named: img.name, in: bundle, compatibleWith: nil)
                 
                 self.view.addSubview(imageView)
                 
