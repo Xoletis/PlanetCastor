@@ -309,12 +309,12 @@ class Database{
         self.addRessource(ressourceID: 10, planetID: 1)
         self.addRessource(ressourceID: 11, planetID: 1)
         
-        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_2", x: 59, y: 605)
-        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_3", x: 66, y: 804)
-        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés_4", x: 146, y: 706)
-        self.addSpaciesOnPlanet(planet: 1, img: "Laping_4", x: 252, y: 606)
-        self.addSpaciesOnPlanet(planet: 1, img: "Laping_2", x: 323, y: 669)
-        self.addSpaciesOnPlanet(planet: 1, img: "Laping_2", x: 236, y: 698)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_2.png", x: 59, y: 605)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_3.png", x: 66, y: 804)
+        self.addSpaciesOnPlanet(planet: 1, img: "Cervidés/Cervidés_4.png", x: 146, y: 706)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping/Laping_4.png", x: 252, y: 606)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping/Laping_2.png", x: 323, y: 669)
+        self.addSpaciesOnPlanet(planet: 1, img: "Laping/Laping_2.png", x: 236, y: 698)
         
         
         let naboo = self.planetsTable.insert(self.type<-"marecageuse", self.diametre<-12120, self.continent<-1, self.temperature<-20, self.humidite<-40, self.pression<-1, self.planetname<-"Naboo")
@@ -335,8 +335,6 @@ class Database{
         self.addRessource(ressourceID: 1, planetID: 2)
         self.addRessource(ressourceID: 9, planetID: 2)
         self.addRessource(ressourceID: 10, planetID: 2)
-        
-        self.addSpaciesOnPlanet(planet: 2, img: "bs_1", x: 410/2, y: 939/2)
     }
     
     func deletePlanetIfTypeNull(){

@@ -20,6 +20,9 @@ class BiodiversiteView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let bundlePath = Bundle.main.path(forResource: "images", ofType: "bundle")!
+        let bundle = Bundle(path: bundlePath)
+        
         PageTitle.text = name
         
         let scrollView = UIScrollView()
@@ -71,7 +74,12 @@ class BiodiversiteView: UIViewController {
             for _ in 1...divider{
                 let imageView = UIImageView()
                 imageView.isUserInteractionEnabled = true
-                imageView.image = UIImage(named: spacies[id])
+                
+                let parties = spacies[id].split(separator: "_")
+
+                let image = UIImage(named: "\(parties[0])/\(spacies[id]).png", in: bundle, compatibleWith: nil)
+                
+                imageView.image = image
                 stackViewHori.addArrangedSubview(imageView)
                 imageView.widthAnchor.constraint(equalToConstant: CGFloat(width)).isActive = true
                 imageView.heightAnchor.constraint(equalToConstant: CGFloat(height)).isActive = true
