@@ -692,19 +692,6 @@
                                     <segue destination="oA4-8K-wxl" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="0Qz-Yd-Ahw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-44-RhC">
-                                <rect key="frame" x="119" y="683" width="159" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Créer"/>
-                                <buttonConfiguration key="configuration" style="filled" title="CREDITS" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background">
-                                        <color key="strokeColor" systemColor="labelColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </buttonConfiguration>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="titre" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-Fa-0r6">
                                 <rect key="frame" x="16" y="392" width="365" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -720,7 +707,6 @@
                         <outlet property="ImagePrincipal" destination="xL9-tJ-R9Q" id="ifo-OS-JKW"/>
                         <outletCollection property="buttons" destination="330-eQ-9aE" collectionClass="NSMutableArray" id="6s7-hJ-1y3"/>
                         <outletCollection property="buttons" destination="3Ml-Q9-bCk" collectionClass="NSMutableArray" id="LhP-Fd-tJf"/>
-                        <outletCollection property="buttons" destination="Ceh-44-RhC" collectionClass="NSMutableArray" id="pZf-k2-up7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2640,7 +2626,7 @@
         <segue reference="4zn-IY-Soy"/>
         <segue reference="7D5-AL-lCR"/>
         <segue reference="q43-GV-fje"/>
-        <segue reference="fc5-qK-PQB"/>
+        <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Alcidés_1" width="139" height="126"/>

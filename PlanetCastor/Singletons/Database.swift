@@ -16,7 +16,7 @@ class Database{
     
     var database: Connection!
     
-    let updateTable = true
+    let updateTable = false
 
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
