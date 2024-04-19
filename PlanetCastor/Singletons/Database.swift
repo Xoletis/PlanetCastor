@@ -611,57 +611,40 @@ class Database{
     }
     
     func AddAllBiodivSpacies(){
-        for _ in 1...24{
-            createBiodivSpacies(Type: "Craniates non tétrapodes")
+        
+        var biodivNamesList: [String] = []
+        
+        do{
+            let distinctBiodivNames =  self.biodivType.select(distinct: self.biodiv_name)
+            
+            for row in try self.database.prepare(distinctBiodivNames){
+                let name = try row.get(self.biodiv_name)
+                biodivNamesList.append(name)
+            }
+        }catch{
+            print(error)
         }
-        for _ in 1...14{
-            createBiodivSpacies(Type: "Cétacés")
+        
+        for bio in biodivNamesList{
+            for _ in 1...getNbImageIn(folder: bio){
+                createBiodivSpacies(Type: bio)
+            }
         }
-        for _ in 1...14{
-            createBiodivSpacies(Type: "Euselachii")
+    }
+    
+    func getNbImageIn(folder : String) -> Int{
+        let bundlePath = Bundle.main.path(forResource: "images", ofType: "bundle")!
+        let bundle = Bundle(path: bundlePath)
+        let folderPath = bundle!.path(forResource: folder, ofType: nil)!
+        var i = 0
+        do {
+            let folderContents = try FileManager.default.contentsOfDirectory(atPath: folderPath)
+            i = folderContents.count
+        } catch {
+            print("Erreur lors de la récupération du contenu du dossier : \(error)")
         }
-        for _ in 1...12{
-            createBiodivSpacies(Type: "Céphalopodes")
-        }
-        for _ in 1...10{
-            createBiodivSpacies(Type: "Crustacés")
-        }
-        for _ in 1...10{
-            createBiodivSpacies(Type: "Cryptodira")
-        }
-        for _ in 1...14{
-            createBiodivSpacies(Type: "Mollusques")
-        }
-        for _ in 1...18{
-            createBiodivSpacies(Type: "Hétérokontophytes")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Camélidés")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Cervidés")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Laping")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Simia")
-        }
-        for _ in 1...6{
-            createBiodivSpacies(Type: "Squamates")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Alcidés")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Batraciens")
-        }
-        for _ in 1...4{
-            createBiodivSpacies(Type: "Passéridés")
-        }
-        for _ in 1...8{
-            createBiodivSpacies(Type: "Cactaceae")
-        }
+        
+        return i
     }
     
     func createBiodivSpacies(Type : String){
