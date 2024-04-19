@@ -30,7 +30,14 @@ class ViewController: UIViewController {
             button.layer.cornerRadius = 4.0
         }
         
-        ImagePrincipal.image = UIImage(named: imagesList.randomElement()!)
+        if let bundlePath = Bundle.main.path(forResource: "images", ofType: "bundle") {
+            if let bundle = Bundle(path: bundlePath) {
+                let image = UIImage(named: "Laping/Laping_2", in: bundle, compatibleWith: nil)
+                ImagePrincipal.image = image
+            }
+        }
+        
+        //ImagePrincipal.image = UIImage(named: imagesList.randomElement()!)
     }
 }
 
