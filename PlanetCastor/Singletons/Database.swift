@@ -225,14 +225,19 @@ class Database{
             //Aride
             createBiodiv(name: "Camélidés", Type: "aride")
             createBiodiv(name: "Cactaceae", Type: "aride")
+            createBiodiv(name: "Elapidés", Type: "aride")
+            createBiodiv(name: "Squamata", Type: "aride")
             createBiodiv(name: "Laping", Type: "aride")
             
             //Terrestre
             createBiodiv(name: "Cervidés", Type: "terrestre")
             createBiodiv(name: "Laping", Type: "terrestre")
             createBiodiv(name: "Passéridés", Type: "terrestre")
+            createBiodiv(name: "Cathartidae", Type: "terrestre")
+            createBiodiv(name: "Quercus", Type: "terrestre")
             
             //Gazeuse
+            createBiodiv(name: "Aves", Type: "gazeuse")
             createBiodiv(name: "Laping", Type: "gazeuse")
             
             //Tropicale
@@ -255,6 +260,7 @@ class Database{
             //Nuageuse
             createBiodiv(name: "Passéridés", Type: "nuageuse")
             createBiodiv(name: "Laping", Type: "nuageuse")
+            createBiodiv(name: "Cathartidae", Type: "nuageuse")
             
             //Marcageuse
             createBiodiv(name: "Batraciens", Type: "marecageuse")
