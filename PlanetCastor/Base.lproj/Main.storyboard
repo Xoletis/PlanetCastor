@@ -462,7 +462,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Teth" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-tJ-R9Q">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alcidés_1" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-tJ-R9Q">
                                 <rect key="frame" x="-146" y="121" width="688" height="412"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2449,9 +2449,9 @@
         <segue reference="0Qz-Yd-Ahw"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Alcidés_1" width="139" height="126"/>
         <image name="Créer" width="59" height="21"/>
         <image name="PlaneteTerrestre" width="183.33332824707031" height="183.33332824707031"/>
-        <image name="Teth" width="500" height="500"/>
         <image name="aquatique" width="390" height="844"/>
         <image name="bouton croix" width="37" height="31"/>
         <image name="bouton retour choix" width="37" height="31"/>

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SQLite
+import Photos
 
 class Database{
     
@@ -16,7 +17,7 @@ class Database{
     var database: Connection!
     
     let updateTable = true
-    
+
     let planetsTable = Table("planets")
     let athmosphereTabe = Table("athmosphere")
     let ressourcesTable = Table("ressources")
@@ -223,6 +224,7 @@ class Database{
             
             //Aride
             createBiodiv(name: "Camélidés", Type: "aride")
+            createBiodiv(name: "Cactaceae", Type: "aride")
             createBiodiv(name: "Laping", Type: "aride")
             
             //Terrestre
@@ -658,6 +660,9 @@ class Database{
         }
         for _ in 1...4{
             createBiodivSpacies(Type: "Passéridés")
+        }
+        for _ in 1...8{
+            createBiodivSpacies(Type: "Cactaceae")
         }
     }
     
