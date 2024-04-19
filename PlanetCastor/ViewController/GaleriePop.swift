@@ -12,7 +12,7 @@ class GaleriePop: UIViewController {
     @IBOutlet var popParameter: [UILabel]!
     
     @IBOutlet weak var nom: UILabel!
-    @IBOutlet weak var couleur: UILabel!
+    @IBOutlet weak var couleur: UIButton!
     @IBOutlet weak var regimePolitique: UILabel!
     @IBOutlet weak var langue: UILabel!
     @IBOutlet weak var aspect: UILabel!
@@ -76,7 +76,7 @@ class GaleriePop: UIViewController {
         let PopcouleurB = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.color_b);
         let PopcouleurR = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.color_r);
         let PopcouleurG = Database.shared.getPlanetParameter(id: planetID, parametre: Database.shared.color_g);
-        couleur.backgroundColor = UIColor(red: CGFloat(PopcouleurR!), green: CGFloat(PopcouleurG!), blue: CGFloat(PopcouleurB!), alpha: 1)
+        couleur.layer.backgroundColor = CGColor(red: CGFloat(PopcouleurR!) / 255, green: CGFloat(PopcouleurG!) / 255, blue: CGFloat(PopcouleurB!) / 255, alpha: 1)
         
         let popCaractere = Database.shared.getPlanetCar(id: planetID);
         caractere.text = ""
