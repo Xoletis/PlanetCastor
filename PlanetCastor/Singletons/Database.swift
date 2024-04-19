@@ -259,8 +259,8 @@ class Database{
             
             //Nuageuse
             createBiodiv(name: "Passéridés", Type: "nuageuse")
-            createBiodiv(name: "Laping", Type: "nuageuse")
             createBiodiv(name: "Cathartidae", Type: "nuageuse")
+            createBiodiv(name: "Laping", Type: "nuageuse")
             
             //Marcageuse
             createBiodiv(name: "Batraciens", Type: "marecageuse")
